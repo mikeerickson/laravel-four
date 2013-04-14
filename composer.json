@@ -1,0 +1,27 @@
+{
+	"require": {
+		"laravel/framework": "4.0.x-dev",
+		"way/generators": "dev-master",
+		"twig/twig": "1.12.*@dev",
+		"rcrowe/twigbridge": "0.1.*",
+		"jasonlewis/expressive-date": "1.*",
+		"ccampbell/chromephp": "dev-master"
+		
+	},
+	"scripts": {
+		"post-update-cmd": "php artisan optimize"
+	},
+	"autoload": {
+		"classmap": [
+			"app/commands",
+			"app/controllers",
+			"app/models",
+			"app/database/migrations",
+			"app/database/seeds",
+			"app/tests/TestCase.php",
+			"app/libraries/helpers.php",
+			"app/debug/ChromePhp.php"
+		]
+	},
+	"minimum-stability": "dev"
+}
