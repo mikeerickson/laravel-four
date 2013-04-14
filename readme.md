@@ -1,13 +1,6 @@
-## Laravel 4.x
+# Laravel 4 Workbench
 
-### A Framework For Web Artisans
+## 2013-04-14
 
-[Official Documentation](http://four.laravel.com) (Under Active Development)
-
-### Contributing To Laravel
-
-**All issues and pull requests should be filed on the [laravel/framework](http://github.com/laravel/framework) repository.**
-
-### License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+- Updated framework to latest build, including new Whoops debugger
+- First commnit with updated TODO and README files
