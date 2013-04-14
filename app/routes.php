@@ -101,7 +101,6 @@ Route::get('/blade', function() {
 	//return View::make('hello')->with($data);
 });
 
-
 Route::resource('users', 'UsersController');
 
 Route::resource('photos', 'PhotosController');

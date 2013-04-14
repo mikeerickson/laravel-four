@@ -12,11 +12,6 @@ class ContactsController extends BaseController {
 		'banned'   => 'Banned'
 	];			
 
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
 	public function index()
 	{		
 
@@ -45,21 +40,11 @@ class ContactsController extends BaseController {
 
 	}
 
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
 	public function create()
 	{
 		var_dump("Contacts Create");
 	}
 
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
-	 */
 	public function store()
 	{
 		$validation = Contact::validate_edit(Input::all());		
@@ -87,11 +72,6 @@ class ContactsController extends BaseController {
 		}		
 	}
 
-	/**
-	 * Display the specified resource.
-	 *
-	 * @return Response
-	 */
 	public function show($id)
 	{
 		$contact = getContact($id);
@@ -106,11 +86,6 @@ class ContactsController extends BaseController {
 			return "No record found matching ID {$id}";
 	}
 
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @return Response
-	 */
 	public function edit($id)
 	{
 	
@@ -134,11 +109,6 @@ class ContactsController extends BaseController {
 		
 	}
 
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @return Response
-	 */
 	public function update($id)
 	{
 
@@ -158,11 +128,6 @@ class ContactsController extends BaseController {
 		//}
 	}
 
-	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @return Response
-	 */
 	public function destroy($id)
 	{
 		$contact = Contact::find($id)->delete();
