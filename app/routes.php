@@ -41,21 +41,31 @@ Route::get('/', function()
 Route::get('/twig', function() {
 	
 	ChromePhp::log('test twig route');
-
-	$date = ExpressiveDate::make(); var_dump($date);
-	var_dump($date->minusSeconds(30)->getRelativeDate());
+	ChromePhp::log('test twig route');
+	
+	$date = ExpressiveDate::make(); //var_dump($date);
+	
+	ChromePhp::log("date str: ".$date);
+	
+	//ChromePhp::log($date);
+	
+	var_dump($date->minusSeconds(30)->minusMinutes(15)->getRelativeDate());
 	var_dump($date->today());
 	var_dump($date->tomorrow());
 	var_dump($date->yesterday()->getRelativeDate());
-	$born = ExpressiveDate::make('October 15, 1966'); var_dump($born->getRelativeDate());
+	
+	$born = ExpressiveDate::make('October 15, 1966'); var_dump("Born: ".$born->getRelativeDate());
 	$days = $born->getDifferenceInDays($date); var_dump("Days old as of today: $days");
+
+	$users = Users::all();
 		
-	$data = [	"fname"  => "Mike",
-				"lname"  => "Erickson",
-				"kids"   => ['joelle', 'brady', 'bailey', 'trevor'],
-				'dogs'   => ['shilo','honu','gunner'],
-				'designer' => 'mike erickson',
-				'family' => [
+	$data = [	"fname" 	=> "mike",
+				"lname"     => "erickson",
+				"kids"      => ['joelle', 'brady', 'bailey', 'trevor'],
+				'users'     => $users,
+				'dogs'      => ['shilo','honu','gunner'],
+				'designer'  => 'mike erickson',
+				'family'    => [
 								'father'    => 'mike erickson', 
 								'mother'    => 'kira erickson',
 								'daughter1' => 'joelle erickson',
@@ -65,7 +75,7 @@ Route::get('/twig', function() {
 							]
 			];
 	
-	return View::make('test')->with($data);	
+	return View::make('twig.test', $data);	
 });
 
 
@@ -80,12 +90,16 @@ Route::get('/blade', function() {
 	var_dump($date->yesterday()->getRelativeDate());
 	$born = ExpressiveDate::make('October 15, 1966'); var_dump($born->getRelativeDate());
 	$days = $born->getDifferenceInDays($date); var_dump("Days old as of today: $days");
+	
+	$users = Users::all();
 		
 	$data = [	"fname"    => "Mike",
 				"lname"    => "Erickson",
 				"kids"     => ['joelle', 'brady', 'bailey', 'trevor'],
+				'users'    => $users,
 				'dogs'     => ['shilo','honu','gunner'],
 				'designer' => 'mike erickson',
+				'phone'    => '7144544236',
 				'title'    => 'title',
 				'family'   => [
 								'father'    => 'mike erickson', 
@@ -97,7 +111,7 @@ Route::get('/blade', function() {
 							]
 			];
 	
-	return View::make('test3')->with($data);	
+	return View::make('test3',$data);	
 	//return View::make('hello')->with($data);
 });
 

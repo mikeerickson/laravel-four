@@ -10,6 +10,21 @@ Hello {{ fname }} {{ lname }} form twig template, reporting for duty!
     <li>{{ loop.index }}: {{ item|title }}</li>
 {% endfor %}
 
+<h3>Users:</h3>
+
+<table width="80%">
+{% for user in users %}
+	<tr>
+    <td>{{ user.active }}</td>
+    <td>{{ user.username|title }}</td>
+    <td>{{ user.email }}</td>
+    <td>{{ user.category|title }}</td>
+    <td>{{ user.created_at|date('m.d.Y - h:i a') }}</td>
+    <td>{{ user.updated_at|date('m.d.Y - h:i a') }}</td>
+	</tr>
+{% endfor %}
+</table>
+
 </p>
 
 <p>
@@ -52,7 +67,9 @@ Hello {{ fname }} {{ lname }} form twig template, reporting for duty!
 
 {% set full = fname %}
 
-{{ full }}
+{{ full|upper }} <br />
+
+Fullname: {{ fname|title }} {{ lname|upper }} 
 
 </p>
 
@@ -65,5 +82,5 @@ Hello {{ fname }} {{ lname }} form twig template, reporting for duty!
 
 
 <p>
-Developed by: {{ designer }}
+Developed by: {{ designer|title }}
 </p>
