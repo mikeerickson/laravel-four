@@ -66,9 +66,9 @@ class ContactsController extends BaseController {
 				'active' => Input::get('active') ? 1 : 0			
 			));
 						
-			return Redirect::to(URL::to_route('contacts').'?page='.Input::get('page'))
-				->with('message','User Updated Successfully')
-				->with('msg_type','success');
+			Session::flash('message','{"msgType": "alert-success", "msgHdr": "Success", "msgBody": "Contact Created Successfully"}');
+			return Redirect::to(URL::to_route('contacts').'?page='.Input::get('page'));
+			
 		}		
 	}
 
@@ -100,9 +100,7 @@ class ContactsController extends BaseController {
 			return View::make('contacts.edit',$data);
 		}
 		else {
-			Session::flash('status_message', "Unable to Edit Record [{$id}].<br />Please contact Database Administrator.");
-			Session::flash('status_class','alert-error');
-			Session::flash('status_header','Database Error');
+			Session::flash('message','{"msgType": "alert-error", "msgHdr": "Database Error", "msgBody": "Unable to Edit Record ['.$id.'].<br />Please contact Database Administrator."}');
 			return Redirect::to(URL::route('contacts.index').'?page='.Input::get('page'));
 		}
 		
@@ -122,16 +120,15 @@ class ContactsController extends BaseController {
 		];
 
 		$contact = Contact::find($id)->where('id', Input::get('id'))->update($data);
-		//if ($contact) {	previous version of laravel had this as a truthy value, b4 does not
-			Session::flash('status_message', 'Contact Updated Successfully');
-			return Redirect::to(URL::route('contacts.index').'?page='.Input::get('page'));
+		Session::flash('message','{"msgType": "alert-success", "msgHdr": "Success", "msgBody": "Contact Updated Successfully"}');
+		return Redirect::to(URL::route('contacts.index').'?page='.Input::get('page'));
 		//}
 	}
 
 	public function destroy($id)
 	{
 		$contact = Contact::find($id)->delete();
-		Session::flash('status_message', 'Contact Deleted Successfully');
+		Session::flash('message','{"msgType": "alert-success", "msgHdr": "Success", "msgBody": "Contact Deleted Successfully"}');
 		return Redirect::to(URL::route('contacts.index').'?page='.Input::get('page'));
 	}
 

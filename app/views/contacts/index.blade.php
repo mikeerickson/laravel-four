@@ -11,6 +11,7 @@
 	</div>
 
 	<table class="table table-striped table-bordered bootstrap-datatable datatable">
+			<th>Active</th>
 			<th>Contact Name</th>
 			<th>Company</th>
 			<th>E Mail</th>
@@ -22,6 +23,7 @@
 		<tbody>
 			@foreach ($contacts as $contact)
 				<tr>
+					<td align='center'>{{ $contact->active ? Form::checkbox('checkbox','1',true,array('disabled' => 'true')) : Form::checkbox('checkbox','1',false, array('disabled' => 'true')) }}</td>
 					<td>{{ ucwords($contact->lname) }}, {{ ucwords($contact->fname) }}</td>
 					<td> {{ is_null($contact->company) ? "" : $contact->company->companyName }} </td>
 					<td>{{ Helpers::mailto(strtolower($contact->email)) }}</td>

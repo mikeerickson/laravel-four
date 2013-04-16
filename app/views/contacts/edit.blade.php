@@ -33,7 +33,7 @@
 		{{ Form::text('fname', $contact->fname, 
 			[
 				'data-required' => 'true',	
-				'data-trigger'  => 'change',			
+				'data-trigger'  => 'change',
 			]) 
 		}}
 
@@ -41,8 +41,9 @@
 		{{ Form::label('status','Status:') }}
 		{{ Form::select('status', $status, $contact->status, 
 			[
-				'class' => 'selectpicker', 
-				'data-size' => 'auto'
+				'class'         => 'selectpicker', 
+				'data-required' => 'true',	
+				'data-size'     => 'auto'
 			]) 
 		}} 
 
@@ -61,7 +62,6 @@
 		<div id="toolbar">
 			<p> {{ Form::submit('Save',['class' => 'btn btn-small btn-primary']) }}
 			&nbsp;&nbsp;<a href="/contacts?page={{ Input::get('page') }}">Cancel</a>
-			
 			</p>
 		</div>
 	

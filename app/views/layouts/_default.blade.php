@@ -153,16 +153,23 @@
 -->
 
 	<script>	
-	  @if (!is_null(Session::get('status_message')))
+	  @if (!is_null(Session::get('message')))
+	  
+	  		$msg = '{{ Session::get('message') }}';		
+	  		var msgObj = eval("(" + $msg + ')');
+
 			$("#msgAlert").show();
 			
-			$var = '{{ Session::get('status_class') }}';
-			$hdr = '{{ Session::get('status_header') }}';
+			$msgClass = msgObj.msgType;
+			$msgHdr   = msgObj.msgHdr;
+			$msgBody  = msgObj.msgBody;
 			
-			$var != "" ? $("#msgAlert").addClass($var) : $("#msgAlert").addClass('alert-success');
-			$hdr != "" ? $("#msgHdr").html($hdr) : '';
+			
+			$msgClass != "" ? $("#msgAlert").addClass($msgClass) : $("#msgAlert").addClass('alert-block');
+			$msgHdr != "" ? $("#msgHdr").html($msgHdr) : '';
 
-			$("#msgBody").html("{{ Session::get('status_message') }}");
+			$("#msgBody").html($msgBody);
+			
 		@endif
 							
 	</script>

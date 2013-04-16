@@ -34,7 +34,7 @@
 				<!-- date("m-d-Y", strtotime($item->updated_at)) -->
 							
 				<td>{{ ExpressiveDate::make($item->updated_at)->getRelativeDate() }}</td>
-				<td align='center'>
+				<td style="text-align: center;">
 					<a href="/users/{{$item->id}}?page={{ Input::get('page') }}" title="Edit Record">{{ Helpers::image('img/icon_edit_16x16.gif') }}</a> &nbsp;&nbsp;
 					<a onclick="return confirm('Are you sure you wish to delete this record?');" href="/users/{{$item->id}}/delete?page={{ Input::get('page') }}" title="Delete Record">{{ Helpers::image('img/icon_trash_16x16.gif') }}</a>
 				</td>
