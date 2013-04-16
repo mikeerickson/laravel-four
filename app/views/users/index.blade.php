@@ -17,7 +17,7 @@
 		<th width='30%'>E-Mail</th>
 		<th width='15%'>Category</th>
 		<th width='15%'>Updated</th>
-		<th align='middle'style='text-align: center'>Actions</th>
+		<th align='middle'style='text-align: center'>- Actions -</th>
 	
 		
 		@foreach ( $users as $item )

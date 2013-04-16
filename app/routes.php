@@ -40,14 +40,16 @@ Route::get('/', function()
 
 Route::get('/twig', function() {
 	
+/*
 	ChromePhp::log('test twig route');
 	ChromePhp::log('test twig route');
+*/
 	
 	$date = ExpressiveDate::make(); //var_dump($date);
 	
 	ChromePhp::log("date str: ".$date);
 	
-	//ChromePhp::log($date);
+	ChromePhp::log($date);
 	
 	var_dump($date->minusSeconds(30)->minusMinutes(15)->getRelativeDate());
 	var_dump($date->today());
@@ -64,6 +66,7 @@ Route::get('/twig', function() {
 				"kids"      => ['joelle', 'brady', 'bailey', 'trevor'],
 				'users'     => $users,
 				'dogs'      => ['shilo','honu','gunner'],
+				'phone'     => '7144544236',
 				'designer'  => 'mike erickson',
 				'family'    => [
 								'father'    => 'mike erickson', 
@@ -74,6 +77,7 @@ Route::get('/twig', function() {
 								'son2'      => 'trevor erickson'
 							]
 			];
+	
 	
 	return View::make('twig.test', $data);	
 });
@@ -110,7 +114,7 @@ Route::get('/blade', function() {
 								'son2'      => 'trevor erickson'
 							]
 			];
-	
+			
 	return View::make('test3',$data);	
 	//return View::make('hello')->with($data);
 });
