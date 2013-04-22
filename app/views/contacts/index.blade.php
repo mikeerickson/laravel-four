@@ -23,7 +23,11 @@
 		<tbody>
 			@foreach ($contacts as $contact)
 				<tr>
-					<td align='center'>{{ $contact->active ? Form::checkbox('checkbox','1',true,array('disabled' => 'true')) : Form::checkbox('checkbox','1',false, array('disabled' => 'true')) }}</td>
+					@if ($contact->active)
+						<td> <span class="label label-success">Active</span> </td>
+					@else
+						<td> <span class="label">Inactive</span> </td>
+					@endif
 					<td>{{ ucwords($contact->lname) }}, {{ ucwords($contact->fname) }}</td>
 					<td> {{ is_null($contact->company) ? "" : $contact->company->companyName }} </td>
 					<td>{{ Helpers::mailto(strtolower($contact->email)) }}</td>

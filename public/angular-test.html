@@ -33,14 +33,16 @@
 			<tbody>
 				<tr ng-repeat="contact in result">
 					<td width="5%"> 
-						<input type="checkbox" value="{{contact.active}}" disabled="true" ng-checked="contact.active == '1'"/>
+						<span class="label" ng-class="{true:'label label-success', false:''}[contact.active=='1']"> 
+							{{ contact.active | active }}
+						</span>
 					</td>
 					<td>{{contact.fname}}</td>
 					<td>{{contact.lname}}</td>
 					<td>{{contact.company.companyName}}</td>
 					<td>{{contact.company.city}}</td>
 					<td>{{contact.email}}</td>
-					<td>{{contact.phone | tel}}</td>
+					<td>{{contact.phone | phone}}</td>
 				</tr>
 			</tbody>
 		</table>

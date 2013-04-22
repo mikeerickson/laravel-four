@@ -71,7 +71,7 @@ class UsersController extends BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		return "Edit User {$id}";
 	}
 
 	/**
@@ -91,7 +91,7 @@ class UsersController extends BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		return "Destroy User {$id}";
 	}
 
 }

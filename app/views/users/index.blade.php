@@ -21,9 +21,7 @@
 	
 		
 		@foreach ( $users as $item )
-		
-			{{ ChromePhp::log($item) }}
-			
+				
 			<tr>
 				<td align='center'>{{ $item->active ? Form::checkbox('checkbox','1',true,array('disabled' => 'true')) : Form::checkbox('checkbox','1',false, array('disabled' => 'true')) }}</td>
 				<td style='text-align: center'>{{ str_pad($item->id, 3, '0', STR_PAD_LEFT) }}</td>
@@ -46,10 +44,6 @@
 	
 		<?= $users->links(); ?>
 	
-
-	<script type="text/javascript" charset="utf-8">
-		$('tr:odd').css('background', '#D7DDE4');
-	</script>
 @stop
 
 @section('validation')
@@ -73,6 +67,3 @@
 	@endif
 
 @stop
-
-
-{{ ChromePhp::log(Users::all()) }}

@@ -39,12 +39,16 @@ Route::get('/', function()
 });
 
 Route::get('/twig', function() {
+
+	$where   = [];
+	$perPage = 10;
 	
 /*
 	ChromePhp::log('test twig route');
 	ChromePhp::log('test twig route');
 */
 	
+/*
 	$date = ExpressiveDate::make(); //var_dump($date);
 	
 	ChromePhp::log("date str: ".$date);
@@ -58,24 +62,36 @@ Route::get('/twig', function() {
 	
 	$born = ExpressiveDate::make('October 15, 1966'); var_dump("Born: ".$born->getRelativeDate());
 	$days = $born->getDifferenceInDays($date); var_dump("Days old as of today: $days");
+*/
 
-	$users = Users::all();
-		
-	$data = [	"fname" 	=> "mike",
-				"lname"     => "erickson",
-				"kids"      => ['joelle', 'brady', 'bailey', 'trevor'],
-				'users'     => $users,
-				'dogs'      => ['shilo','honu','gunner'],
-				'phone'     => '7144544236',
-				'designer'  => 'mike erickson',
-				'family'    => [
+	//$users = Users::all();
+
+	$users  = User::getUsers($perPage,$where);	
+	if( count($users) == 0 ) return Redirect::to(URL::route('users.index').'?page=1');
+
+	// setup recMessage Object
+	$currPage   = Input::get('page') ? Input::get('page') : 1;
+	$recCount   = User::getCount($where);
+	$pageCount  = count($users);	
+
+	$recMessage = Helpers::recMessage($currPage, $perPage, $pageCount, $recCount);		
+			
+	$data = [	"fname" 	 => "mike",
+				"lname"      => "erickson",
+				"kids"       => ['joelle', 'brady', 'bailey', 'trevor'],
+				'users'      => $users,
+				'recMessage' => $recMessage,
+				'dogs'       => ['shilo','honu','gunner'],
+				'phone'      => '7144544236',
+				'designer'   => 'mike erickson',
+				'family'     => [
 								'father'    => 'mike erickson', 
 								'mother'    => 'kira erickson',
 								'daughter1' => 'joelle erickson',
 								'son1'      => 'brady erickson',
 								'daughter2' => 'bailey erickson',
 								'son2'      => 'trevor erickson'
-							]
+								]
 			];
 	
 	

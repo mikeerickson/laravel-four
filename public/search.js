@@ -18,14 +18,21 @@ function SearchCtrl($scope, $http) {
 
 }
 
-angular.module('ng').filter('tel', function () {
-    return function (tel) {
-        if (!tel) { return ''; }
+angular.module('ng').filter('active', function () {
+	return function (active) {
+		var value = active.toString().trim().replace(/^\+/, '');
+		return value == '1' ? 'Active' : 'Inactive';
+	}	
+});
 
-        var value = tel.toString().trim().replace(/^\+/, '');
+angular.module('ng').filter('phone', function () {
+    return function (phone) {
+        if (!phone) { return ''; }
+
+        var value = phone.toString().trim().replace(/^\+/, '');
 
         if (value.match(/[^0-9]/)) {
-            return tel;
+            return phone;
         }
 
         var country, city, number;
@@ -50,7 +57,7 @@ angular.module('ng').filter('tel', function () {
                 break;
 
             default:
-                return tel;
+                return phone;
         }
 
         if (country == 1) {
@@ -61,4 +68,5 @@ angular.module('ng').filter('tel', function () {
 
         return (country + " (" + city + ") " + number).trim();
     };
+    
 });
