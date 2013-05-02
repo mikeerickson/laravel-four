@@ -352,6 +352,7 @@ return array(
     'Illuminate\\Container\\Container' => $vendorDir . '/laravel/framework/src/Illuminate/Container/Container.php',
     'Illuminate\\Cookie\\CookieJar' => $vendorDir . '/laravel/framework/src/Illuminate/Cookie/CookieJar.php',
     'Illuminate\\Cookie\\CookieServiceProvider' => $vendorDir . '/laravel/framework/src/Illuminate/Cookie/CookieServiceProvider.php',
+    'Illuminate\\Database\\Capsule' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Capsule.php',
     'Illuminate\\Database\\Connection' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Connection.php',
     'Illuminate\\Database\\ConnectionInterface' => $vendorDir . '/laravel/framework/src/Illuminate/Database/ConnectionInterface.php',
     'Illuminate\\Database\\ConnectionResolver' => $vendorDir . '/laravel/framework/src/Illuminate/Database/ConnectionResolver.php',
