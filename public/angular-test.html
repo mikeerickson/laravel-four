@@ -6,7 +6,7 @@
     <script src="js/angular-1.0.5.js"></script>
     <script src="app.js"></script>
 </head>
- 
+
 <body>
     <div ng-controller="SearchCtrl">
 	    <form class="well form-search">
@@ -18,7 +18,6 @@
 		<pre ng-model="result">
 			{{result}}
 		</pre>
-		
 -->
 
 		<table class="table table-striped table-bordered bootstrap-datatable datatable">
@@ -33,15 +32,15 @@
 			</thead>
 			<tbody>
 				<tr ng-repeat="contact in result">
-					<td width="5%"> 
-						<span class="label" ng-class="{true:'label-success', false:''}[contact.active=='1']"> 
+					<td width="5%">
+						<span class="label" ng-class="{true:'label-success', false:''}[contact.active=='1']">
 							{{ contact.active | status }}
 						</span>
 					</td>
 					<td>{{contact.fname}}</td>
 					<td>{{contact.lname}}</td>
 					<td>{{contact.company.companyName}}</td>
-					<td>{{contact.company.city}}</td>
+					<td>{{contact.company.city}}, {{contact.company.state}} {{contact.company.zip }}</td>
 					<td>{{contact.email}}</td>
 					<td>{{contact.phone | phone}}</td>
 				</tr>
@@ -49,5 +48,5 @@
 		</table>
    </div>
 </body>
- 
-</html> 
+
+</html>

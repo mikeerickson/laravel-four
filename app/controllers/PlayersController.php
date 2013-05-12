@@ -12,16 +12,16 @@ class PlayersController extends BaseController {
 	 */
 	public function index()
 	{
-		$players  = Player::playerList($this->perPage,$this->where);	
+		$players  = Player::playerList($this->perPage,$this->where);
 		if( count($players) == 0 )
 			return Redirect::to(URL::route('players.index').'?page=1');
-			
+
 		// setup recMessage Object
 		$currPage   = Input::get('page') ? Input::get('page') : 1;
 		$recCount   = Player::getCount($this->where);
-		$pageCount  = count($players);	
-		$recMessage = Helpers::recMessage($currPage, $this->perPage, $pageCount, $recCount);		
-				
+		$pageCount  = count($players);
+		$recMessage = Helpers::recMessage($currPage, $this->perPage, $pageCount, $recCount);
+
 		$data = [
 					'title'      => 'Players',
 					'players'    => $players,
@@ -29,7 +29,7 @@ class PlayersController extends BaseController {
 					'username'   => Cookie::get('username'),
 					'password'   => Cookie::get('password')
 				];
-		
+
 		//return View::make('contacts.test',$data);
 		return View::make('players.index',$data);
 	}

@@ -10,14 +10,14 @@ class PhotosController extends BaseController {
 	public function index()
 	{
 		//return Photo::all();
-		
+
 		$photos = Photo::all();
-		
+
 		$data = [
 			'title'   => 'Photos',
 			'photos'  => $photos
 		];
-		
+
 		//return View::make('photos.index',compact('photos'));
 		//return View::make('photos.index,$data);
 		return View::make('photos.index')->with($data);
@@ -30,7 +30,7 @@ class PhotosController extends BaseController {
 	 */
 	public function create()
 	{
-	
+
 		$data = ['title' => 'Photo: Create'];
 		return View::make('photos.create')->with($data);
 	}
@@ -53,12 +53,12 @@ class PhotosController extends BaseController {
 	public function show($id)
 	{
 		$photo = Photo::find($id);
-		
+
 		$data = [
 			'title'   => 'Photo: Detail',
 			'photo'  => $photo
 		];
-				
+
 		return View::make('photos.show')->with($data);
 	}
 

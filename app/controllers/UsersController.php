@@ -12,17 +12,17 @@ class UsersController extends BaseController {
 	 */
 	public function index()
 	{
-		
+
 		$users = User::getUsers($this->perPage,$this->where);
 		if( count($users) == 0 )
 			return Redirect::to(URL::route('users.index').'?page=1');
-			
+
 		// setup recMessage Object
 		$currPage   = Input::get('page') ? Input::get('page') : 1;
 		$recCount   = User::getCount($this->where);
-		$pageCount  = count($users);	
-		$recMessage = Helpers::recMessage($currPage, $this->perPage, $pageCount, $recCount);		
-				
+		$pageCount  = count($users);
+		$recMessage = Helpers::recMessage($currPage, $this->perPage, $pageCount, $recCount);
+
 		$data = array(
 				'title'     => 'Users',
 				'recMessage' => $recMessage,
@@ -30,7 +30,7 @@ class UsersController extends BaseController {
 				'username'  => Cookie::get('username'),
 				'password'  => Cookie::get('password')
 			);
-			
+
 		return View::make('users.index',$data);
 	}
 

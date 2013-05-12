@@ -11,34 +11,26 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- end: Mobile Specific -->	
 
-
-	<script src="/js/jquery-1.9.1.min.js"></script>
-	<script src="/js/utils.js"></script>
-	
-	<script src="/js/bootstrap.js"></script>
-		
-	<link rel="stylesheet" href="/css/default.css" />
-	
-	<link rel="stylesheet" href="/js/msgbox/jquery.msgbox.css" />
-	<script src="/js/msgbox/jquery.msgbox.min.js"></script>
-	
-	<link rel="stylesheet" href="/css/original.css" />
-	<script src="/js/humane.js"></script>
-	
+	<!-- start: JS -->
+	<script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="/js/utils.js"></script>	
+	<script type="text/javascript" src="/js/bootstrap.js"></script>
+	<script type="text/javascript" src="/js/msgbox/jquery.msgbox.min.js"></script>
+	<script type="text/javascript" src="/js/humane.js"></script>
 	<script type="text/javascript" src="/js/angular-1.0.5.js"></script>
- 
  	<script type="text/javascript" src="/js/parsley.min.js"></script>
  	<script type="text/javascript" src="/js/moment.js"></script>
-	
-	<script src="/js/main.js"></script>
+	<script type="text/javascript" src="/js/main.js"></script>
+	<!-- end: JS -->
 	
 	<!-- start: CSS -->
-	<link id="bootstrap-style" href="/css/bootstrap.min.css" rel="stylesheet">
-	<link href="/css/bootstrap-responsive.min.css" rel="stylesheet">
-	<link id="base-style" href="/css/style.css" rel="stylesheet">
-	<link id="base-style-responsive" href="/css/style-responsive.css" rel="stylesheet">
-
-	
+	<link rel="stylesheet" href="/css/default.css" />
+	<link rel="stylesheet" href="/js/msgbox/jquery.msgbox.css" />
+	<link rel="stylesheet" href="/css/original.css" />
+	<link rel="stylesheet" href="/css/bootstrap.min.css" id="bootstrap-style" />
+	<link rel="stylesheet" href="/css/bootstrap-responsive.min.css" />
+	<link rel="stylesheet" href="/css/style.css" id="base-style" />
+	<link rel="stylesheet" href="/css/style-responsive.css" id="base-style-responsive" />
 	<!-- end: CSS -->
 	
 
@@ -77,10 +69,8 @@
 
 	<script>
 		$(function() {
-/*
 			console.log('Moment JS Date: '+moment().format('MMMM Do YYYY, h:mm:ss a'));
-			console.log(moment().subtract('days', 3).fromNow());			
-*/
+			console.log(moment().subtract('seconds', 32).fromNow());			
 
 /* 			alert(jQuery.fn.jquery); */
 			
@@ -133,7 +123,7 @@
 
 		<div role="main" class="main">
 			<div class="home">
-				@yield('content')		
+				@yield('content')			
 			</div>
 		</div>	
 

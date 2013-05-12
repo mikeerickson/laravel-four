@@ -3,7 +3,7 @@
 use Illuminate\Routing\UrlGenerator as Url;
 
 class Helpers {
-	
+
 
 	/**
 	 * The encoding to use
@@ -260,7 +260,7 @@ class Helpers {
 		$emailLink = '&#109;&#097;&#105;&#108;&#116;&#111;&#058;'.$email;
 
 		return '<a href="'.$emailLink.'"</a>'.$email;
-		
+
 		//return '<a href="'.$email.'"'.$this->attributes($attributes).'>'.$this->entities($title).'</a>';
 	}
 
@@ -467,12 +467,17 @@ class Helpers {
 		if($startRec > $pageCount)
 			$startRec = ($currPage-1) * $perPage + 1;
 		$endRec     = $startRec + $pageCount - 1;
-		
+
 		return $startRec.' to '.$endRec.' of '.$recCount;
 	}
-	
+
 	const MY_SQL_DATE_FORMAT = '%Y-%m-%d %H:%M:%S';
-	
+
+	/**
+	 * Returns twitter style time ago from supplied timestamp
+	 * @param  timestamp $timestamp [description]
+	 * @return string           	[description]
+	 */
 	public static function howLongAgo($timestamp) {
         $difference = time() - $timestamp;
 
@@ -504,13 +509,13 @@ class Helpers {
             $r = 'moments ago';
         }
 
-        return $r;		
+        return $r;
 	}
-	
+
 	public static function currentTime($format = self::MY_SQL_DATE_FORMAT) {
-		return strftime($format, time() );		
+		return strftime($format, time() );
 	}
-	
+
 	public static function formatPhone($data) {
 		if (strlen($data)==10)
 			return "(".substr($data, 0, 3).") ".substr($data, 3, 3)."-".substr($data,6);

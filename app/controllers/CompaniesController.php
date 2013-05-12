@@ -12,17 +12,17 @@ class CompaniesController extends BaseController {
 	 */
 	public function index()
 	{
-		
+
 		$companies = Company::getCompanies($this->perPage,$this->where);
 		if( count($companies) == 0 )
 			return Redirect::to(URL::route('companies.index').'?page=1');
-			
+
 		// setup recMessage Object
 		$currPage   = Input::get('page') ? Input::get('page') : 1;
 		$recCount   = Company::getCount($this->where);
-		$pageCount  = count($companies);	
-		$recMessage = Helpers::recMessage($currPage, $this->perPage, $pageCount, $recCount);		
-				
+		$pageCount  = count($companies);
+		$recMessage = Helpers::recMessage($currPage, $this->perPage, $pageCount, $recCount);
+
 		$data = array(
 				'title'      => 'Companies',
 				'companies'  => $companies,
@@ -30,7 +30,7 @@ class CompaniesController extends BaseController {
 				'username'   => Cookie::get('username'),
 				'password'   => Cookie::get('password')
 			);
-			
+
 		return View::make('companies.index',$data);
 	}
 
