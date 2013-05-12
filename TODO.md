@@ -4,7 +4,7 @@
 2. Add Login interface
 3. Confirm ChromePhp is still working (@done)
 4. Integrate Kaleidoscope as Diff tool (@done)
-5. Replace separate message session variables into a single message object (JSON format) (@done)			
+5. Replace separate message session variables into a single message object (JSON format) (@done)
 6. Add 'active' field to contact listing (@done)
 7. Modify form errors to use new class from Bootstrap theme (@done)
 8. Determine method for creating checkboxes when using Twig templates (@done)
