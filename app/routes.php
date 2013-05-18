@@ -14,8 +14,11 @@ Route::post('/angular', function(){
 	$data = file_get_contents("php://input");
 	$objData = json_decode($data);
 	$val = '%'.$objData->data.'%';
-	return Contact::with('company')->where('fname','LIKE',$val)->orWhere('lname','LIKE',$val)->orderBy('lname')->get();
-
+	return Contact::with('company')
+		->where('fname','LIKE',$val)
+		->orWhere('lname','LIKE',$val)
+		->orderBy('lname','ASC')
+		->get();
 });
 
 Route::get('/', function()
@@ -38,6 +41,7 @@ Route::get('/', function()
 	return View::make('hello', $data);
 });
 
+// localhost:8000/twig
 Route::get('/twig', function() {
 
 	$where   = [];
@@ -135,6 +139,7 @@ Route::get('/blade', function() {
 	//return View::make('hello')->with($data);
 });
 
+// localhost:8000/users
 Route::resource('users', 'UsersController');
 
 Route::resource('photos', 'PhotosController');
@@ -148,5 +153,7 @@ Route::resource('animals', 'AnimalsController');
 Route::resource('players', 'PlayersController');
 
 Route::resource('companies', 'CompaniesController');
+
+Route::resource('dogs', 'DogsController');
 
 Route::resource('dogs', 'DogsController');

@@ -41,7 +41,7 @@
 					<td>{{contact.lname}}</td>
 					<td>{{contact.company.companyName}}</td>
 					<td>{{contact.company.city}}, {{contact.company.state}} {{contact.company.zip }}</td>
-					<td>{{contact.email}}</td>
+					<td><a href='mailto:{{contact.email }}'>{{contact.email }}</a></td>
 					<td>{{contact.phone | phone}}</td>
 				</tr>
 			</tbody>

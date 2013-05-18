@@ -2,8 +2,8 @@
 @import "compass/css3";
 @import "compass/utilities";
 
-$box: 450px;
-$main-color: #232323;
+$box: 550px;
+$main-color: #29241F;
 
 body { 
 	margin: 10px;
@@ -13,7 +13,7 @@ body {
 	background: $main-color;
 	color: white;
 	font-family: "Helvetica Neue";
-	font-size: 20px;
+	font-size: 24px;
 }
 .box {
 	@include border-radius(5px);

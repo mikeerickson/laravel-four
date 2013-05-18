@@ -58,12 +58,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 body {
   margin: 10px;
   padding: 10px;
-  width: 450px;
-  height: 450px;
-  background: #232323;
+  width: 550px;
+  height: 550px;
+  background: #29241f;
   color: white;
   font-family: "Helvetica Neue";
-  font-size: 20px; }
+  font-size: 24px; }
 
 /* line 18, ../sass/screen.scss */
 .box {
