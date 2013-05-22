@@ -157,3 +157,7 @@ Route::resource('companies', 'CompaniesController');
 Route::resource('dogs', 'DogsController');
 
 Route::resource('dogs', 'DogsController');
+
+Route::resource('dogs', 'DogsController');
+
+Route::resource('dogs', 'DogsController');
