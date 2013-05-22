@@ -23,5 +23,22 @@
 			"app/debug/ChromePhp.php"
 		]
 	},
+<<<<<<< HEAD
+=======
+	"scripts": {
+		"pre-update-cmd": [
+			"php artisan clear-compiled"
+		],
+		"post-install-cmd": [
+			"php artisan optimize"
+		],
+		"post-update-cmd": [
+			"php artisan optimize"
+		]
+	},
+	"config": {
+		"preferred-install": "dist"
+	},
+>>>>>>> 71cb787346fa7baa67d90037dd3892966feabb12
 	"minimum-stability": "dev"
 }
