@@ -503,11 +503,17 @@ header h1 {
   padding-bottom: 6px;
 }
 footer {
-  font-size: 11px;
-  margin: 40px 10px 5px 10px;
+  font-size: 10px;
   border-top: 1px solid #606060;
   color: #606060;
   text-align: left;
+}
+#footer {
+  padding-top: 5px;
+  margin: 20px 0px 10px 0px;
+  border-top: 1px solid #606060;
+  color: #606060;
+  font-size: 11px;
 }
 input[type="checkbox"],
 input[type="radio"] {

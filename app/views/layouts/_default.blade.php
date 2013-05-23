@@ -9,11 +9,11 @@
 
 	<!-- start: Mobile Specific -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- end: Mobile Specific -->	
+	<!-- end: Mobile Specific -->
 
 	<!-- start: JS -->
 	<script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
-	<script type="text/javascript" src="/js/utils.js"></script>	
+	<script type="text/javascript" src="/js/utils.js"></script>
 	<script type="text/javascript" src="/js/bootstrap.js"></script>
 	<script type="text/javascript" src="/js/msgbox/jquery.msgbox.min.js"></script>
 	<script type="text/javascript" src="/js/humane.js"></script>
@@ -22,7 +22,7 @@
  	<script type="text/javascript" src="/js/moment.js"></script>
 	<script type="text/javascript" src="/js/main.js"></script>
 	<!-- end: JS -->
-	
+
 	<!-- start: CSS -->
 	<link rel="stylesheet" href="/css/default.css" />
 	<link rel="stylesheet" href="/js/msgbox/jquery.msgbox.css" />
@@ -32,18 +32,18 @@
 	<link rel="stylesheet" href="/css/style.css" id="base-style" />
 	<link rel="stylesheet" href="/css/style-responsive.css" id="base-style-responsive" />
 	<!-- end: CSS -->
-	
+
 
 	<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
 	<!--[if lt IE 9]>
 	  	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<link id="ie-style" href="css/ie.css" rel="stylesheet">
 	<![endif]-->
-	
+
 	<!--[if IE 9]>
 		<link id="ie9style" href="css/ie9.css" rel="stylesheet">
 	<![endif]-->
-		
+
 	<!-- start: Favicon -->
 	<link rel="shortcut icon" href="img/favicon.ico">
 	<!-- end: Favicon -->
@@ -54,14 +54,14 @@
 	<link rel="stylesheet" href="/css/validation.css" type="text/css" media="screen" charset="utf-8">
 
 	<style>
-		select { width: 215px; }	
+		select { width: 215px; }
 		.dropdown-menu { background-color: black; color: green; border: 0px;}
-		footer { 
-			background-color: white; 
-			font-size: 11px; 
-			margin: 40px 10px 5px 10px; 
-			border-top: 1px solid #606060; 
-			color: #606060; 
+		footer {
+			background-color: white;
+			font-size: 11px;
+			margin: 40px 10px 5px 10px;
+			border-top: 1px solid #606060;
+			color: #606060;
 			text-align: left;
 		}
 		body { margin-top: 20px; }
@@ -70,41 +70,41 @@
 	<script>
 		$(function() {
 			console.log('Moment JS Date: '+moment().format('MMMM Do YYYY, h:mm:ss a'));
-			console.log(moment().subtract('seconds', 32).fromNow());			
+			console.log(moment().subtract('seconds', 32).fromNow());
 
 /* 			alert(jQuery.fn.jquery); */
-			
+
 			// dont move this into main.js, needs to stay here ot work
 			$('#contact').parsley( {listeners: {
 			    onFormSubmit: function ( isFormValid, event ) {
 			        if ( !isFormValid  ) {
 						$("#msgAlert").show();
-						$("#msgAlert").addClass('alert-error');	
+						$("#msgAlert").addClass('alert-error');
 						$("#msgHdr").html("Validation Error");
 						$("#msgBody").html("You have errors in your form, pleaes correct and try again.");
-			        } 
+			        }
 			    }
 			}});
 
 		});
 	</script>
-		
+
 </head>
 
 <body id="body">
 
 	<div class="wrapper">
-		<div id="userinfo">				
+		<div id="userinfo">
 			@if ( Auth::check() )
 				Welcome back <strong>{{ Cookie::get('username') }}</strong>&nbsp;&nbsp;
 				<i class="icon-user"></i>&nbsp;{{ link_to('logout', 'Logout') }}
-			@endif	
+			@endif
 		</div>
-		
-		<header>		
+
+		<header>
 			<h1>{{ $title }}</h1>
 		</header>
-		
+
 		<nav>
 			<ul ul class="nav nav-tabs">
 			  <li class="{{ $title == 'Home' ? 'active' : '' }}"><a href="/">Home</a></li>
@@ -114,22 +114,22 @@
 			  <li class="{{ $title == 'Players' ? 'active' : '' }}"><a href="/players">Players</a></li>
 			</ul>
 		</nav>
-				
-		<div id="msgAlert" class="alert" style="display: none;">		
-			<a class="close" data-dismiss="alert" href="#">&times;</a>				
+
+		<div id="msgAlert" class="alert" style="display: none;">
+			<a class="close" data-dismiss="alert" href="#">&times;</a>
 			<h4 id="msgHdr"></h4>
 			<div id="msgBody"> </div>
-		</div>				
+		</div>
 
 		<div role="main" class="main">
 			<div class="home">
-				@yield('content')			
+				@yield('content')
 			</div>
-		</div>	
+		</div>
 
-		<footer>
-	        Rendered On: {{ Helpers::currentTime() }} 
-		</footer>
+		<div id="footer">
+	        Rendered On: {{ Helpers::currentTime() }}
+		</div>
 
 	</div>
 
@@ -140,31 +140,31 @@
 		window.onload=function(){
 			$('select').selectpicker();
 		};
-    </script>   
+    </script>
 -->
 
-	<script>	
+	<script>
 	  @if (!is_null(Session::get('message')))
-	  
-	  		$msg = '{{ Session::get('message') }}';		
+
+	  		$msg = '{{ Session::get('message') }}';
 	  		var msgObj = eval("(" + $msg + ')');
 
 			$("#msgAlert").show();
-			
+
 			$msgClass = msgObj.msgType;
 			$msgHdr   = msgObj.msgHdr;
 			$msgBody  = msgObj.msgBody;
-			
-			
+
+
 			$msgClass != "" ? $("#msgAlert").addClass($msgClass) : $("#msgAlert").addClass('alert-block');
 			$msgHdr != "" ? $("#msgHdr").html($msgHdr) : '';
 
 			$("#msgBody").html($msgBody);
-			
+
 		@endif
-							
+
 	</script>
-		
+
 
 </body>
 
