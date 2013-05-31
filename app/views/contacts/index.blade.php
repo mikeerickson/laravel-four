@@ -58,12 +58,11 @@
 					<td style="text-align: center">
 
 						<a href="/contacts/{{$contact->id}}/edit?page={{ Input::get('page') }}"
-						   title="Edit Record">{{ Helpers::image('img/icon_edit_16x16.gif') }}
-						</a> &nbsp;&nbsp;
-
+						   title="Edit Record"><img src="img/icon_edit_16x16.gif">
+						</a>&nbsp;
 						<a onclick="return confirm('Are you sure you wish to delete this record?');"
 						   data-method="delete" href="/contacts/{{$contact->id}}?page={{Input::get('page') }}"
-						   title="Delete Record">{{ Helpers::image('img/icon_trash_16x16.gif') }}
+						   title="Delete Record"><img src="img/icon_trash_16x16.gif">
 						</a>
 
 					</td>
@@ -72,6 +71,6 @@
 		</tbody>
 	</table>
 
-	{{ $contacts->links(); }}
+	{{ $contacts->links(); }} 
 
 @stop

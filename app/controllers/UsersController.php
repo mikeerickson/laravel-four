@@ -4,7 +4,6 @@ class UsersController extends BaseController {
 
 	public $perPage = 12;
 	public $where   = [];
-
 	/**
 	 * Display a listing of the resource.
 	 *
