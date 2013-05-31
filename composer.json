@@ -1,6 +1,6 @@
 {
 	"require": {
-		"laravel/framework": "4.1.*"
+		"laravel/framework": "4.0.*",
 		"way/generators": "dev-master",
 		"twig/twig": "1.12.*@dev",
 		"rcrowe/twigbridge": "0.1.*",
