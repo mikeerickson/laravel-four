@@ -1,6 +1,6 @@
 {
 	"require": {
-		"laravel/framework": "4.0.x-dev",
+		"laravel/framework": "4.1.*"
 		"way/generators": "dev-master",
 		"twig/twig": "1.12.*@dev",
 		"rcrowe/twigbridge": "0.1.*",
@@ -8,7 +8,6 @@
 		"ccampbell/chromephp": "dev-master"
 	},
 	"scripts": {
-		"post-update-cmd": "php artisan optimize"
 	},
 	"autoload": {
 		"classmap": [
