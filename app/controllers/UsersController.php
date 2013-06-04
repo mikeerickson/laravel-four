@@ -2,7 +2,7 @@
 
 class UsersController extends BaseController {
 
-	public $perPage = 12;
+	public $perPage = 20;
 	public $where   = [];
 	/**
 	 * Display a listing of the resource.

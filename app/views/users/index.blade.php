@@ -19,27 +19,27 @@
 		<th width='15%'>Updated</th>
 		<th align='middle'style='text-align: center'>- Actions -</th>
 
-		@foreach ( $users as $item )
+
+		@foreach ( $users as $user )
 
 			<tr>
-				<td align='center'>{{ $item->active ? Form::checkbox('checkbox','1',true,array('disabled' => 'true')) : Form::checkbox('checkbox','1',false, array('disabled' => 'true')) }}</td>
-				<td style='text-align: center'>{{ str_pad($item->id, 3, '0', STR_PAD_LEFT) }}</td>
-				<td>{{ ucwords($item->username) }}</td>
-				<td>{{ Helpers::mailto(strtolower($item->email)) }}</td>
-				<td>{{ ucwords($item->category) }}</td>
+				<td align='center'>{{ $user->active ? Form::checkbox('checkbox','1',true,array('disabled' => 'true')) : Form::checkbox('checkbox','1',false, array('disabled' => 'true')) }}</td>
+				<td style='text-align: center'>{{ str_pad($user->id, 3, '0', STR_PAD_LEFT) }}</td>
+				<td>{{ ucwords($user->username) }}</td>
+				<td>{{ Helpers::mailto(strtolower($user->email)) }}</td>
+				<td>{{ ucwords($user->category) }}</td>
 
-				<!-- date("m-d-Y", strtotime($item->updated_at)) -->
+				<!-- date("m-d-Y", strtotime($user->updated_at)) -->
 
-				<td>{{ ExpressiveDate::make($item->updated_at)->getRelativeDate() }}</td>
+				<td>{{ ExpressiveDate::make($user->updated_at)->getRelativeDate() }}</td>
 				<td style="text-align: center;">
-					<a href="/users/{{$item->id}}?page={{ Input::get('page') }}" title="Edit Record">{{ Helpers::image('img/icon_edit_16x16.gif') }}</a> &nbsp;&nbsp;
-					<a onclick="return confirm('Are you sure you wish to delete this record?');" href="/users/{{$item->id}}/delete?page={{ Input::get('page') }}" title="Delete Record">{{ Helpers::image('img/icon_trash_16x16.gif') }}</a>
+					<a href="/users/{{$user->id}}?page={{ Input::get('page') }}" title="Edit Record">{{ Helpers::image('img/icon_edit_16x16.gif') }}</a> &nbsp;&nbsp;
+					<a onclick="return confirm('Are you sure you wish to delete this record?');" href="/users/{{$user->id}}/delete?page={{ Input::get('page') }}" title="Delete Record">{{ Helpers::image('img/icon_trash_16x16.gif') }}</a>
 				</td>
 
 			</tr>
 		@endforeach
 	</table>
-
 
 		<?= $users->links(); ?>
 

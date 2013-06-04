@@ -2,7 +2,7 @@
 
 class CompaniesController extends BaseController {
 
-	public $perPage = 12;
+	public $perPage = 20;
 	public $where   = [];
 
 	/**

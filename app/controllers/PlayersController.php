@@ -2,7 +2,7 @@
 
 class PlayersController extends BaseController {
 
-	public $perPage = 14;
+	public $perPage = 20;
 	public $where   = [];
 
 	/**

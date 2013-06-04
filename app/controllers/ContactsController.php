@@ -2,7 +2,7 @@
 
 class ContactsController extends BaseController {
 
-	public $perPage = 12;
+	public $perPage = 20;
 	public $where   = [];
 	public $status = [
 		''         => 'Select Status',

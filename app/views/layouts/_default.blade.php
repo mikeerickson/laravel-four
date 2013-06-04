@@ -21,7 +21,7 @@
  	<script type="text/javascript" src="/js/parsley.min.js"></script>
  	<script type="text/javascript" src="/js/moment.js"></script>
 	<script type="text/javascript" src="/js/main.js"></script>
-	<!-- end: JS -->
+	<script type="text/javascript" src="/js/underscore-1.4.4.min.js"></script>
 
 	<!-- start: CSS -->
 	<link rel="stylesheet" href="/css/default.css" />
@@ -64,7 +64,7 @@
 			color: #606060;
 			text-align: left;
 		}
-		body { margin-top: 20px; }
+		body { margin-top: 20px; font-size: 12px;}
 	</style>
 
 	<script>

@@ -468,6 +468,11 @@ class Helpers {
 			$startRec = ($currPage-1) * $perPage + 1;
 		$endRec     = $startRec + $pageCount - 1;
 
+		if($pageCount == $recCount )
+			$startRec = 1;
+		if($endRec >= $recCount)
+				$endRec = $recCount;
+
 		return $startRec.' to '.$endRec.' of '.$recCount;
 	}
 
