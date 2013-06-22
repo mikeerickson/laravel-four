@@ -4,5 +4,3 @@
 @foreach($contacts as $contact)
 	{{ $contact->lname }} </br>
 @endforeach
-
-
