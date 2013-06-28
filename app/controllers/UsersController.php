@@ -4,11 +4,17 @@ class UsersController extends BaseController {
 
 	public $perPage = 20;
 	public $where   = [];
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
+	/* TODO: Pull this data from model method */
+	public $category = [
+		''         => 'Select Category',
+		'parent'   => 'Parent',
+		'student'  => 'Student',
+		'dog'      => 'Dog',
+		'relative' => 'Relative',
+		'brother'  => 'Brother',
+		'sister'   => 'Sister'
+	];
+
 	public function index()
 	{
 
@@ -23,11 +29,11 @@ class UsersController extends BaseController {
 		$recMessage = Helpers::recMessage($currPage, $this->perPage, $pageCount, $recCount);
 
 		$data = array(
-				'title'     => 'Users',
+				'title'      => 'Users',
 				'recMessage' => $recMessage,
-				'users'     => $users,
-				'username'  => Cookie::get('username'),
-				'password'  => Cookie::get('password')
+				'users'      => $users,
+				'username'   => Cookie::get('username'),
+				'password'   => Cookie::get('password')
 			);
 
 		return View::make('users.index',$data);
@@ -50,7 +56,25 @@ class UsersController extends BaseController {
 	 */
 	public function store()
 	{
-		//
+		$validation = User::validate_edit(Input::all());
+		if($validation->fails()) {
+			return Redirect::to_route('edit_user',array(Input::get('id')))
+				->with_errors($validation)
+				->with_input()
+				->with('msg_type','error');
+		} else {
+			User::update(Input::get('id'), array(
+				'username' => Input::get('username'),
+				'email'    => Input::get('email'),
+				'category' => Input::get('category'),
+				'active'   => Input::get('active') ? 1 : 0
+			));
+
+			Session::flash('message','{"msgType": "alert-success", "msgHdr": "Success", "msgBody": "Contact Created Successfully"}');
+			return Redirect::to(URL::to_route('users').'?page='.Input::get('page'));
+
+		}
+	
 	}
 
 	/**
@@ -61,6 +85,7 @@ class UsersController extends BaseController {
 	public function show($id)
 	{
 		//
+		return "show";
 	}
 
 	/**
@@ -70,7 +95,19 @@ class UsersController extends BaseController {
 	 */
 	public function edit($id)
 	{
-		return "Edit User {$id}";
+		$user = User::find($id);
+		if($user) {
+			$data = [
+				'title' => 'Users',
+				'category' => $this->category,
+				'user'  => $user
+			];
+			return View::make('users.edit',$data);
+		}
+		else {
+			Session::flash('message','{"msgType": "alert-error", "msgHdr": "Database Error", "msgBody": "Unable to Edit Record ['.$id.'].<br />Please contact Database Administrator."}');
+			return Redirect::to(URL::route('users.index').'?page='.Input::get('page'));
+		}
 	}
 
 	/**
@@ -80,7 +117,17 @@ class UsersController extends BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$data = [
+			'username'  => Input::get('username'),
+			'email'  => Input::get('email'),
+			'category' => Input::get('category'),
+			'active' => Input::get('active') ? 1 : 0
+		];
+
+		$contact = User::find($id)->where('id', Input::get('id'))->update($data);
+		Session::flash('message','{"msgType": "alert-success", "msgHdr": "Success", "msgBody": "Contact Updated Successfully"}');
+		return Redirect::to(URL::route('users.index').'?page='.Input::get('page'));
+		//}
 	}
 
 	/**

@@ -17,7 +17,7 @@
 	<script type="text/javascript" src="/js/bootstrap.js"></script>
 	<script type="text/javascript" src="/js/msgbox/jquery.msgbox.min.js"></script>
 	<script type="text/javascript" src="/js/humane.js"></script>
-	<script type="text/javascript" src="/js/angular-1.0.5.js"></script>
+	<script type="text/javascript" src="/js/angular-1.0.6-min.js"></script>
  	<script type="text/javascript" src="/js/parsley.min.js"></script>
  	<script type="text/javascript" src="/js/moment.js"></script>
 	<script type="text/javascript" src="/js/main.js"></script>

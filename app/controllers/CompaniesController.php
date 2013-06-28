@@ -73,7 +73,18 @@ class CompaniesController extends BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		$company = Company::find($id);
+		if($company) {
+			$data = [
+				'title'    => 'Companies',
+				'company'  => $company
+			];
+			return View::make('companies.edit',$data);
+		}
+		else {
+			Session::flash('message','{"msgType": "alert-error", "msgHdr": "Database Error", "msgBody": "Unable to Edit Record ['.$id.'].<br />Please contact Database Administrator."}');
+			return Redirect::to(URL::route('companies.index').'?page='.Input::get('page'));
+		}
 	}
 
 	/**
@@ -95,7 +106,7 @@ class CompaniesController extends BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		return "Deleting {$id}";
 	}
 
 }

@@ -139,7 +139,6 @@ Route::get('/blade', function() {
 	//return View::make('hello')->with($data);
 });
 
-// localhost:8000/users
 Route::resource('users', 'UsersController');
 
 Route::resource('photos', 'PhotosController');
@@ -153,11 +152,5 @@ Route::resource('animals', 'AnimalsController');
 Route::resource('players', 'PlayersController');
 
 Route::resource('companies', 'CompaniesController');
-
-Route::resource('dogs', 'DogsController');
-
-Route::resource('dogs', 'DogsController');
-
-Route::resource('dogs', 'DogsController');
 
 Route::resource('dogs', 'DogsController');
