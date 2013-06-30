@@ -17,18 +17,19 @@
 		<th width='30%'>E-Mail</th>
 		<th width='15%'>Category</th>
 		<th width='15%'>Updated</th>
-		<th align='middle'style='text-align: center'>- Actions -</th>
+		<th width='10%' align='middle'style='text-align: center'>- Actions -</th>
 
 
 		@foreach ( $users as $user )
 
 			<tr>
 <!-- 				<td align='center'>{{ $user->active ? Form::checkbox('checkbox','1',true,array('disabled' => 'true')) : Form::checkbox('checkbox','1',false, array('disabled' => 'true')) }}</td>
- -->					@if ($user->active)
-						<td> <span class="label label-success">Active</span> </td>
-					@else
-						<td> <span class="label">Inactive</span> </td>
-					@endif
+ -->
+ 				@if ($user->active)
+					<td> <span class="label label-success">Active</span> </td>
+				@else
+					<td> <span class="label">Inactive</span> </td>
+				@endif
 
 				<td style='text-align: center'>{{ str_pad($user->id, 3, '0', STR_PAD_LEFT) }}</td>
 				<td>{{ ucwords($user->username) }}</td>
@@ -38,7 +39,7 @@
 				<!-- date("m-d-Y", strtotime($user->updated_at)) -->
 
 				<td>{{ ExpressiveDate::make($user->updated_at)->getRelativeDate() }}</td>
-				<td style="text-align: center;">
+				<td width='10%' style="text-align: center;">
 					<a href="/users/{{$user->id}}/edit?page={{ Input::get('page') }}" title="Edit Record">{{ Helpers::image('img/icon_edit_16x16.gif') }}</a> &nbsp;&nbsp;
 					<a onclick="return confirm('Are you sure you wish to delete this record?');" href="/users/{{$user->id}}/delete?page={{ Input::get('page') }}" title="Delete Record">{{ Helpers::image('img/icon_trash_16x16.gif') }}</a>
 				</td>

@@ -15,7 +15,6 @@ class ContactsController extends BaseController {
 	public function index()
 	{
 		//$contacts  = Contact::with('company')->orderBy('lname')->paginate($this->perPage);
-
 		$contacts  = Contact::contactList($this->perPage,$this->where);
 		if( count($contacts) == 0 )
 			return Redirect::to(URL::route('contacts.index').'?page=1');
@@ -70,22 +69,23 @@ class ContactsController extends BaseController {
 
 	public function show($id)
 	{
-		$contact = getContact($id);
+		$contact = Contact::find($id);
 		if($contact) {
 			$data = [
 				'title'    => 'Contacts',
+				'status'   => $this->status,
 				'contact'  => $contact
 			];
 			return View::make('contacts.show',$data);
 		}
-		else
-			return "No record found matching ID {$id}";
+		else {
+			Session::flash('message','{"msgType": "alert-error", "msgHdr": "Database Error", "msgBody": "Unable to Edit Record ['.$id.'].<br />Please contact Database Administrator."}');
+			return Redirect::to(URL::route('contacts.index').'?page='.Input::get('page'));
+		}
 	}
 
 	public function edit($id)
 	{
-
-		// query for record, if not found add a flash message and redirect to index method
 		$contact = Contact::find($id);
 		if($contact) {
 			$data = [
@@ -103,7 +103,6 @@ class ContactsController extends BaseController {
 
 	public function update($id)
 	{
-
 		$data = [
 			'lname'  => Input::get('lname'),
 			'fname'  => Input::get('fname'),
@@ -112,11 +111,10 @@ class ContactsController extends BaseController {
 			'phone'  => Input::get('phone'),
 			'active' => Input::get('active') ? 1 : 0
 		];
-
+		$fullname = Input::get('fname').' '.Input::get('lname');
 		$contact = Contact::find($id)->where('id', Input::get('id'))->update($data);
-		Session::flash('message','{"msgType": "alert-success", "msgHdr": "Success", "msgBody": "Contact Updated Successfully"}');
+		Session::flash('message','{"msgType": "alert-success", "msgHdr": "Record Update Successfully", "msgBody": "'.$fullname.' Updated Successfully"}');
 		return Redirect::to(URL::route('contacts.index').'?page='.Input::get('page'));
-		//}
 	}
 
 	public function destroy($id)

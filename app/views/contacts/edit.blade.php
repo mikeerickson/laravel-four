@@ -1,51 +1,53 @@
 @extends ('layouts._default')
 
 @section('content')
-	
-	{{ Form::open( 
+
+	{{ Form::open(
 		[
 			'id'			=> 'contact',
-			'method'        => 'put', 
+			'method'        => 'put',
 			'route'         => ['contacts.update',$contact->id],
 			'data-validate' => 'parsley',
 			'class'         => 'well well-large'
-		]) 
+		])
 	}}
 
 		{{ Form::hidden('id', $contact->id) }}
 		{{ Form::hidden('page', Input::get('page')) }}
 
-		<p>{{ Form::checkbox('active', '1', $contact->active ) }}&nbsp;Active</p>
+		<p>
+			<div class="switch" data-on-label="Active" data-off-label="Inactive" style="width: 125px;">
+				{{ Form::checkbox('active', '1', $contact->active ) }}
+			</div>
+		</p>
 
 		{{ Form::label('compName','Company Name:') }}
-		{{ Form::text('compName', (is_null($contact->company) ? "" : $contact->company->companyName), 
+		{{ Form::text('compName', (is_null($contact->company) ? "" : $contact->company->companyName),
 			['readonly' => 'true']) }}
 
 		{{ Form::label('lname','Last Name:') }}
-		{{ Form::text('lname', $contact->lname, 
+		{{ Form::text('lname', $contact->lname,
 			[
-				'data-required' => 'true',	
+				'data-required' => 'true',
 				'data-trigger'  => 'change',
-			]) 
+			])
 		}}
 
 		{{ Form::label('fname','First Name:') }}
-		{{ Form::text('fname', $contact->fname, 
+		{{ Form::text('fname', $contact->fname,
 			[
-				'data-required' => 'true',	
+				'data-required' => 'true',
 				'data-trigger'  => 'change',
-			]) 
+			])
 		}}
-
-
 		{{ Form::label('status','Status:') }}
-		{{ Form::select('status', $status, $contact->status, 
+		{{ Form::select('status', $status, $contact->status,
 			[
-				'class'         => '', 
-				'data-required' => 'true',	
-				'data-size'     => 'auto'
-			]) 
-		}} 
+				'data-required' => 'true',
+				'data-size'     => 'auto',
+				'style'			=> 'width: 220px'
+			])
+		}}
 
 		{{ Form::label('phone','Phone:') }}
 		{{ Form::text('phone', $contact->phone) }}
@@ -53,18 +55,18 @@
 		{{ Form::label('email','E Mail:') }}
 		{{ Form::text('email', $contact->email,
 			[
-				'data-required' => 'true',	
+				'data-required' => 'true',
 				'data-trigger'  => 'change',
-				'data-type'	    => 'email',			
-			])  
+				'data-type'	    => 'email',
+			])
 		}}
-		
+
 		<div id="toolbar">
-			<p> {{ Form::submit('Save',['class' => 'btn btn-small btn-primary']) }}
+			<p> {{ Form::submit('Save',['class' => 'btn-small btn btn-primary']) }}
 			&nbsp;&nbsp;<a href="/contacts?page={{ Input::get('page') }}">Cancel</a>
 			</p>
 		</div>
-	
+
 	{{ Form::close() }}
 @stop
 

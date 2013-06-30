@@ -22,6 +22,8 @@
  	<script type="text/javascript" src="/js/moment.js"></script>
 	<script type="text/javascript" src="/js/main.js"></script>
 	<script type="text/javascript" src="/js/underscore-1.4.4.min.js"></script>
+	<script type="text/javascript" src="/js/bootstrapSwitch.js"></script>
+	<script type="text/javascript" src="/js/select2.js"></script>
 
 	<!-- start: CSS -->
 	<link rel="stylesheet" href="/css/default.css" />
@@ -31,6 +33,8 @@
 	<link rel="stylesheet" href="/css/bootstrap-responsive.min.css" />
 	<link rel="stylesheet" href="/css/style.css" id="base-style" />
 	<link rel="stylesheet" href="/css/style-responsive.css" id="base-style-responsive" />
+	<link rel="stylesheet" href="/css/bootstrapSwitch.css" />
+	<link rel="stylesheet" href="/css/select2.css" />
 	<!-- end: CSS -->
 
 
@@ -65,6 +69,7 @@
 			text-align: left;
 		}
 		body { margin-top: 20px; font-size: 12px;}
+		#msgHdr { padding-bottom: 5px;}
 	</style>
 
 	<script>
@@ -72,6 +77,8 @@
 			console.log('Moment JS Date: '+moment().format('MMMM Do YYYY, h:mm:ss a'));
 			console.log(moment().subtract('seconds', 32).fromNow());
 
+			$('select').select2();
+			console.log($('select'));
 /* 			alert(jQuery.fn.jquery); */
 
 			// dont move this into main.js, needs to stay here ot work
@@ -134,14 +141,6 @@
 	</div>
 
 	<script src="/js/laravel.js"></script>
-
-<!--
-    <script type="text/javascript">
-		window.onload=function(){
-			$('select').selectpicker();
-		};
-    </script>
--->
 
 	<script>
 	  @if (!is_null(Session::get('message')))

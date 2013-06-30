@@ -18,7 +18,7 @@
 			<th>Phone</th>
 			<th>Status</th>
 			<th>Updated</th>
-			<th style="text-align: center;"> - Actions - </th>
+			<th width="10%" style="text-align: center;"> - Actions - </th>
 
 		<tbody>
 			@foreach ($contacts as $contact)
@@ -55,7 +55,7 @@
 
 					<td> <span class="label {{ $class }}">{{ ucwords($contact->status) }}</span> </td>
 					<td>{{ ExpressiveDate::make($contact->updated_at)->getRelativeDate() }}</td>
-					<td style="text-align: center">
+					<td width="10%" style="text-align: center">
 
 						<a href="/contacts/{{$contact->id}}/edit?page={{ Input::get('page') }}"
 						   title="Edit Record"><img src="img/icon_edit_16x16.gif">

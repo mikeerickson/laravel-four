@@ -46,7 +46,7 @@ class UsersController extends BaseController {
 	 */
 	public function create()
 	{
-		//
+		return View::make('users.create');
 	}
 
 	/**
@@ -70,7 +70,7 @@ class UsersController extends BaseController {
 				'active'   => Input::get('active') ? 1 : 0
 			));
 
-			Session::flash('message','{"msgType": "alert-success", "msgHdr": "Success", "msgBody": "Contact Created Successfully"}');
+			Session::flash('message','{"msgType": "alert-success", "msgHdr": "Record Update Successfully", "msgBody": "'.ucwords(Input::get('username')).' Updated Successfully"}');
 			return Redirect::to(URL::to_route('users').'?page='.Input::get('page'));
 
 		}
@@ -125,7 +125,7 @@ class UsersController extends BaseController {
 		];
 
 		$contact = User::find($id)->where('id', Input::get('id'))->update($data);
-		Session::flash('message','{"msgType": "alert-success", "msgHdr": "Success", "msgBody": "Contact Updated Successfully"}');
+		Session::flash('message','{"msgType": "alert-success", "msgHdr": "Record Update Successfully", "msgBody": "'.ucwords(Input::get('username')).' Updated Successfully"}');
 		return Redirect::to(URL::route('users.index').'?page='.Input::get('page'));
 		//}
 	}

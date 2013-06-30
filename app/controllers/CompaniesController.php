@@ -5,14 +5,8 @@ class CompaniesController extends BaseController {
 	public $perPage = 20;
 	public $where   = [];
 
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
 	public function index()
 	{
-
 		$companies = Company::getCompanies($this->perPage,$this->where);
 		if( count($companies) == 0 )
 			return Redirect::to(URL::route('companies.index').'?page=1');
@@ -95,7 +89,20 @@ class CompaniesController extends BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$data = [
+			'companyName' => Input::get('companyName'),
+			'address'     => Input::get('address'),
+			'city'        => Input::get('city'),
+			'state'       => Input::get('state'),
+			'zip'         => Input::get('zip')
+		];
+		$company = Company::find($id)->where('id', $id)->update($data);
+		if($company)
+			Session::flash('message','{"msgType": "alert-success", "msgHdr": "Record Update Successfully", "msgBody": "'.Input::get('companyName').' Updated Successfully"}');
+		else
+			Session::flash('message','{"msgType": "alert-error", "msgHdr": "Database Error", "msgBody": "Unable to Update Record ['.$id.'].<br />Please contact Database Administrator."}');
+
+		return Redirect::to(URL::route('companies.index').'?page='.Input::get('page'));
 	}
 
 	/**
