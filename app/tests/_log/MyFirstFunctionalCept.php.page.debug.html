@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Home</title>
+	<meta name="viewport" content="width=device-width">
+
+
+	<!-- start: Mobile Specific -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- end: Mobile Specific -->
+
+	<!-- start: JS -->
+	<script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="/js/utils.js"></script>
+	<script type="text/javascript" src="/js/bootstrap.js"></script>
+	<script type="text/javascript" src="/js/msgbox/jquery.msgbox.min.js"></script>
+	<script type="text/javascript" src="/js/humane.js"></script>
+	<script type="text/javascript" src="/js/angular-1.0.6-min.js"></script>
+ 	<script type="text/javascript" src="/js/parsley.min.js"></script>
+ 	<script type="text/javascript" src="/js/moment.js"></script>
+	<script type="text/javascript" src="/js/main.js"></script>
+	<script type="text/javascript" src="/js/underscore-1.4.4.min.js"></script>
+	<script type="text/javascript" src="/js/bootstrapSwitch.js"></script>
+	<script type="text/javascript" src="/js/select2.js"></script>
+
+	<!-- start: CSS -->
+	<link rel="stylesheet" href="/css/default.css" />
+	<link rel="stylesheet" href="/js/msgbox/jquery.msgbox.css" />
+	<link rel="stylesheet" href="/css/original.css" />
+	<link rel="stylesheet" href="/css/bootstrap.min.css" id="bootstrap-style" />
+	<link rel="stylesheet" href="/css/bootstrap-responsive.min.css" />
+	<link rel="stylesheet" href="/css/style.css" id="base-style" />
+	<link rel="stylesheet" href="/css/style-responsive.css" id="base-style-responsive" />
+	<link rel="stylesheet" href="/css/bootstrapSwitch.css" />
+	<link rel="stylesheet" href="/css/select2.css" />
+	<!-- end: CSS -->
+
+
+	<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	  	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<link id="ie-style" href="css/ie.css" rel="stylesheet">
+	<![endif]-->
+
+	<!--[if IE 9]>
+		<link id="ie9style" href="css/ie9.css" rel="stylesheet">
+	<![endif]-->
+
+	<!-- start: Favicon -->
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<!-- end: Favicon -->
+
+	<link rel="stylesheet" href="/css/bootstrap-select.css" />
+	<script src="/js/bootstrap-select.js"></script>
+
+	<link rel="stylesheet" href="/css/validation.css" type="text/css" media="screen" charset="utf-8">
+
+	<style>
+		select { width: 215px; }
+		.dropdown-menu { background-color: black; color: green; border: 0px;}
+		footer {
+			background-color: white;
+			font-size: 11px;
+			margin: 40px 10px 5px 10px;
+			border-top: 1px solid #606060;
+			color: #606060;
+			text-align: left;
+		}
+		body { margin-top: 20px; font-size: 12px;}
+		#msgHdr { padding-bottom: 5px;}
+	</style>
+
+	<script>
+		$(function() {
+			console.log('Moment JS Date: '+moment().format('MMMM Do YYYY, h:mm:ss a'));
+			console.log(moment().subtract('seconds', 32).fromNow());
+
+			$('select').select2();
+			console.log($('select'));
+/* 			alert(jQuery.fn.jquery); */
+
+			// dont move this into main.js, needs to stay here ot work
+			$('#contact').parsley( {listeners: {
+			    onFormSubmit: function ( isFormValid, event ) {
+			        if ( !isFormValid  ) {
+						$("#msgAlert").show();
+						$("#msgAlert").addClass('alert-error');
+						$("#msgHdr").html("Validation Error");
+						$("#msgBody").html("You have errors in your form, pleaes correct and try again.");
+			        }
+			    }
+			}});
+
+		});
+	</script>
+
+</head>
+
+<body id="body">
+
+	<div class="wrapper">
+		<div id="userinfo">
+					</div>
+
+		<header>
+			<h1>Home</h1>
+		</header>
+
+		<nav>
+			<ul ul class="nav nav-tabs">
+			  <li class="active"><a href="/">Home</a></li>
+			  <li class=""><a href="/companies">Companies</a></li>
+			  <li class=""><a href="/contacts">Contacts</a></li>
+			  <li class=""><a href="/users">Users</a></li>
+			  <li class=""><a href="/players">Players</a></li>
+			</ul>
+		</nav>
+
+		<div id="msgAlert" class="alert" style="display: none;">
+			<a class="close" data-dismiss="alert" href="#">&times;</a>
+			<h4 id="msgHdr"></h4>
+			<div id="msgBody"> </div>
+		</div>
+
+		<div role="main" class="main">
+			<div class="home">
+				
+<span class="span11" style="padding-bottom: 30px;">
+<p>
+	<img src="img/baseball.jpg" width="100" style="float: left; padding-right: 10px;" height="95" alt="Baseball">
+
+<strong>Baseball</strong> Ad literally culpa, odio accusamus gastropub bicycle rights proident brooklyn locavore try-hard.  Mustache church-key fanny pack, small batch 8-bit hella lo-fi elit reprehenderit.  Exercitation narwhal 90's, hoodie williamsburg est  echo park blog photo booth velit.  Kale chips consectetur duis  ut nihil, anim  farm-to-table vero sartorial sint  narwhal.  Fanny pack Austin pug, odio adipisicing flannel sunt church-key selfies fugiat  locavore single-origin coffee godard.  Quis polaroid pug bespoke, sapiente proident wes anderson forage dolore church-key nostrud chambray deep v ethical tumblr.  Do fashion axe letterpress, scenester vero cred accusamus +1.
+</p>
+</span>
+
+<span class="span11" style="padding-bottom: 30px;">
+<p>
+<img src="img/softball.jpg" style="float: left; padding-right: 10px;" width="100" height="95" alt="Volleyball">
+	<strong>Softball</strong> Bespoke banksy neutra deep v, irony stumptown gentrify twee letterpress butcher four loko.  Artisan actually pork belly 90's fashion axe.  Yr leggings whatever, art party dreamcatcher vegan PBR lomo umami keytar iphone.  Sriracha tousled semiotics beard +1.  Bicycle rights biodiesel hashtag art party tumblr small batch, aesthetic marfa american apparel seitan tofu trust fund ennui gentrify.  Blog vegan pour-over wayfarers, blue bottle street art occupy viral quinoa.  Portland flannel literally umami mlkshk, readymade narwhal etsy.
+
+</p>
+</span>
+
+<span class="span11" style="padding-bottom: 30px;">
+<p>
+	<img src="img/lacrosse.jpg" style="float: left; padding-right: 10px;" width="100" height="95" alt="Volleyball">
+
+<strong>Lacrosse</strong> Ad literally culpa, odio accusamus gastropub bicycle rights proident brooklyn locavore try-hard.  Mustache church-key fanny pack, small batch 8-bit hella lo-fi elit reprehenderit.  Exercitation narwhal 90's, hoodie williamsburg est  echo park blog photo booth velit.  Kale chips consectetur duis  ut nihil, anim  farm-to-table vero sartorial sint  narwhal.  Fanny pack Austin pug, odio adipisicing flannel sunt church-key selfies fugiat  locavore single-origin coffee godard.  Quis polaroid pug bespoke, sapiente proident wes anderson forage dolore church-key nostrud chambray deep v ethical tumblr.  Do fashion axe letterpress, scenester vero cred accusamus +1.
+</p>
+</span>
+
+<span class="span11" style="padding-bottom: 30px;">
+<p>
+	<img src="img/volleyball.jpg" style="float: left; padding-right: 10px;" width="100" height="95" alt="Volleyball">
+
+<strong>Volleyball</strong> Bespoke banksy neutra deep v, irony stumptown gentrify twee letterpress butcher four loko.  Artisan actually pork belly 90's fashion axe.  Yr leggings whatever, art party dreamcatcher vegan PBR lomo umami keytar iphone.  Sriracha tousled semiotics beard +1.  Bicycle rights biodiesel hashtag art party tumblr small batch, aesthetic marfa american apparel seitan tofu trust fund ennui gentrify.  Blog vegan pour-over wayfarers, blue bottle street art occupy viral quinoa.  Portland flannel literally umami mlkshk, readymade narwhal etsy.
+</p>
+</span>
+			</div>
+		</div>
+
+		<div id="footer">
+	        Rendered On: 2013-06-30 19:03:48		</div>
+
+	</div>
+
+	<script src="/js/laravel.js"></script>
+
+	<script>
+	  
+	</script>
+
+
+</body>
+
+</html>
