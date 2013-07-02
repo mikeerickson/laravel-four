@@ -11,8 +11,7 @@
 	</div>
 
 	<table class="table table-striped table-bordered bootstrap-datatable datatable">
-		<th width='5%'>Active</th>
-		<th width='5%' style='text-align: center'>ID</th>
+		<th width='5%'>Status</th>
 		<th width='20%'>User</th>
 		<th width='30%'>E-Mail</th>
 		<th width='15%'>Category</th>
@@ -23,15 +22,13 @@
 		@foreach ( $users as $user )
 
 			<tr>
-<!-- 				<td align='center'>{{ $user->active ? Form::checkbox('checkbox','1',true,array('disabled' => 'true')) : Form::checkbox('checkbox','1',false, array('disabled' => 'true')) }}</td>
- -->
+
  				@if ($user->active)
 					<td> <span class="label label-success">Active</span> </td>
 				@else
 					<td> <span class="label">Inactive</span> </td>
 				@endif
 
-				<td style='text-align: center'>{{ str_pad($user->id, 3, '0', STR_PAD_LEFT) }}</td>
 				<td>{{ ucwords($user->username) }}</td>
 				<td>{{ Helpers::mailto(strtolower($user->email)) }}</td>
 				<td>{{ ucwords($user->category) }}</td>

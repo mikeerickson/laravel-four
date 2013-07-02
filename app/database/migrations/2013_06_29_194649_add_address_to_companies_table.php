@@ -12,7 +12,7 @@ class AddAddressToCompaniesTable extends Migration {
 	public function up()
 	{
 		Schema::table('companies', function($table) {
-			$table->string('address');			
+			$table->string('address');
 		});
 	}
 
@@ -24,7 +24,7 @@ class AddAddressToCompaniesTable extends Migration {
 	public function down()
 	{
 		Schema::table('companies', function($table) {
-			$table->drop_column('address');			
+			$table->drop_column('address');
 		});
 	}
 

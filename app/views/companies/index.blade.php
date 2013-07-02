@@ -11,8 +11,6 @@
 	</div>
 
 	<table class="table table-striped table-bordered bootstrap-datatable datatable">
-<!-- 			<th width='5%' style='text-align: center'>ID</th>
--->			
  			<th>Company</th>
 			<th>Address</th>
 			<th>City</th>
@@ -23,8 +21,7 @@
 		<tbody>
 		@foreach ($companies as $company)
 		<tr>
-<!-- 			<td style='text-align: center'>{{ str_pad($company->id, 3, '0', STR_PAD_LEFT) }}</td>
- -->			<td>{{ $company->companyName }} </td>
+			<td>{{ $company->companyName }} </td>
 			<td>{{ $company->address }} </td>
 			<td>{{ $company->city }} </td>
 			<td>{{ $company->state }} </td>

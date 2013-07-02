@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class AddAddressToCompaniesTable extends Migration {
+class CreateCatsTable extends Migration {
 
     /**
      * Run the migrations.
@@ -12,8 +12,12 @@ class AddAddressToCompaniesTable extends Migration {
      */
     public function up()
     {
-        Schema::table('companies', function(Blueprint $table) {
-            $table->string('address');
+        Schema::create('cats', function(Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+			$table->string('type');
+			$table->integer('age');
+            $table->timestamps();
         });
     }
 
@@ -24,9 +28,7 @@ class AddAddressToCompaniesTable extends Migration {
      */
     public function down()
     {
-        Schema::table('companies', function(Blueprint $table) {
-            $table->dropColumn('address');
-        });
+        Schema::drop('cats');
     }
 
 }

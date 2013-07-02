@@ -78,7 +78,6 @@
 			console.log(moment().subtract('seconds', 32).fromNow());
 
 			$('select').select2();
-			console.log($('select'));
 /* 			alert(jQuery.fn.jquery); */
 
 			// dont move this into main.js, needs to stay here ot work

@@ -11,8 +11,6 @@
 	</div>
 
 	<table class="table table-striped table-bordered bootstrap-datatable datatable">
-<!-- 			<th width='5%' style='text-align: center'>ID</th>
- -->			
  			<th width="5%" style="text-align: center;">No</th>
 			<th>Name</th>
 			<th>Position</th>
@@ -22,8 +20,11 @@
 
 		<tbody>
 			@foreach ($players as $player)
-			<tr>
-				<!-- <td style='text-align: center'>{{ str_pad($player->id, 3, '0', STR_PAD_LEFT) }}</td> -->
+			@if($player->lname == 'erickson')
+				<tr style="font-weight: bold; color: green;">
+			@else
+				<tr>
+			@endif
 				<td style="text-align: center;">{{ $player->number }} </td>
 				<td>{{ ucwords($player->lname) }}, {{ ucwords($player->fname) }}</td>
 				<td>{{ ucwords($player->position) }} </td>

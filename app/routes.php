@@ -47,11 +47,7 @@ Route::get('/twig', function() {
 	$where   = [];
 	$perPage = 10;
 
-/*
 	ChromePhp::log('test twig route');
-	ChromePhp::log('test twig route');
-*/
-
 /*
 	$date = ExpressiveDate::make(); //var_dump($date);
 
@@ -80,7 +76,7 @@ Route::get('/twig', function() {
 
 	$recMessage = Helpers::recMessage($currPage, $perPage, $pageCount, $recCount);
 
-	$data = [	"fname" 	 => "mike",
+	$data = [ 	"fname" 	 => "mike",
 				"lname"      => "erickson",
 				"kids"       => ['joelle', 'brady', 'bailey', 'trevor'],
 				'users'      => $users,
@@ -98,14 +94,11 @@ Route::get('/twig', function() {
 								]
 			];
 
-
 	return View::make('twig.test', $data);
 });
 
 
 Route::get('/blade', function() {
-
-	ChromePhp::log('test blade route');
 
 	$date = ExpressiveDate::make(); var_dump($date);
 	var_dump($date->minusSeconds(30)->getRelativeDate());
@@ -154,3 +147,5 @@ Route::resource('players', 'PlayersController');
 Route::resource('companies', 'CompaniesController');
 
 Route::resource('dogs', 'DogsController');
+
+Route::resource('cats', 'CatsController');

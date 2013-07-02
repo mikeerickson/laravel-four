@@ -22,14 +22,15 @@
 
 		<tbody>
 			@foreach ($contacts as $contact)
-				<tr>
+
+				{{ (($contact->lname == 'Erickson') ? '<tr style="color: green; font-weight: bold;">': '<tr>') }}
 					@if ($contact->active)
 						<td> <span class="label label-success">Active</span> </td>
 					@else
 						<td> <span class="label">Inactive</span> </td>
 					@endif
 					<td>{{ ucwords($contact->lname) }}, {{ ucwords($contact->fname) }}</td>
-					<td> {{ is_null($contact->company) ? "" : $contact->company->companyName }} </td>
+					<td>{{ is_null($contact->company) ? "" : $contact->company->companyName }} </td>
 					<td>{{ Helpers::mailto(strtolower($contact->email)) }}</td>
 					<td>{{ Helpers::formatPhone($contact->phone) }}</td>
 
