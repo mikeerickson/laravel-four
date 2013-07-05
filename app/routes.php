@@ -147,5 +147,3 @@ Route::resource('players', 'PlayersController');
 Route::resource('companies', 'CompaniesController');
 
 Route::resource('dogs', 'DogsController');
-
-Route::resource('cats', 'CatsController');

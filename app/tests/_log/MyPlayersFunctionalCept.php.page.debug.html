@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Home</title>
+	<title>Contacts</title>
 	<meta name="viewport" content="width=device-width">
 
 
@@ -104,14 +104,14 @@
 					</div>
 
 		<header>
-			<h1>Home</h1>
+			<h1>Contacts</h1>
 		</header>
 
 		<nav>
 			<ul ul class="nav nav-tabs">
-			  <li class="active"><a href="/">Home</a></li>
+			  <li class=""><a href="/">Home</a></li>
 			  <li class=""><a href="/companies">Companies</a></li>
-			  <li class=""><a href="/contacts">Contacts</a></li>
+			  <li class="active"><a href="/contacts">Contacts</a></li>
 			  <li class=""><a href="/users">Users</a></li>
 			  <li class=""><a href="/players">Players</a></li>
 			</ul>
@@ -126,42 +126,28 @@
 		<div role="main" class="main">
 			<div class="home">
 				
-<span class="span11" style="padding-bottom: 30px;">
-<p>
-	<img src="img/baseball.jpg" width="100" style="float: left; padding-right: 10px;" height="95" alt="Baseball">
+	<form method="POST" action="http://localhost/contacts/93" accept-charset="UTF-8" id="contact" data-validate="parsley" class="well well-large"><input name="_method" type="hidden" value="PUT"><input name="_token" type="hidden" value="cHSGywLzgAabYXWmwSSsNXYuZBAHjHH8sFGWwboO">
+		<input name="id" type="hidden" value="93">		<input name="page" type="hidden">
+		<p>
+			<div class="switch" data-on-label="Active" data-off-label="Inactive" style="width: 125px;">
+				<input checked="checked" name="active" type="checkbox" value="1">			</div>
+		</p>
 
-<strong>Baseball</strong> Ad literally culpa, odio accusamus gastropub bicycle rights proident brooklyn locavore try-hard.  Mustache church-key fanny pack, small batch 8-bit hella lo-fi elit reprehenderit.  Exercitation narwhal 90's, hoodie williamsburg est  echo park blog photo booth velit.  Kale chips consectetur duis  ut nihil, anim  farm-to-table vero sartorial sint  narwhal.  Fanny pack Austin pug, odio adipisicing flannel sunt church-key selfies fugiat  locavore single-origin coffee godard.  Quis polaroid pug bespoke, sapiente proident wes anderson forage dolore church-key nostrud chambray deep v ethical tumblr.  Do fashion axe letterpress, scenester vero cred accusamus +1.
-</p>
-</span>
+		<label for="compName">Company Name:</label>		<input readonly="true" name="compName" type="text" value="Los Angeles Angels of Anaheim" id="compName">
+		<label for="lname">Last Name:</label>		<input data-required="true" data-trigger="change" name="lname" type="text" value="Erickson" id="lname">
+		<label for="fname">First Name:</label>		<input data-required="true" data-trigger="change" name="fname" type="text" value="Joelle" id="fname">		<label for="status">Status:</label>		<select data-required="true" data-size="auto" style="width: 220px" id="status" name="status"><option value="">Select Status</option><option value="active">Active</option><option value="inactive" selected="selected">Inactive</option><option value="pending">Pending</option><option value="banned">Banned</option></select>
+		<label for="phone">Phone:</label>		<input name="phone" type="text" value="6575551212" id="phone">
+		<label for="email">E Mail:</label>		<input data-required="true" data-trigger="change" data-type="email" name="email" type="text" value="joelle.erickson@mac.com" id="email">
+		<div id="toolbar">
+			<p> <input class="btn-small btn btn-primary" type="submit" value="Save">			&nbsp;&nbsp;<a href="/contacts?page=">Cancel</a>
+			</p>
+		</div>
 
-<span class="span11" style="padding-bottom: 30px;">
-<p>
-<img src="img/softball.jpg" style="float: left; padding-right: 10px;" width="100" height="95" alt="Volleyball">
-	<strong>Softball</strong> Bespoke banksy neutra deep v, irony stumptown gentrify twee letterpress butcher four loko.  Artisan actually pork belly 90's fashion axe.  Yr leggings whatever, art party dreamcatcher vegan PBR lomo umami keytar iphone.  Sriracha tousled semiotics beard +1.  Bicycle rights biodiesel hashtag art party tumblr small batch, aesthetic marfa american apparel seitan tofu trust fund ennui gentrify.  Blog vegan pour-over wayfarers, blue bottle street art occupy viral quinoa.  Portland flannel literally umami mlkshk, readymade narwhal etsy.
-
-</p>
-</span>
-
-<span class="span11" style="padding-bottom: 30px;">
-<p>
-	<img src="img/lacrosse.jpg" style="float: left; padding-right: 10px;" width="100" height="95" alt="Volleyball">
-
-<strong>Lacrosse</strong> Ad literally culpa, odio accusamus gastropub bicycle rights proident brooklyn locavore try-hard.  Mustache church-key fanny pack, small batch 8-bit hella lo-fi elit reprehenderit.  Exercitation narwhal 90's, hoodie williamsburg est  echo park blog photo booth velit.  Kale chips consectetur duis  ut nihil, anim  farm-to-table vero sartorial sint  narwhal.  Fanny pack Austin pug, odio adipisicing flannel sunt church-key selfies fugiat  locavore single-origin coffee godard.  Quis polaroid pug bespoke, sapiente proident wes anderson forage dolore church-key nostrud chambray deep v ethical tumblr.  Do fashion axe letterpress, scenester vero cred accusamus +1.
-</p>
-</span>
-
-<span class="span11" style="padding-bottom: 30px;">
-<p>
-	<img src="img/volleyball.jpg" style="float: left; padding-right: 10px;" width="100" height="95" alt="Volleyball">
-
-<strong>Volleyball</strong> Bespoke banksy neutra deep v, irony stumptown gentrify twee letterpress butcher four loko.  Artisan actually pork belly 90's fashion axe.  Yr leggings whatever, art party dreamcatcher vegan PBR lomo umami keytar iphone.  Sriracha tousled semiotics beard +1.  Bicycle rights biodiesel hashtag art party tumblr small batch, aesthetic marfa american apparel seitan tofu trust fund ennui gentrify.  Blog vegan pour-over wayfarers, blue bottle street art occupy viral quinoa.  Portland flannel literally umami mlkshk, readymade narwhal etsy.
-</p>
-</span>
-			</div>
+	</form>			</div>
 		</div>
 
 		<div id="footer">
-	        Rendered On: 2013-07-04 16:50:11		</div>
+	        Rendered On: 2013-07-04 17:01:40		</div>
 
 	</div>
 

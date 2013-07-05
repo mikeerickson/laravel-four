@@ -1,0 +1,1 @@
+function formFocus(){if(document.forms.length>0){var e=["text","checkbox","radio","select-one","select-multiple","textarea"],t=document.forms[document.forms.length-1];for(var n=0;n<t.elements.length;n++){var r=t.elements[n];for(var i=0;i<e.length;i++)if(r.getAttribute("type")==e[i]){r.focus();return!1}}}};

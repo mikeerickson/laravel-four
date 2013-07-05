@@ -1,5 +1,6 @@
 <?php
+
 $I = new TestGuy($scenario);
-$I->wantTo('verify the home page');
+$I->wantTo('verify lacrosse on the home page');
 $I->amOnPage('/');
 $I->see('Lacrosse');

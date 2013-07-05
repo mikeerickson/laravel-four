@@ -12,7 +12,7 @@
   console.log(multi);
 
   /* 
-  	greeting
+    greeting
   */
 
 
@@ -28,7 +28,7 @@
   console.log(greet("Kira"));
 
   /* Splat
-  */
+   */
 
 
   test = function() {
@@ -46,7 +46,7 @@
   test("one", "two", "three", "four", "five", "six", "seven", 121, 12);
 
   /* anonymous funtions
-  */
+   */
 
 
   (function(message) {
@@ -54,7 +54,7 @@
   })("Hello");
 
   /* random range
-  */
+   */
 
 
   rand = function(max, min) {
@@ -76,7 +76,7 @@
   console.log(" ");
 
   /* Objects
-  */
+   */
 
 
   obj = {
