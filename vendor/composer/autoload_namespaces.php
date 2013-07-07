@@ -25,6 +25,7 @@ return array(
     'Symfony\\Component\\Debug\\' => array($vendorDir . '/symfony/debug'),
     'Symfony\\Component\\CssSelector\\' => array($vendorDir . '/symfony/css-selector'),
     'Symfony\\Component\\Console\\' => array($vendorDir . '/symfony/console'),
+    'Symfony\\Component\\ClassLoader\\' => array($vendorDir . '/symfony/class-loader'),
     'Symfony\\Component\\BrowserKit\\' => array($vendorDir . '/symfony/browser-kit'),
     'Selenium' => array($vendorDir . '/alexandresalome/php-selenium/src'),
     'Psr\\Log\\' => array($vendorDir . '/psr/log'),
@@ -52,4 +53,6 @@ return array(
     'Carbon' => array($vendorDir . '/nesbot/carbon'),
     'Behat\\Mink\\Driver' => array($vendorDir . '/behat/mink-zombie-driver/src', $vendorDir . '/behat/mink-selenium2-driver/src', $vendorDir . '/behat/mink-selenium-driver/src', $vendorDir . '/behat/mink-browserkit-driver/src', $vendorDir . '/behat/mink-goutte-driver/src'),
     'Behat\\Mink' => array($vendorDir . '/behat/mink/src'),
+    'Barryvdh\\LaravelIdeHelper' => array($vendorDir . '/barryvdh/laravel-ide-helper/src'),
+    'Barryvdh' => array($vendorDir . '/barryvdh/reflection-docblock/src'),
 );

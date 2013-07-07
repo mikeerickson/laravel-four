@@ -6,9 +6,14 @@
 		"rcrowe/twigbridge": "0.1.*",
 		"jasonlewis/expressive-date": "1.*",
 		"ccampbell/chromephp": "dev-master",
-		"codeception/codeception": "dev-master"
+		"codeception/codeception": "dev-master",
+		"barryvdh/laravel-ide-helper": "1.*"
 	},
 	"scripts": {
+	    "post-update-cmd":[
+	        "php artisan ide-helper:generate",
+	        "php artisan optimize",
+	    ]
 	},
 	"autoload": {
 		"classmap": [

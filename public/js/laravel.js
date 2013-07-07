@@ -28,13 +28,13 @@
         return;
       }
 
-      var form = 
+      var form =
         $('<form>', {
           'method': 'POST',
           'action': link.attr('href')
         });
 
-      var token = 
+      var token =
         $('<input>', {
           'type': 'hidden',
           'name': 'csrf_token',

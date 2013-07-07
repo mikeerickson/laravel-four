@@ -21,7 +21,7 @@
  	<script type="text/javascript" src="/js/parsley.min.js"></script>
  	<script type="text/javascript" src="/js/moment.js"></script>
 	<script type="text/javascript" src="/js/main.js"></script>
-	<script type="text/javascript" src="/js/underscore-1.4.4.min.js"></script>
+	<script type="text/javascript" src="/js/underscore-1.5.min.js"></script>
 	<script type="text/javascript" src="/js/bootstrapSwitch.js"></script>
 	<script type="text/javascript" src="/js/select2.js"></script>
 
