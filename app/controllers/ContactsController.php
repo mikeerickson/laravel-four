@@ -3,7 +3,7 @@
 class ContactsController extends BaseController {
 
 	public $perPage = 20;
-	public $where   = [];
+	public $where   = []; // ['lname','LIKE','E%']
 	public $status = [
 		''         => 'Select Status',
 		'active'   => 'Active',
@@ -14,6 +14,22 @@ class ContactsController extends BaseController {
 
 	public function index()
 	{
+
+		$user = User::where('username', '=', 'mike erickson')->first();
+		Auth::login($user);
+
+		$field = Input::get('queryField');
+		$delim = Input::get('queryDelim');
+		$value = Input::get('queryValue');
+		if((!$field == '') && (!$value == '')) {
+			if($delim == '#') $delim = '<>';
+			if($delim == 'LIKE') $value = '%'.$value.'%';
+			$this->where = [$field,$delim,$value];
+		}
+
+		$fieldList = Contact::getFieldList();
+		$delimList = Contact::getDelimList();
+
 		//$contacts  = Contact::with('company')->orderBy('lname')->paginate($this->perPage);
 		$contacts  = Contact::contactList($this->perPage,$this->where);
 		if( count($contacts) == 0 )
@@ -28,14 +44,14 @@ class ContactsController extends BaseController {
 		$data = [
 					'title'      => 'Contacts',
 					'contacts'   => $contacts,
+					'fieldList'  => $fieldList,
+					'delimList'  => $delimList,
 					'recMessage' => $recMessage,
 					'username'   => Cookie::get('username'),
 					'password'   => Cookie::get('password')
 				];
 
-		//return View::make('contacts.test',$data);
 		return View::make('contacts.index',$data);
-
 	}
 
 	public function create()

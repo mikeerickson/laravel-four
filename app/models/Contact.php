@@ -22,6 +22,14 @@ class Contact extends Eloquent {
 		return Validator::make($data, static::$rules_edit);
 	}
 
+	public static function getFieldList() {
+		return ['fname' => 'First Name', 'lname' => 'Last Name', 'email' => 'E Mail', 'phone' => 'Phone', 'status' => 'Status'];
+	}
+
+	public static function getDelimList() {
+		return ['=' => 'is equal to', '<>' => 'not equal to', 'LIKE' => 'contains'];
+	}
+	
 	public static function contactList($per_page = 10, $where = [] ) {
 
 		//return DB::table('contacts')->orderBy('lname')->paginate($per_page);
@@ -35,9 +43,6 @@ class Contact extends Eloquent {
 		}
 		else
 			return Contact::with('company')->orderBy('lname')->paginate($per_page);
-
-		//$contacts = Contact::with('company')->where('fname','=','trevor')->orderBy('lname')->paginate($per_page);
-		//return $contacts;
 	}
 
 	public static function getContact($id)

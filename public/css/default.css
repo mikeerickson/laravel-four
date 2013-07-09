@@ -261,6 +261,9 @@ table {
 td {
   vertical-align: top;
 }
+* {
+  font-size: 11px;
+}
 body {
   font-family: 'Droid Sans', sans-serif;
   font-size: 10pt;
@@ -476,6 +479,10 @@ a:hover {
   margin: 3px;
   padding: 5px;
 }
+.special {
+  font-weight: bold;
+  color: green;
+}
 .warning > img {
   margin-top: -4px;
 }
@@ -495,6 +502,20 @@ a:hover {
 #toolbar input[type="submit"] {
   width: 150px;
   line-height: 24px;
+}
+div #queryForm {
+  font-size: 11px;
+  float: left;
+}
+div #queryForm label,
+input {
+  font-size: 11px;
+}
+div #queryForm input[type='text'] {
+  font-size: 11px;
+  width: 100px;
+  margin-right: 10px;
+  height: 15px;
 }
 /* header { padding-bottom: 5px; } */
 header h1 {

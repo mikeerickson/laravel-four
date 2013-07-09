@@ -1,0 +1,24 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/utilities";
+
+$box: 550px;
+$main-color: #29241F;
+
+body {
+	margin: 10px;
+	padding: 10px;
+	width: $box;
+	height: $box;
+	background: $main-color;
+	color: white;
+	font-family: "Helvetica Neue";
+	font-size: 24px;
+}
+.box {
+	@include border-radius(5px);
+	// @include pie-clearfix;
+	border: 1px solid red;
+	padding: 5px;
+	@include box-shadow(red, 2px, 5px, 10px);
+}

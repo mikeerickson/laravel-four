@@ -13,5 +13,4 @@ class BootController extends BaseController {
 		//return "Hello from BootController";
 		return View::make('boot.index',$data);
 	}
-
 }

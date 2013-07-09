@@ -1,3 +1,0 @@
-/*
-<a href="posts/2" data-method="delete"> <---- We want to send an HTTP DELETE request
-*/(function(){var e={initialize:function(){this.methodLinks=$("a[data-method]");this.registerEvents()},registerEvents:function(){this.methodLinks.on("click",this.handleMethod)},handleMethod:function(e){var t=$(this),n=t.data("method").toUpperCase(),r=["PUT","DELETE"];if($.inArray(n,r)===-1)return;var i=$("<form>",{method:"POST",action:t.attr("href")}),s=$("<input>",{type:"hidden",name:"csrf_token",value:"<?php echo csrf_token(); ?>"}),o=$("<input>",{name:"_method",type:"hidden",value:t.data("method")});i.append(o,s).appendTo("body").submit();e.preventDefault()}};e.initialize()})();

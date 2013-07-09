@@ -4,7 +4,6 @@ use Illuminate\Routing\UrlGenerator as Url;
 
 class Helpers {
 
-
 	/**
 	 * The encoding to use
 	 *
@@ -522,9 +521,14 @@ class Helpers {
 	}
 
 	public static function formatPhone($data) {
+
+		$defAreaCode = '714';
+
 		if (strlen($data)==10)
 			return "(".substr($data, 0, 3).") ".substr($data, 3, 3)."-".substr($data,6);
-		else
+		elseif (strlen($data)==7) {
+			return '('.$defAreaCode.') '.substr($data, 0, 3).'-'.substr($data,3,4);
+		}
 			return $data;
 	}
 }

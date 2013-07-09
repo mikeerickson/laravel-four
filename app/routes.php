@@ -1,5 +1,9 @@
 <?php
 
+Route::get('/login', function(){
+	return 'Login Page';
+});
+
 Route::get('/boot','BootController@index');
 /*
 Route::get('/boot', function()

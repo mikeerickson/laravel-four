@@ -68,6 +68,8 @@ input:invalid, textarea:invalid { background-color: #f0dddd; }
 table { border-collapse: collapse; border-spacing: 0; }
 td { vertical-align: top; }
 
+* { font-size: 11px;}
+
 body
 {
 	font-family: @font_family, sans-serif;
@@ -241,6 +243,8 @@ tr:hover {
 	padding: 5px;
 }
 
+.special { font-weight: bold; color: green;}
+
 .warning>img { margin-top: -4px; }
 
 #toolbar button { width: 150px; line-height: 24px; }
@@ -248,7 +252,9 @@ tr:hover {
 #toolbar button>a:visited { color: black; }
 #toolbar .disabled { color: #c9c9c9; }
 #toolbar input[type="submit"] { width: 150px; line-height: 24px; }
-
+div #queryForm { font-size: 11px; float: left;}
+div #queryForm label, input { font-size: 11px; }
+div #queryForm input[type='text'] { font-size: 11px; width: 100px; margin-right: 10px; height: 15px;}
 
 /* header { padding-bottom: 5px; } */
 header h1 { color: @header_color; border-bottom: 1px solid @header_color; padding-bottom: 6px; }

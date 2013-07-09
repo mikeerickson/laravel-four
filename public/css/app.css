@@ -1,0 +1,23 @@
+select {
+  width: 215px;
+}
+.dropdown-menu {
+  background-color: black;
+  color: green;
+  border: 0px;
+}
+footer {
+  background-color: white;
+  font-size: 11px;
+  margin: 40px 10px 5px 10px;
+  border-top: 1px solid #606060;
+  color: #606060;
+  text-align: left;
+}
+body {
+  margin-top: 20px;
+  font-size: 12px;
+}
+#msgHdr {
+  padding-bottom: 5px;
+}
