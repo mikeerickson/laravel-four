@@ -5,6 +5,7 @@ class PlayersController extends BaseController {
 	public $perPage = 20;
 	public $where   = [];
 
+
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -12,6 +13,19 @@ class PlayersController extends BaseController {
 	 */
 	public function index()
 	{
+
+		$field = Input::get('queryField');
+		$delim = Input::get('queryDelim');
+		$value = Input::get('queryValue');
+		if((!$field == '') && (!$value == '')) {
+			if($delim == '#') $delim = '<>';
+			if($delim == 'LIKE') $value = '%'.$value.'%';
+			$this->where = [$field,$delim,$value];
+		}
+
+		$fieldList = Player::getFieldList();
+		$delimList = Player::getDelimList();
+
 		$players  = Player::playerList($this->perPage,$this->where);
 		if( count($players) == 0 )
 			return Redirect::to(URL::route('players.index').'?page=1');
@@ -26,6 +40,8 @@ class PlayersController extends BaseController {
 					'title'      => 'Players',
 					'players'    => $players,
 					'recMessage' => $recMessage,
+					'fieldList'  => $fieldList,
+					'delimList'  => $delimList,
 					'username'   => Cookie::get('username'),
 					'password'   => Cookie::get('password')
 				];

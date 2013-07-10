@@ -23,7 +23,7 @@ class Contact extends Eloquent {
 	}
 
 	public static function getFieldList() {
-		return ['fname' => 'First Name', 'lname' => 'Last Name', 'email' => 'E Mail', 'phone' => 'Phone', 'status' => 'Status'];
+		return ['company.companyName' => 'Company Name', 'fname' => 'First Name', 'lname' => 'Last Name', 'email' => 'E Mail', 'phone' => 'Phone', 'status' => 'Status'];
 	}
 
 	public static function getDelimList() {

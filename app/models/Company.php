@@ -5,6 +5,14 @@ class Company extends Eloquent {
 		return $this->hasMany('Contact');
 	}
 
+	public static function getFieldList() {
+		return ['companyName' => 'Company Name', 'address' => 'Address', 'city' => 'City', 'state' => 'State', 'zip' => 'Zip'];
+	}
+
+	public static function getDelimList() {
+		return ['=' => 'is equal to', '<>' => 'not equal to', 'LIKE' => 'contains'];
+	}
+
 	public static function getCompanies($per_page = 10, $where = [] ) {
 
 		//return DB::table('contacts')->orderBy('lname')->paginate($per_page);
@@ -14,7 +22,7 @@ class Company extends Eloquent {
 			$_fname = $where[0];
 			$_delim = $where[1];
 			$_value = $where[2];
-			return Company::with('contacts')->where($_fname,$_delim,$_value)->orderBy('lname')->paginate($per_page);
+			return Company::with('contacts')->where($_fname,$_delim,$_value)->orderBy('companyName')->paginate($per_page);
 		}
 		else
 			return Company::with('contacts')->orderBy('companyName')->paginate($per_page);

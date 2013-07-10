@@ -7,6 +7,19 @@ class CompaniesController extends BaseController {
 
 	public function index()
 	{
+
+		$field = Input::get('queryField');
+		$delim = Input::get('queryDelim');
+		$value = Input::get('queryValue');
+		if((!$field == '') && (!$value == '')) {
+			if($delim == '#') $delim = '<>';
+			if($delim == 'LIKE') $value = '%'.$value.'%';
+			$this->where = [$field,$delim,$value];
+		}
+
+		$fieldList = Company::getFieldList();
+		$delimList = Company::getDelimList();
+
 		$companies = Company::getCompanies($this->perPage,$this->where);
 		if( count($companies) == 0 )
 			return Redirect::to(URL::route('companies.index').'?page=1');
@@ -21,6 +34,8 @@ class CompaniesController extends BaseController {
 				'title'      => 'Companies',
 				'companies'  => $companies,
 				'recMessage' => $recMessage,
+				'fieldList'  => $fieldList,
+				'delimList'  => $delimList,
 				'username'   => Cookie::get('username'),
 				'password'   => Cookie::get('password')
 			);

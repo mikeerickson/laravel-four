@@ -2,15 +2,9 @@
 
 @section('content')
 
-	<div id="toolbar">
-		<a class="btn btn-small btn-info" href="/companies/create?page={{ Input::get('page') }}">
-			<i class="icon-user icon-white"></i>&nbsp;&nbsp;New {{ Str::singular($title) }}</a>
-			<div id="recHeader" class="pull-right">
-				{{ $recMessage }} {{ $title }}
-			</div>
-	</div>
+	@include ('layouts._toolbar')
 
-	<table class="table table-striped table-bordered bootstrap-datatable datatable">
+	<table id="mainList" class="table table-striped table-bordered bootstrap-datatable datatable">
  			<th>Company</th>
 			<th>Address</th>
 			<th>City</th>

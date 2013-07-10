@@ -21,3 +21,73 @@ body {
 #msgHdr {
   padding-bottom: 5px;
 }
+#contact {
+  font-size: 11px;
+}
+#contact input[type="text"] {
+  font-size: 12px;
+  height: 15px;
+}
+#contact label {
+  font-size: 11px;
+}
+#user {
+  font-size: 11px;
+}
+#user input[type="text"] {
+  font-size: 12px;
+  height: 15px;
+}
+#user label {
+  font-size: 11px;
+}
+#company {
+  font-size: 11px;
+}
+#company input[type="text"] {
+  font-size: 12px;
+  height: 15px;
+}
+#company label {
+  font-size: 11px;
+}
+#toolbar button {
+  width: 150px;
+  line-height: 24px;
+}
+#toolbar a:hover {
+  text-decoration: none;
+}
+#toolbar button > a:visited {
+  color: black;
+}
+#toolbar .disabled {
+  color: #c9c9c9;
+}
+#toolbar input[type="submit"] {
+  width: 150px;
+  line-height: 24px;
+}
+div #queryForm {
+  font-size: 11px;
+  float: left;
+}
+div #queryForm label,
+input {
+  font-size: 11px;
+}
+div #queryForm input[type='text'] {
+  font-size: 11px;
+  width: 120px;
+  margin-right: 10px;
+  height: 15px;
+}
+#queryFilterClear {
+  margin-left: -10px;
+}
+#recHeader {
+  margin-bottom: 5px;
+}
+tr:hover {
+  background-color: #FEFCD1;
+}

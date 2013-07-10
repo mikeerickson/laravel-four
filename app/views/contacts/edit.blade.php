@@ -16,7 +16,7 @@
 		{{ Form::hidden('page', Input::get('page')) }}
 
 		<p>
-			<div class="switch" data-on-label="Active" data-off-label="Inactive" style="width: 125px;">
+			<div class="switch switch-small" data-on-label="Active" data-off-label="Inactive" style="width: 100px;">
 				{{ Form::checkbox('active', '1', $contact->active ) }}
 			</div>
 		</p>

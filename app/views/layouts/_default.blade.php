@@ -7,7 +7,6 @@
 	<title>{{ $title }}</title>
 	<meta name="viewport" content="width=device-width">
 
-
 	<!-- start: Mobile Specific -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- end: Mobile Specific -->
@@ -69,7 +68,7 @@
 				Welcome back <strong>{{ ucwords(Auth::user()->username) }}</strong>&nbsp;&nbsp;
 				<i class="icon-user"></i>&nbsp;{{ link_to('logout', 'Logout') }}
 			@else
-				<a href="/login">Login</a>
+				<i class="icon-user"></i>&nbsp;{{ link_to('login', 'Login') }}
 			@endif
 		</div>
 

@@ -18,9 +18,22 @@ class UsersController extends BaseController {
 	public function index()
 	{
 
+		$field = Input::get('queryField');
+		$delim = Input::get('queryDelim');
+		$value = Input::get('queryValue');
+		if((!$field == '') && (!$value == '')) {
+			if($delim == '#') $delim = '<>';
+			if($delim == 'LIKE') $value = '%'.$value.'%';
+			if($field == 'active') { $value == 'active' ? $value = 1 : $value = 0;}
+			$this->where = [$field,$delim,$value];
+		}
+
 		$users = User::getUsers($this->perPage,$this->where);
 		if( count($users) == 0 )
 			return Redirect::to(URL::route('users.index').'?page=1');
+
+		$fieldList = User::getFieldList();
+		$delimList = User::getDelimList();
 
 		// setup recMessage Object
 		$currPage   = Input::get('page') ? Input::get('page') : 1;
@@ -32,6 +45,8 @@ class UsersController extends BaseController {
 				'title'      => 'Users',
 				'recMessage' => $recMessage,
 				'users'      => $users,
+				'fieldList'  => $fieldList,
+				'delimList'  => $delimList,
 				'username'   => Cookie::get('username'),
 				'password'   => Cookie::get('password')
 			);

@@ -1,8 +1,11 @@
+@input_font_size : 12px;
+@label_font_size : 11px;
+
 select { width: 215px; }
 .dropdown-menu { background-color: black; color: green; border: 0px;}
 footer {
 	background-color: white;
-	font-size: 11px;
+	font-size: @label_font_size;
 	margin: 40px 10px 5px 10px;
 	border-top: 1px solid #606060;
 	color: #606060;
@@ -10,3 +13,31 @@ footer {
 }
 body { margin-top: 20px; font-size: 12px;}
 #msgHdr { padding-bottom: 5px;}
+
+#contact { font-size: @label_font_size;}
+#contact input[type="text"] { font-size: @input_font_size; height: 15px;}
+#contact label {font-size: @label_font_size;}
+
+#user { font-size: @label_font_size;}
+#user input[type="text"] { font-size: @input_font_size; height: 15px;}
+#user label {font-size: @label_font_size;}
+
+#company { font-size: @label_font_size;}
+#company input[type="text"] { font-size: @input_font_size; height: 15px;}
+#company label {font-size: @label_font_size;}
+
+#toolbar button { width: 150px; line-height: 24px; }
+#toolbar a:hover { text-decoration: none; }
+#toolbar button>a:visited { color: black; }
+#toolbar .disabled { color: #c9c9c9; }
+#toolbar input[type="submit"] { width: 150px; line-height: 24px; }
+
+div #queryForm { font-size: 11px; float: left; }
+div #queryForm label, input { font-size: 11px; }
+div #queryForm input[type='text'] { font-size: 11px; width: 120px; margin-right: 10px; height: 15px;}
+
+#queryFilterClear { margin-left: -10px; }
+
+#recHeader { margin-bottom: 5px; }
+
+tr:hover{background-color: #FEFCD1;}
