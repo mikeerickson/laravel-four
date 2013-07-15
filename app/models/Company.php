@@ -10,25 +10,30 @@ class Company extends Eloquent {
 	}
 
 	public static function getDelimList() {
-		return ['=' => 'is equal to', '<>' => 'not equal to', 'LIKE' => 'contains'];
+		return ['equals' => 'is equal to', '<>' => 'not equal to', 'begins' => 'begins with', 'like' => 'contains'];
 	}
 
-	public static function getCompanies($per_page = 10, $where = [] ) {
+	public static function companyList($per_page = 10, $where = [], $orderField = 'companyName,asc' ) {
 
-		//return DB::table('contacts')->orderBy('lname')->paginate($per_page);
-		//return Contact::with('company')->orderBy('lname')->paginate($per_page);
+		$_order = 'companyName';
+		$_dir = 'ASC';
+		if(strlen($orderField)>1) {
+			$result = explode(',', $orderField);
+			if(sizeof($result)>=1) {
+				$_order = $result[0];
+				if(sizeof($result)>=2) 
+					$_dir = $result[1];
+			}
+		}
 
 		if(sizeof($where) == 3) {
 			$_fname = $where[0];
 			$_delim = $where[1];
 			$_value = $where[2];
-			return Company::with('contacts')->where($_fname,$_delim,$_value)->orderBy('companyName')->paginate($per_page);
+			return Company::with('contacts')->where($_fname,$_delim,$_value)->orderBy($_order,$_dir)->paginate($per_page);
 		}
 		else
-			return Company::with('contacts')->orderBy('companyName')->paginate($per_page);
-
-		//$contacts = Contact::with('company')->where('fname','=','trevor')->orderBy('lname')->paginate($per_page);
-		//return $contacts;
+			return Company::with('contacts')->orderBy($_order,$_dir)->paginate($per_page);
 	}
 
 	public static function getCount($where = []) {

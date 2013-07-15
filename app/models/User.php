@@ -10,19 +10,29 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	}
 
 	public static function getDelimList() {
-		return ['=' => 'is equal to', '<>' => 'not equal to', 'LIKE' => 'contains'];
+		return ['equals' => 'is equal to', '<>' => 'not equal to', 'begins' => 'begins with', 'like' => 'contains'];
 	}
 
-	public static function getUsers($per_page = 10, $where = []) {
-# 		return DB::table('users')->where('username','LIKE','%erickson%')->order_by('username')->paginate($per_page);
+	public static function userList($per_page = 10, $where = [], $orderField = 'username,asc') {
+		$_order = 'username';
+		$_dir = 'ASC';
+		if(strlen($orderField)>1) {
+			$result = explode(',', $orderField);
+			if(sizeof($result)>=1) {
+				$_order = $result[0];
+				if(sizeof($result)>=2) 
+					$_dir = $result[1];
+			}
+		}
+
 		if(sizeof($where) == 3) {
 			$_fname = $where[0];
 			$_delim = $where[1];
 			$_value = $where[2];
-			return DB::table('users')->where($_fname,$_delim,$_value)->orderBy('username')->paginate($per_page);
+			return User::where($_fname,$_delim,$_value)->orderBy($_order,$_dir)->paginate($per_page);
 		}
 		else
-			return DB::table('users')->orderBy('username')->paginate($per_page);
+			return User::orderBy($_order,$_dir)->paginate($per_page);
 	}
 
 	public static function getCount($where = []) {

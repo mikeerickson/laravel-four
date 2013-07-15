@@ -8,8 +8,9 @@
 					'class'         => 'form-inline'
 				])
 			}}
-
-				<!-- Toolbar Button: New -->
+<!-- 				{{ Session::get('queryParams') }}
+				{{ 'f:'.$queryField  }} {{ 'd:'.$queryDelim }} {{'v:'.$queryValue}}
+ -->				<!-- Toolbar Button: New -->
 				<a class="btn btn-small btn-info" style="width: 60px;" href="/{{strtolower($title)}}/create?page={{ Input::get('page') }}">
 				<i class="icon-user icon-white"></i>&nbsp;&nbsp;New</a>
 
@@ -25,13 +26,13 @@
 				<span style="margin-right: 5px;">&nbsp;</span>
 				<span id="formAdvancedQuery" style="display: none;">
 					{{ Form::label('queryField','Field:')}}
-					{{ Form::select('queryField', $fieldList, Input::get('queryField'),
+					{{ Form::select('queryField', $fieldList, $queryField,
 						[
-							'style' => 'width: 120px;'
+							'style' => 'width: 120px;',
 						])
 					}}
 					<span style="margin-right: 5px;"></span>
-					{{ Form::select('queryDelim', $delimList, Input::get('queryDelim'),
+					{{ Form::select('queryDelim', $delimList, $queryDelim,
 						[
 							'style' => 'width: 120px;'
 						])
@@ -39,7 +40,7 @@
 
 					<span style="margin-right: 5px;"></span>
 					{{ Form::label('queryValue','Value:')}}
-					{{ Form::input('text','queryValue',Input::get('queryValue')) }}
+					{{ Form::input('text','queryValue',$queryValue) }}
 					{{ Form::submit('Find',['class' => 'btn-mini btn','style' => 'width: 50px;','id' => 'queryFindBtn']) }}
 					<span style="margin-left: 15px; margin-right: 15px; border-right: 1px solid #ccc;"></span>
 				</span>

@@ -459,6 +459,19 @@ class Helpers {
 		throw new \Exception("Method [$method] does not exist.");
 	}
 
+	public static function getQueryParamValue($queryString, $paramName) {
+		if($queryString != '') {
+			$results = explode("&",$queryString);
+			$pairs = [];
+			foreach($results as $result) {
+				list($name,$value) = explode("=",$result);
+				$pairs[$name] = $value;
+			}
+		return $pairs[$paramName];
+		} else {
+			return '';
+		}
+	}
 
 	public static function recMessage($currPage = 1, $perPage, $pageCount, $recCount ) {
 
@@ -471,7 +484,8 @@ class Helpers {
 			$startRec = 1;
 		if($endRec >= $recCount)
 				$endRec = $recCount;
-
+		if($startRec>$recCount)
+				$startRec = 0;
 		return $startRec.' to '.$endRec.' of '.$recCount;
 	}
 

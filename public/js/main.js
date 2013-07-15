@@ -19,8 +19,7 @@ $(function() {
 
 	$("#toolbarQuery").on('click',function(){
 		$elem = $("#queryText");
-		var btnTxt = $elem.text();
-		if ( btnTxt == 'Show Query') {
+		if ( $elem.text() == 'Show Query') {
 			$elem.text('Hide Query');
 			$("#formAdvancedQuery").show();
 		} else {

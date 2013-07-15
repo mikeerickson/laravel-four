@@ -14,21 +14,57 @@ class PlayersController extends BaseController {
 	public function index()
 	{
 
+		// $user = User::where('username', '=', 'mike erickson')->first();
+		// Auth::login($user);
+
+		// get any query form values (sort order coming from column headers)
 		$field = Input::get('queryField');
 		$delim = Input::get('queryDelim');
 		$value = Input::get('queryValue');
+		$order = Input::get('queryOrder');
+
+		$tempDelim = $delim;
+
+		if(is_null(Input::get('page'))) {
+			Session::set('queryParams','');
+		}
+		$queryParams = Session::get('queryParams');
+
+		if(($field == '') && ($delim == '') && ($value == '') && ($order == '')) {
+			$field = Helpers::getQueryParamValue($queryParams,'queryField');
+			$delim = Helpers::getQueryParamValue($queryParams,'queryDelim');
+			$value = Helpers::getQueryParamValue($queryParams,'queryValue');
+			$order = Helpers::getQueryParamValue($queryParams,'queryOrder');
+		}
+
+		// default sort order (overridden until we have all working)
+		$queryOrder = 'lname,asc';
+
+		// cache these variables, used the pass data along to view so the query objects are prefilled if necessary
+		$queryField = $field;
+		$queryDelim = $delim;
+		$queryValue = $value;
+		$queryOrder = $order;
+
 		if((!$field == '') && (!$value == '')) {
 			if($delim == '#') $delim = '<>';
+			if($delim == 'equals') $delim = '=';
+			if($delim == '') $delim = '=';
 			if($delim == 'LIKE') $value = '%'.$value.'%';
+			if($delim == 'begins') { $value = $value.'%'; $delim = 'LIKE'; }
 			$this->where = [$field,$delim,$value];
 		}
 
-		$fieldList = Player::getFieldList();
-		$delimList = Player::getDelimList();
+		$value = str_replace('%', '', $value);
+		if($tempDelim=='') $tempDelim = 'equals';
+		$queryParam = 'queryField='.$field.'&queryDelim='.$tempDelim.'&queryValue='.$value.'&queryOrder='.$order;
+		Session::set('queryParams',$queryParam);
 
-		$players  = Player::playerList($this->perPage,$this->where);
-		if( count($players) == 0 )
-			return Redirect::to(URL::route('players.index').'?page=1');
+		$players = Player::playerList($this->perPage,$this->where,$queryOrder);
+		if( count($players) == 0 ) {
+			Session::set('queryParams','');
+			//return Redirect::to(URL::route('contacts.index').'?page=1');
+		}
 
 		// setup recMessage Object
 		$currPage   = Input::get('page') ? Input::get('page') : 1;
@@ -39,14 +75,17 @@ class PlayersController extends BaseController {
 		$data = [
 					'title'      => 'Players',
 					'players'    => $players,
+					'fieldList'  => Player::getFieldList(),
+					'delimList'  => Player::getDelimList(),
 					'recMessage' => $recMessage,
-					'fieldList'  => $fieldList,
-					'delimList'  => $delimList,
+					'queryField' => $queryField,
+					'queryDelim' => $queryDelim,
+					'queryValue' => $queryValue,
+					'orderField' => $queryOrder,
 					'username'   => Cookie::get('username'),
 					'password'   => Cookie::get('password')
 				];
 
-		//return View::make('contacts.test',$data);
 		return View::make('players.index',$data);
 	}
 

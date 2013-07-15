@@ -58,6 +58,15 @@
 	<!-- Start Application Script -->
 	<script src="/js/main.js"></script>
 
+    <script>
+        $(function() {
+        	// $("#nav_players").attr('href','#').addClass("disabled");
+        	// $(".disabled").on('click',function(e){
+        	// 	e.PreventDefault();
+        	// });
+         // });
+    </script>
+
 </head>
 
 <body id="body">
@@ -73,16 +82,19 @@
 		</div>
 
 		<header>
-			<h1>{{ $title }}</h1>
+			 <h1> <img src="/img/laravel.png"> {{ $title }}</h1>
 		</header>
 
 		<nav>
 			<ul ul class="nav nav-tabs">
 			  <li class="{{ $title == 'Home' ? 'active' : '' }}"><a href="/">Home</a></li>
-			  <li class="{{ $title == 'Companies' ? 'active' : '' }}"><a href="/companies">Companies</a></li>
-			  <li class="{{ $title == 'Contacts' ? 'active' : '' }}"><a href="/contacts">Contacts</a></li>
-			  <li class="{{ $title == 'Users' ? 'active' : '' }}"><a href="/users">Users</a></li>
-			  <li class="{{ $title == 'Players' ? 'active' : '' }}"><a href="/players">Players</a></li>
+			@if(Auth::check())
+			  <li class="{{ $title == 'Companies' ? 'active' : '' }}"><a id="nav_companies" href="/companies">Companies</a></li>
+			  <li class="{{ $title == 'Contacts' ? 'active' : '' }}"><a id="nav_ccontacts" href="/contacts">Contacts</a></li>
+			  <li class="{{ $title == 'Users' ? 'active' : '' }}"><a id="nav_users" href="/users">Users</a></li>
+
+			  <li class="{{ $title == 'Players' ? 'active' : '' }}"><a id="nav_players" href="/players">Players</a></li>
+			@endif
 			</ul>
 		</nav>
 

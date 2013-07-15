@@ -3,7 +3,6 @@ function SearchCtrl($scope, $http) {
 
     // The function that will be executed on button click (ng-click="search()")
     $scope.search = function() {
-
         $http.post($scope.url, { "data" : $scope.keywords}).
           success(function(data, status, headers, config) {
 			$scope.status = status;
@@ -15,7 +14,6 @@ function SearchCtrl($scope, $http) {
             $scope.status = status;
           });
     };
-
 }
 
 angular.module('testApp', [])

@@ -1,7 +1,10 @@
 <?php
 
-Route::get('/login', function(){
-	return 'Login Page';
+Route::get('/login', 'LoginsController@index');
+Route::post('/login','LoginsController@create');
+Route::get('/logout',function(){
+	Auth::logout();
+	return Redirect::to('/');
 });
 
 Route::get('/boot','BootController@index');
@@ -136,18 +139,20 @@ Route::get('/blade', function() {
 	//return View::make('hello')->with($data);
 });
 
-Route::resource('users', 'UsersController');
 
-Route::resource('photos', 'PhotosController');
-
-Route::resource('contacts', 'ContactsController');
+Route::group(['before' => 'auth'], function(){
+	Route::resource('contacts', 'ContactsController');
+	Route::resource('companies', 'CompaniesController');
+	Route::resource('users', 'UsersController');
+	Route::resource('players', 'PlayersController');
+});
 
 Route::resource('cars', 'CarsController');
 
+Route::resource('photos', 'PhotosController');
+
 Route::resource('animals', 'AnimalsController');
 
-Route::resource('players', 'PlayersController');
-
-Route::resource('companies', 'CompaniesController');
-
 Route::resource('dogs', 'DogsController');
+
+// Route::resource('logins','LoginsController');
