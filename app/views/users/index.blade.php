@@ -32,7 +32,7 @@
 				<td>{{ ExpressiveDate::make($user->updated_at)->getRelativeDate() }}</td>
 				<td width='10%' style="text-align: center;">
 					<a href="/users/{{$user->id}}/edit?page={{ Input::get('page') }}" title="Edit Record">{{ Helpers::image('img/icon_edit_16x16.gif') }}</a> &nbsp;&nbsp;
-					<a onclick="return confirm('Are you sure you wish to delete this record?');" href="/users/{{$user->id}}/delete?page={{ Input::get('page') }}" title="Delete Record">{{ Helpers::image('img/icon_trash_16x16.gif') }}</a>
+					<a onclick="return bootbox.confirm('Are you sure you wish to delete this record?');" href="/users/{{$user->id}}/delete?page={{ Input::get('page') }}" title="Delete Record">{{ Helpers::image('img/icon_trash_16x16.gif') }}</a>
 				</td>
 
 			</tr>

@@ -15,9 +15,6 @@ class ContactsController extends BaseController {
 	public function index()
 	{
 
-		// $user = User::where('username', '=', 'mike erickson')->first();
-		// Auth::login($user);
-
 		// get any query form values (sort order coming from column headers)
 		$field = Input::get('queryField');
 		$delim = Input::get('queryDelim');
@@ -66,7 +63,7 @@ class ContactsController extends BaseController {
 			Session::set('queryParams','');
 			//return Redirect::to(URL::route('contacts.index').'?page=1');
 		}
-
+		
 		// setup recMessage Object
 		$currPage   = Input::get('page') ? Input::get('page') : 1;
 		$recCount   = Contact::getCount($this->where);
@@ -77,7 +74,7 @@ class ContactsController extends BaseController {
 					'title'      => 'Contacts',
 					'contacts'   => $contacts,
 					'fieldList'  => Contact::getFieldList(),
-					'delimList'  => Contact::getDelimList(),
+					'delimList'  => Helpers::getQueryDelimeterList(),
 					'recMessage' => $recMessage,
 					'queryField' => $queryField,
 					'queryDelim' => $queryDelim,

@@ -26,10 +26,6 @@ class Contact extends Eloquent {
 		return ['companies.companyName' => 'Company Name', 'fname' => 'First Name', 'lname' => 'Last Name', 'email' => 'E Mail', 'phone' => 'Phone', 'status' => 'Status'];
 	}
 
-	public static function getDelimList() {
-		return ['equals' => 'is equal to', '<>' => 'not equal to', 'begins' => 'begins with', 'like' => 'contains'];
-	}
-
 	public static function contactList($per_page = 10, $where = [], $orderField = 'lname,asc' ) {
 
 		//return DB::table('contacts')->orderBy('lname')->paginate($per_page);
@@ -43,7 +39,7 @@ class Contact extends Eloquent {
 				if(sizeof($result)>=2) 
 					$_dir = $result[1];
 			}
-	}
+		}
 
 		if(sizeof($where) == 3) {
 			$_fname = $where[0];

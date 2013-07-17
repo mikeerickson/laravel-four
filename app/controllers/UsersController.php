@@ -4,16 +4,6 @@ class UsersController extends BaseController {
 
 	public $perPage = 20;
 	public $where   = [];
-	/* TODO: Pull this data from model method */
-	public $category = [
-		''         => 'Select Category',
-		'parent'   => 'Parent',
-		'student'  => 'Student',
-		'dog'      => 'Dog',
-		'relative' => 'Relative',
-		'brother'  => 'Brother',
-		'sister'   => 'Sister'
-	];
 
 	public function index()
 	{
@@ -76,7 +66,7 @@ class UsersController extends BaseController {
 					'title'      => 'Users',
 					'users'   	 => $users,
 					'fieldList'  => User::getFieldList(),
-					'delimList'  => User::getDelimList(),
+					'delimList'  => Helpers::getQueryDelimeterList(),
 					'recMessage' => $recMessage,
 					'queryField' => $queryField,
 					'queryDelim' => $queryDelim,
@@ -149,7 +139,7 @@ class UsersController extends BaseController {
 		if($user) {
 			$data = [
 				'title' => 'Users',
-				'category' => $this->category,
+				'category' => User::getCategoryList(),
 				'user'  => $user
 			];
 			return View::make('users.edit',$data);

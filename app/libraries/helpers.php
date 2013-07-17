@@ -271,8 +271,7 @@ class Helpers {
 	 */
 	public static function email($email)
 	{
-		//return str_replace('@', '&#64;', $this->obfuscate($email));
-		return $email;
+		return str_replace('@', '&#64;', self::obfuscate($email));
 	}
 
 	/**
@@ -290,7 +289,7 @@ class Helpers {
 		$attributes['alt'] = $alt;
 
 		return '<img src="'.$url.'"'.'>';
-//		return '<img src="'.$this->url->to($url).'"'.$this->attributes($attributes).'>';
+		// return '<img src="'.$this->url->to($url).'"'.$this->attributes($attributes).'>';
 	}
 
 	/**
@@ -545,5 +544,10 @@ class Helpers {
 		}
 			return $data;
 	}
+
+	public static function getQueryDelimeterList() {
+		return ['equals' => 'is equal to', '<>' => 'not equal to', 'begins' => 'begins with', 'like' => 'contains'];
+	}
+
 }
 

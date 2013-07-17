@@ -10,15 +10,16 @@
 
     <!-- http://jsfiddle.net/guyong/EUVWC/2/ -->
 
-    <!-- TODO: Install alert, confirm, promote -->
-
     <script>
         $(function() {
             var login = $('#login_dlog');
             login.modal({ backdrop: true, keyboard: true, show: true });
-            $('#btn').click(function () {
-                login.modal('show');
-            });
+
+            // TODO: Implement Remember Me
+
+            // $("body").css("display", "none");
+            // $("body").fadeIn(1000);
+
             $('#login_forget').click(function(){
                 // TODO: Create password reset email
                 // TODO: Determine how to create a unique random URL
@@ -27,13 +28,14 @@
                 alert('send reset password');
             });
             $('#btn_cancel').click(function(){
+                // $("body").fadeOut(1000);
                 window.location.href = '/';
             });
         });
     </script>
 
     <style>
-        #msgBox { margin: 10px;}
+        #msgBox { margin: 10px; }
     </style>
 
 </head>
@@ -56,7 +58,7 @@
         {{ Form::open(['id' => 'login', 'method'  => 'post']) }}
 
             <div class="modal-body">
-                {{ Form::label('login_id','User ID / E Mail Address' ) }}
+                {{ Form::label('login_id','User ID or E-Mail Address' ) }}
                 {{ Form::text ('login_id', $userID ) }}
 
                 {{ Form::label('login_pw','Password') }}

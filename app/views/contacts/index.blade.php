@@ -55,9 +55,7 @@
 						<a href="/{{strtolower($title)}}/{{$contact->id}}/edit?page={{ Input::get('page') }}"
 						   title="Edit Record"><img src="img/icon_edit_16x16.gif">
 						</a>&nbsp;
-						<a onclick="return confirm('Are you sure you wish to delete this record?');"
-						   data-method="delete" href="/{{strtolower($title)}}/{{$contact->id}}?page={{Input::get('page') }}"
-						   title="Delete Record"><img src="img/icon_trash_16x16.gif">
+						<a data-method="delete" data-confirm="Are you sure?" href="/{{strtolower($title)}}/{{$contact->id}}?page={{Input::get('page') }}" title="Delete Record"><img src="img/icon_trash_16x16.gif">
 						</a>
 
 					</td>

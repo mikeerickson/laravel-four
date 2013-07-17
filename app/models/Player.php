@@ -6,10 +6,6 @@ class Player extends Eloquent {
 		return ['fname' => 'First Name', 'lname' => 'Last Name', 'position' => 'Position', 'bats' => 'Bats', 'throws' => 'Throws', 'number' => 'Number', 'class' => 'Class'];
 	}
 
-	public static function getDelimList() {
-		return ['equals' => 'is equal to', '<>' => 'not equal to', 'begins' => 'begins with', 'like' => 'contains'];
-	}
-
 	public static function playerList($per_page = 10, $where = [], $orderField = 'lname,asc') {
 		$_order = 'lname';
 		$_dir = 'ASC';

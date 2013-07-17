@@ -23,6 +23,7 @@
 	<script type="text/javascript" src="/js/vendor/underscore-1.5.min.js"></script>
 	<script type="text/javascript" src="/js/vendor/bootstrapSwitch.js"></script>
 	<script type="text/javascript" src="/js/vendor/select2.js"></script>
+	<script type="text/javascript" src="/js/vendor/bootbox.min.js"></script>
 
 	<!-- start: CSS -->
 	<link rel="stylesheet" href="/css/default.css" />
@@ -64,7 +65,7 @@
         	// $(".disabled").on('click',function(e){
         	// 	e.PreventDefault();
         	// });
-         // });
+         });
     </script>
 
 </head>

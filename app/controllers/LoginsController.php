@@ -35,7 +35,12 @@ class LoginsController extends BaseController {
             if($user->active) {
                 $user->connections++;
                 $user->save();
-                return Redirect::to('/');
+                $reqUrl = Session::get('url');
+                if(is_null($reqUrl)) {
+                    return Redirect::to('/');
+                } else {
+                    return Redirect::to($reqUrl['intended']);
+                }
             } else {
                 $data = [
                     'errMsg'   => '<strong>User Account Suspended</strong>. Please contact system administrator.',

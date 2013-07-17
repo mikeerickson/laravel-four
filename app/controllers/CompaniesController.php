@@ -70,7 +70,7 @@ class CompaniesController extends BaseController {
 					'title'      => 'Companies',
 					'companies'   => $companies,
 					'fieldList'  => Company::getFieldList(),
-					'delimList'  => Company::getDelimList(),
+					'delimList'  => Helpers::getQueryDelimeterList(),
 					'recMessage' => $recMessage,
 					'queryField' => $queryField,
 					'queryDelim' => $queryDelim,

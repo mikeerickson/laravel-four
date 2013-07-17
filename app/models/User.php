@@ -5,12 +5,22 @@ use Illuminate\Auth\Reminders\RemindableInterface;
 
 class User extends Eloquent implements UserInterface, RemindableInterface {
 
-	public static function getFieldList() {
-		return ['username' => 'User Name', 'email' => 'E Mail', 'category' => 'Category', 'active' => 'Status' ];
+	public static $category = [
+			''         => 'Select Category',
+			'parent'   => 'Parent',
+			'student'  => 'Student',
+			'dog'      => 'Dog',
+			'relative' => 'Relative',
+			'brother'  => 'Brother',
+			'sister'   => 'Sister'
+		];
+
+	public static function getCategoryList() {
+		return self::$category;
 	}
 
-	public static function getDelimList() {
-		return ['equals' => 'is equal to', '<>' => 'not equal to', 'begins' => 'begins with', 'like' => 'contains'];
+	public static function getFieldList() {
+		return ['username' => 'User Name', 'email' => 'E Mail', 'category' => 'Category', 'active' => 'Status' ];
 	}
 
 	public static function userList($per_page = 10, $where = [], $orderField = 'username,asc') {
@@ -20,7 +30,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 			$result = explode(',', $orderField);
 			if(sizeof($result)>=1) {
 				$_order = $result[0];
-				if(sizeof($result)>=2) 
+				if(sizeof($result)>=2)
 					$_dir = $result[1];
 			}
 		}

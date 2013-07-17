@@ -9,10 +9,6 @@ class Company extends Eloquent {
 		return ['companyName' => 'Company Name', 'address' => 'Address', 'city' => 'City', 'state' => 'State', 'zip' => 'Zip'];
 	}
 
-	public static function getDelimList() {
-		return ['equals' => 'is equal to', '<>' => 'not equal to', 'begins' => 'begins with', 'like' => 'contains'];
-	}
-
 	public static function companyList($per_page = 10, $where = [], $orderField = 'companyName,asc' ) {
 
 		$_order = 'companyName';

@@ -76,7 +76,7 @@ class PlayersController extends BaseController {
 					'title'      => 'Players',
 					'players'    => $players,
 					'fieldList'  => Player::getFieldList(),
-					'delimList'  => Player::getDelimList(),
+					'delimList'  => Helpers::getQueryDelimeterList(),
 					'recMessage' => $recMessage,
 					'queryField' => $queryField,
 					'queryDelim' => $queryDelim,
