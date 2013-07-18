@@ -26,9 +26,7 @@
 				   title="Edit Record">{{ Helpers::image('img/icon_edit_16x16.gif') }}
 				</a> &nbsp;&nbsp;
 
-				<a onclick="return confirm('Are you sure you wish to delete this record?');"
-				   data-method="delete" href="/companies/{{$company->id}}?page={{Input::get('page') }}"
-				   title="Delete Record">{{ Helpers::image('img/icon_trash_16x16.gif') }}
+				<a data-method="delete" data-confirm="Are you sure?" href="/companies/{{$company->id}}?page={{Input::get('page') }}" title="Delete Record">{{ Helpers::image('img/icon_trash_16x16.gif') }}
 				</a>
 
 			</td>

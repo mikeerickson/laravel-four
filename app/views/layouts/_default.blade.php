@@ -35,6 +35,9 @@
 	<link rel="stylesheet" href="/css/vendor/style-responsive.css" id="base-style-responsive" />
 	<link rel="stylesheet" href="/css/vendor/bootstrapSwitch.css" />
 	<link rel="stylesheet" href="/css/vendor/select2.css" />
+
+	<link rel="stylesheet" href="/css/validation.css" type="text/css" media="screen" charset="utf-8">
+	<link rel="stylesheet" href="/css/app.css" type="text/css" media="screen" charset="utf-8">
 	<!-- end: CSS -->
 
 
@@ -53,18 +56,15 @@
 	<!-- end: Favicon -->
 
 
-	<link rel="stylesheet" href="/css/validation.css" type="text/css" media="screen" charset="utf-8">
-	<link rel="stylesheet" href="/css/app.css" type="text/css" media="screen" charset="utf-8">
-
 	<!-- Start Application Script -->
 	<script src="/js/main.js"></script>
 
     <script>
         $(function() {
-        	// $("#nav_players").attr('href','#').addClass("disabled");
-        	// $(".disabled").on('click',function(e){
-        	// 	e.PreventDefault();
-        	// });
+        	$("#nav_events").attr('href','#').addClass("disabled");
+        	$(".disabled").on('click',function(e){
+        		e.PreventDefault();
+        	});
          });
     </script>
 
@@ -95,6 +95,8 @@
 			  <li class="{{ $title == 'Users' ? 'active' : '' }}"><a id="nav_users" href="/users">Users</a></li>
 
 			  <li class="{{ $title == 'Players' ? 'active' : '' }}"><a id="nav_players" href="/players">Players</a></li>
+
+			  <li class="disabled {{ $title == 'Events' ? 'active' : '' }}"><a id="nav_events" href="/events">Events</a></li>
 			@endif
 			</ul>
 		</nav>

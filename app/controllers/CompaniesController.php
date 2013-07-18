@@ -98,12 +98,12 @@ class CompaniesController extends BaseController {
 				->with('msg_type','error');
 		} else {
 			Company::update(Input::get('id'), array(
-				'fname'  => Input::get('fname'),
-				'lname'  => Input::get('lname'),
-				'email'  => Input::get('email'),
-				'phone'  => Input::get('phone'),
-				'status' => Input::get('status'),
-				'active' => Input::get('active') ? 1 : 0
+				'companyName' => Input::get('companyName'),
+				'address'     => Input::get('address'),
+				'city'        => Input::get('city'),
+				'state'       => Input::get('state'),
+				'zip'         => Input::get('zip')
+				// 'active'   => Input::get('active') ? 1 : 0
 			));
 
 			Session::flash('message','{"msgType": "alert-success", "msgHdr": "Success", "msgBody": "Company Created Successfully"}');
@@ -118,7 +118,7 @@ class CompaniesController extends BaseController {
 		if($company) {
 			$data = [
 				'title'    => 'Companies',
-				'status'   => $this->status,
+				// 'status'   => $this->status,
 				'company'  => $company
 			];
 			return View::make('companies.show',$data);
@@ -135,7 +135,7 @@ class CompaniesController extends BaseController {
 		if($company) {
 			$data = [
 				'title'    => 'Companies',
-				'status'   => $this->status,
+				// 'status'   => $this->status,
 				'company'  => $company
 			];
 			return View::make('companies.edit',$data);
@@ -149,12 +149,12 @@ class CompaniesController extends BaseController {
 	public function update($id)
 	{
 		$data = [
-			'lname'  => Input::get('lname'),
-			'fname'  => Input::get('fname'),
-			'email'  => Input::get('email'),
-			'status' => Input::get('status'),
-			'phone'  => Input::get('phone'),
-			'active' => Input::get('active') ? 1 : 0
+			'companyName' => Input::get('companyName'),
+			'address'     => Input::get('address'),
+			'city'        => Input::get('city'),
+			'state'       => Input::get('state'),
+			'zip'         => Input::get('zip')
+			// 'active'   => Input::get('active') ? 1 : 0
 		];
 		$fullname = Input::get('fname').' '.Input::get('lname');
 		$company = Company::find($id)->where('id', Input::get('id'))->update($data);

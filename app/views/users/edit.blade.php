@@ -29,6 +29,9 @@
 		])
 	}}
 
+	{{ Form::label('password','Password:') }}
+	{{ Form::text('password', $user->password, ['disabled' => 'disabled','style' => 'width: 450px'] ) }}
+
 	{{ Form::label('email','E-Mail:') }}
 	{{ Form::text('email', $user->email,
 		[

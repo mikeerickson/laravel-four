@@ -1,5 +1,5 @@
 @input_font_size : 12px;
-@label_font_size : 11px;
+@label_font_size : 12px;
 
 select { width: 215px; }
 .dropdown-menu { background-color: black; color: green; border: 0px;}
@@ -11,7 +11,7 @@ footer {
 	color: #606060;
 	text-align: left;
 }
-body { margin-top: 20px; font-size: 12px;}
+body { margin-top: 20px; font-size: @label_font_size;}
 #msgHdr { padding-bottom: 5px;}
 
 #contact { font-size: @label_font_size;}
@@ -30,11 +30,11 @@ body { margin-top: 20px; font-size: 12px;}
 #toolbar a:hover { text-decoration: none; }
 #toolbar button>a:visited { color: black; }
 #toolbar .disabled { color: #c9c9c9; }
-#toolbar input[type="submit"] { width: 150px; line-height: 24px; }
+#toolbar input[type="submit"] { width: 100px; line-height: 24px; }
 
 div #queryForm { font-size: 11px; float: left; }
-div #queryForm label, input { font-size: 11px; }
-div #queryForm input[type='text'] { font-size: 11px; width: 120px; margin-right: 10px; height: 15px;}
+div #queryForm label, input { font-size: 12px; }
+div #queryForm input[type='text'] { font-size: 12px; width: 120px; margin-right: 10px; height: 15px;}
 
 #queryFilterClear { margin-left: -8px; }
 

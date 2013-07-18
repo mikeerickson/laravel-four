@@ -7,13 +7,14 @@
 
 /* variables */
 
-@pagination_color : #41A6C8; //#fca143;  Orange replaced by turquoise color to match buttons
-@pagination_border: #cac9c9;
-@baseLineHeight   : 14px;
-@footer_color     : #606060;
-@header_color     : @footer_color;
-@font_family      : 'Droid Sans';
-@input_font_size  : 12px;
+@pagination_color  : #41A6C8; //#fca143;  Orange replaced by turquoise color to match buttons
+@pagination_border : #cac9c9;
+@baseLineHeight    : 14px;
+@footer_color      : #606060;
+@header_color      : @footer_color;
+@font_family       : 'Droid Sans';
+@input_font_size   : 12px;
+@default_font_size : 1em; // 12px;
 
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
 audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
@@ -68,12 +69,12 @@ input:invalid, textarea:invalid { background-color: #f0dddd; }
 // table { border-collapse: collapse; border-spacing: 0; }
 // td { vertical-align: top; }
 
-* { font-size: 11px;}
+* { font-size: @default_font_size;}
 
 body
 {
 	font-family: @font_family, sans-serif;
-	font-size: 10pt;
+	font-size: @default_font_size;
 	color: #555;
 	line-height: 25px;
 	margin-top: 20px;
