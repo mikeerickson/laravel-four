@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Calendar</title>
+	<script type="text/javascript" src="/js/vendor/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="/js/vendor/fullcalendar.min.js"></script>
+
+	<link rel="stylesheet" href="/css/vendor/bootstrap.min.css" id="bootstrap-style" />
+	<link rel="stylesheet" href="/css/vendor/fullcalendar.css" />
+
+    <script>
+        $(function() {
+
+			$("#calendar").fullCalendar({
+					buttonIcons: { 
+						prev: 'circle-triangle-w',
+						next: 'circle-triangle-e'
+					},
+					editable: true,
+					header: {
+						left:   'prev, next today',
+						center: 'title',
+					 	right:  'month, agendaWeek, agendaDay'
+					},
+					events: [
+						{
+							title: 'Mike Birthday',
+							start: new Date(2013,9,15)
+						},
+						{
+							title: 'Test',
+							start: new Date(2013,6,25,10,30),
+							end: new Date(2013,6,25,11,30),
+							allDay: false
+						},
+						{
+							title: 'Test 2',
+							start: new Date(2013,6,25,13,30),
+							end: new Date(2013,6,25,15,30),
+							allDay: false
+						}
+					]
+			});
+
+         });
+    </script>
+
+</head>
+<body>
+
+<div id="calendar"></div>
+
+</body>
+</html>

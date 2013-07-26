@@ -12,11 +12,11 @@
 	<!-- end: Mobile Specific -->
 
 	<!-- start: JS Libraries -->
-	<script type="text/javascript" src="/js/vendor/jquery-1.9.1.min.js"></script>
-	<script type="text/javascript" src="/js/vendor/angular-1.0.6-min.js"></script>
+	<script type="text/javascript" src="/js/vendor/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="/js/vendor/jquery-ui-1.10.0.custom.min.js"></script>
+	<script type="text/javascript" src="/js/vendor/angular-1.0.7-min.js"></script>
 	<script type="text/javascript" src="/js/vendor/utils.js"></script>
 	<script type="text/javascript" src="/js/vendor/bootstrap.js"></script>
-	<script type="text/javascript" src="/js/vendor/msgbox/jquery.msgbox.min.js"></script>
 	<script type="text/javascript" src="/js/vendor/humane.js"></script>
  	<script type="text/javascript" src="/js/vendor/parsley.min.js"></script>
  	<script type="text/javascript" src="/js/vendor/moment.js"></script>
@@ -26,21 +26,22 @@
 	<script type="text/javascript" src="/js/vendor/bootbox.min.js"></script>
 	<script type="text/javascript" src="/js/vendor/fullcalendar.min.js"></script>
 
-	<!-- start: CSS -->
-	<link rel="stylesheet" href="/css/default.css" />
-	<link rel="stylesheet" href="/js/vendor/msgbox/jquery.msgbox.css" />
-	<link rel="stylesheet" href="/css/vendor/original.css" />
 	<link rel="stylesheet" href="/css/vendor/bootstrap.min.css" id="bootstrap-style" />
 	<link rel="stylesheet" href="/css/vendor/bootstrap-responsive.min.css" />
+	<link rel="stylesheet" href="/css/vendor/fullcalendar.css" />
+
+	<link rel="stylesheet" href="/css/default.css" />
+
+	<!-- start: bootstrap theme -->
+	<link rel="stylesheet" href="/css/vendor/original.css" />
 	<link rel="stylesheet" href="/css/vendor/style.css" id="base-style" />
 	<link rel="stylesheet" href="/css/vendor/style-responsive.css" id="base-style-responsive" />
+	<!-- end: bootstrap theme -->
+
 	<link rel="stylesheet" href="/css/vendor/bootstrapSwitch.css" />
 	<link rel="stylesheet" href="/css/vendor/select2.css" />
-	<!-- <link rel="stylesheet" href="/css/vendor/fullcalendar.css" /> -->
-
 	<link rel="stylesheet" href="/css/validation.css" type="text/css" media="screen" charset="utf-8">
 	<link rel="stylesheet" href="/css/app.css" type="text/css" media="screen" charset="utf-8">
-	<!-- end: CSS -->
 
 
 	<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
