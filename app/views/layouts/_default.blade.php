@@ -122,6 +122,7 @@
 	<div class="wrapper">
 		<div id="userinfo">
 			@if ( Auth::check() )
+				{{ Gravatar::get( null , false , Auth::user()->email ) }}&nbsp;
 				Welcome back <strong>{{ ucwords(Auth::user()->username) }}</strong>&nbsp;&nbsp;
 				<i class="icon-user"></i>&nbsp;{{ link_to('logout', 'Logout') }}
 			@else

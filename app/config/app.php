@@ -117,6 +117,8 @@ return array(
 		'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
 		'TwigBridge\TwigServiceProvider',
 		'ExpressiveDateServiceProvider',
+		'Tournasdim\Getgravatar\GetgravatarServiceProvider',
+
 /* 		'LaravelBook\Laravel4Powerpack\Providers\PowerpackServiceProvider', */
 	),
 
@@ -182,6 +184,7 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
+		'Gravatar'		  => 'Tournasdim\Getgravatar\Facades\Getgravatar',
 //	    'PowerHtml' 	  => 'LaravelBook\Laravel4Powerpack\Facades\HTMLFacade',
 //	    'Form' 			  => 'LaravelBook\Laravel4Powerpack\Facades\FormFacade',
 //	    'Str' 			  => 'LaravelBook\Laravel4Powerpack\Facades\StrFacade', 

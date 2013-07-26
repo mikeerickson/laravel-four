@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "cac6051c21b05486f4309f4384abd19e",
+    "hash": "9a15a4647dae21865182a118ea3d9281",
     "packages": [
         {
             "name": "alexandresalome/php-selenium",
@@ -3172,6 +3172,50 @@
             "time": "2013-07-21 20:19:01"
         },
         {
+            "name": "tournasdim/laravel4-getgravatar",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tournasdim/Laravel4-getgravatar.git",
+                "reference": "f7e000d55e41c3a1a210eaa822f7b01c6c492082"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tournasdim/Laravel4-getgravatar/zipball/f7e000d55e41c3a1a210eaa822f7b01c6c492082",
+                "reference": "f7e000d55e41c3a1a210eaa822f7b01c6c492082",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "4.0.x",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Tournasdim\\Getgravatar": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tournas Dimitrios",
+                    "email": "tournasdimitrios@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A Laravel 4 package . Given an email address it automatically retrieves an Avatar from Gravatar's website . For logged-in users , their email address is automatically generated , through the Auth adapter Interface . Three Adapters are supported : Auth , Sentry and Confide  . ",
+            "homepage": "https://github.com/tournasdim/Laravel4-getgravatar",
+            "keywords": [
+                "gravatar",
+                "laravel",
+                "laravel4"
+            ],
+            "time": "2013-07-15 07:08:25"
+        },
+        {
             "name": "twig/twig",
             "version": "v1.12.3",
             "source": {
@@ -3363,7 +3407,8 @@
         "way/generators": 20,
         "twig/twig": 20,
         "ccampbell/chromephp": 20,
-        "codeception/codeception": 20
+        "codeception/codeception": 20,
+        "tournasdim/laravel4-getgravatar": 20
     },
     "platform": [
 

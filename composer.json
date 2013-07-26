@@ -7,7 +7,8 @@
 		"jasonlewis/expressive-date": "1.*",
 		"ccampbell/chromephp": "dev-master",
 		"codeception/codeception": "dev-master",
-		"barryvdh/laravel-ide-helper": "1.*"
+		"barryvdh/laravel-ide-helper": "1.*",
+		"tournasdim/laravel4-getgravatar": "dev-master"
 	},
 	"scripts": {
 	    "post-update-cmd":[

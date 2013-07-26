@@ -3468,5 +3468,51 @@
         ],
         "description": "Symfony Process Component",
         "homepage": "http://symfony.com"
+    },
+    {
+        "name": "tournasdim/laravel4-getgravatar",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/tournasdim/Laravel4-getgravatar.git",
+            "reference": "f7e000d55e41c3a1a210eaa822f7b01c6c492082"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/tournasdim/Laravel4-getgravatar/zipball/f7e000d55e41c3a1a210eaa822f7b01c6c492082",
+            "reference": "f7e000d55e41c3a1a210eaa822f7b01c6c492082",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/support": "4.0.x",
+            "php": ">=5.3.0"
+        },
+        "time": "2013-07-15 07:08:25",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "Tournasdim\\Getgravatar": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Tournas Dimitrios",
+                "email": "tournasdimitrios@gmail.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "A Laravel 4 package . Given an email address it automatically retrieves an Avatar from Gravatar's website . For logged-in users , their email address is automatically generated , through the Auth adapter Interface . Three Adapters are supported : Auth , Sentry and Confide  . ",
+        "homepage": "https://github.com/tournasdim/Laravel4-getgravatar",
+        "keywords": [
+            "gravatar",
+            "laravel",
+            "laravel4"
+        ]
     }
 ]

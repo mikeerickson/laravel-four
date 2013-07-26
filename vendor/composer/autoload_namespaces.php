@@ -12,6 +12,7 @@ return array(
     'Way\\Generators' => array($vendorDir . '/way/generators/src'),
     'Twig_' => array($vendorDir . '/twig/twig/lib'),
     'TwigBridge' => array($vendorDir . '/rcrowe/twigbridge/src'),
+    'Tournasdim\\Getgravatar' => array($vendorDir . '/tournasdim/laravel4-getgravatar/src'),
     'Symfony\\Component\\Yaml\\' => array($vendorDir . '/symfony/yaml'),
     'Symfony\\Component\\Translation\\' => array($vendorDir . '/symfony/translation'),
     'Symfony\\Component\\Routing\\' => array($vendorDir . '/symfony/routing'),

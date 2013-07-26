@@ -1,5 +1,10 @@
 <?php
 
+Route::get('/gravatar' , function()
+{
+	return Gravatar::get( null , false , 'codeungeon@gmail.com' ) ;
+});
+
 Route::get('/api/contacts', function(){
 	return Contact::all();
 });
