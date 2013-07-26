@@ -10,7 +10,7 @@
 			<th>City</th>
 			<th>State</th>
 			<th>Zip</th>
-			<th width="10%" style="text-align: center;"> - Actions - </th>
+			<th width="10%" style="text-align: center;"></th>
 
 		<tbody>
 		@foreach ($companies as $company)
@@ -22,11 +22,12 @@
 			<td>{{ $company->zip }} </td>
 			<td width="10%" style="text-align: center">
 
-				<a href="/companies/{{$company->id}}/edit?page={{ Input::get('page') }}"
+				<a class="action" href="/companies/{{$company->id}}/edit?page={{ Input::get('page') }}"
 				   title="Edit Record">{{ Helpers::image('img/icon_edit_16x16.gif') }}
 				</a> &nbsp;&nbsp;
 
-				<a data-method="delete" data-confirm="Are you sure?" href="/companies/{{$company->id}}?page={{Input::get('page') }}" title="Delete Record">{{ Helpers::image('img/icon_trash_16x16.gif') }}
+				<a class="action" data-method="delete" data-confirm="Are you sure?" href="/companies/{{$company->id}}?page={{Input::get('page') }}"
+				   title="Delete Record">{{ Helpers::image('img/icon_trash_16x16.gif') }}
 				</a>
 
 			</td>

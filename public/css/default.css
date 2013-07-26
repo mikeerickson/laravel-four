@@ -472,3 +472,6 @@ input[type="radio"] {
   width: 20px;
   height: 16px;
 }
+#calendar {
+  margin-top: 50px;
+}

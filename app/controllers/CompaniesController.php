@@ -7,7 +7,6 @@ class CompaniesController extends BaseController {
 
 	public function index()
 	{
-
 		// $user = User::where('username', '=', 'mike erickson')->first();
 		// Auth::login($user);
 

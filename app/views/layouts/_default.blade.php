@@ -24,6 +24,7 @@
 	<script type="text/javascript" src="/js/vendor/bootstrapSwitch.js"></script>
 	<script type="text/javascript" src="/js/vendor/select2.js"></script>
 	<script type="text/javascript" src="/js/vendor/bootbox.min.js"></script>
+	<script type="text/javascript" src="/js/vendor/fullcalendar.min.js"></script>
 
 	<!-- start: CSS -->
 	<link rel="stylesheet" href="/css/default.css" />
@@ -35,6 +36,7 @@
 	<link rel="stylesheet" href="/css/vendor/style-responsive.css" id="base-style-responsive" />
 	<link rel="stylesheet" href="/css/vendor/bootstrapSwitch.css" />
 	<link rel="stylesheet" href="/css/vendor/select2.css" />
+	<!-- <link rel="stylesheet" href="/css/vendor/fullcalendar.css" /> -->
 
 	<link rel="stylesheet" href="/css/validation.css" type="text/css" media="screen" charset="utf-8">
 	<link rel="stylesheet" href="/css/app.css" type="text/css" media="screen" charset="utf-8">
@@ -61,14 +63,58 @@
 
     <script>
         $(function() {
-        	$("#nav_events").attr('href','#').addClass("disabled");
+        	// $("#nav_events").attr('href','#').addClass("disabled");
         	$(".disabled").on('click',function(e){
         		e.PreventDefault();
         	});
+
+		 	$('tbody tr').find('a.action').hide();
+			$('tbody tr').hover(
+			    function() {
+			        $('a.action', this).show();
+			    },
+			    function() {
+			        $('a.action', this).hide();
+			    }
+			);
+
+			$("#calendar").fullCalendar({
+					buttonIcons: { 
+						prev: 'circle-triangle-w',
+						next: 'circle-triangle-e'
+					},
+					editable: true,
+					header: {
+						left:   'prev, next today',
+						center: 'title',
+					 	right:  'month, agendaWeek, agendaDay'
+					},
+					events: [
+						{
+							title: 'Mike Birthday',
+							start: new Date(2013,9,15)
+						},
+						{
+							title: 'Test',
+							start: new Date(2013,6,25,10,30),
+							end: new Date(2013,6,25,11,30),
+							allDay: false
+						},
+						{
+							title: 'Test 2',
+							start: new Date(2013,6,25,13,30),
+							end: new Date(2013,6,25,15,30),
+							allDay: false
+						}
+					]
+			});
+
          });
     </script>
 
 </head>
+
+<html>
 
 <body id="body">
 
@@ -96,7 +142,7 @@
 
 			  <li class="{{ $title == 'Players' ? 'active' : '' }}"><a id="nav_players" href="/players">Players</a></li>
 
-			  <li class="disabled {{ $title == 'Events' ? 'active' : '' }}"><a id="nav_events" href="/events">Events</a></li>
+			  <li class="{{ $title == 'Events' ? 'active' : '' }}"><a id="nav_events" href="/events">Events</a></li>
 			@endif
 			</ul>
 		</nav>

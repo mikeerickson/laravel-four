@@ -39,6 +39,7 @@ class LoginsController extends BaseController {
                 if(is_null($reqUrl)) {
                     return Redirect::to('/');
                 } else {
+                    // redirect to the page the user originally requested
                     return Redirect::to($reqUrl['intended']);
                 }
             } else {

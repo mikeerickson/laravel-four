@@ -1,5 +1,9 @@
 <?php
 
+Route::get('/api/contacts', function(){
+	return Contact::all();
+});
+
 Route::get('/login', 'LoginsController@index');
 Route::post('/login','LoginsController@create');
 Route::get('/logout',function(){
@@ -156,3 +160,6 @@ Route::resource('animals', 'AnimalsController');
 Route::resource('dogs', 'DogsController');
 
 // Route::resource('logins','LoginsController');
+
+
+Route::resource('events', 'EventsController');

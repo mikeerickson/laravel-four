@@ -10,7 +10,7 @@
 			<th>Position</th>
 			<th width="10%" style="text-align: center;">Bat/Throw</th>
 			<th style="text-align: center;">Class</th>
-			<th width="10%" style="text-align: center;"> - Actions - </th>
+			<th width="10%" style="text-align: center;"></th>
 
 		<tbody>
 			@foreach ($players as $player)
@@ -25,12 +25,11 @@
 				<td style="text-align: center;">{{ $player->class }} </td>
 				<td width="10%" style="text-align: center">
 
-					<a href="/players/{{$player->id}}/edit?page={{ Input::get('page') }}"
+					<a class="action" href="/players/{{$player->id}}/edit?page={{ Input::get('page') }}"
 					   title="Edit Record">{{ Helpers::image('img/icon_edit_16x16.gif') }}
 					</a> &nbsp;&nbsp;
 
-					<a onclick="return confirm('Are you sure you wish to delete this record?');"
-					   data-method="delete" href="/players/{{$player->id}}?page={{Input::get('page') }}"
+					<a class="action" data-confirm="Are you sure?" data-method="delete" href="/players/{{$player->id}}?page={{Input::get('page') }}"
 					   title="Delete Record">{{ Helpers::image('img/icon_trash_16x16.gif') }}
 					</a>
 

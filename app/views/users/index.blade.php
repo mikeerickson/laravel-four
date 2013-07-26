@@ -10,13 +10,12 @@
 		<th width='30%'>E-Mail</th>
 		<th width='15%'>Category</th>
 		<th width='15%'>Updated</th>
-		<th width='10%' align='middle'style='text-align: center'>- Actions -</th>
+		<th width='10%' align='middle'style='text-align: center'></th>
 
 
 		@foreach ( $users as $user )
 
 			<tr>
-
  				@if ($user->active)
 					<td> <span class="label label-success">Active</span> </td>
 				@else
@@ -31,8 +30,8 @@
 
 				<td>{{ ExpressiveDate::make($user->updated_at)->getRelativeDate() }}</td>
 				<td width='10%' style="text-align: center;">
-					<a href="/users/{{$user->id}}/edit?page={{ Input::get('page') }}" title="Edit Record">{{ Helpers::image('img/icon_edit_16x16.gif') }}</a> &nbsp;&nbsp;
-					<a data-method="delete" data-confirm="Are you sure?" href="/{{strtolower($title)}}/{{$user->id}}?page={{Input::get('page') }}" title="Delete Record"><img src="img/icon_trash_16x16.gif">
+					<a class="action" href="/users/{{$user->id}}/edit?page={{ Input::get('page') }}" title="Edit Record">{{ Helpers::image('img/icon_edit_16x16.gif') }}</a> &nbsp;&nbsp;
+					<a class="action" data-method="delete" data-confirm="Are you sure?" href="/{{strtolower($title)}}/{{$user->id}}?page={{Input::get('page') }}" title="Delete Record"><img src="img/icon_trash_16x16.gif">
 				</td>
 
 			</tr>
