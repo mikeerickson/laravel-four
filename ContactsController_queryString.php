@@ -48,7 +48,7 @@ class ContactsController extends BaseController {
 		}
 
 		$fieldList = Contact::getFieldList();
-		$delimList = Contact::getDelimList();
+		$delimList = Helpers::getQueryDelimeterList();
 
 		//$contacts  = Contact::with('company')->orderBy('lname')->paginate($this->perPage);
 		$contacts  = Contact::contactList($this->perPage,$this->where);

@@ -424,6 +424,29 @@ class App extends Illuminate\Support\Facades\App{
 	 }
 
 	/**
+	 * Get or set the request class for the application.
+	 *
+	 * @param string  $class
+	 * @return string
+	 * @static 
+	 */
+	 public static function requestClass($class = null){
+		return Illuminate\Foundation\Application::requestClass($class);
+	 }
+
+	/**
+	 * Call a method on the default request class.
+	 *
+	 * @param string  $method
+	 * @param array  $parameters
+	 * @return mixed
+	 * @static 
+	 */
+	 public static function onRequest($method, $parameters = array()){
+		return Illuminate\Foundation\Application::onRequest($method, $parameters);
+	 }
+
+	/**
 	 * Dynamically access application services.
 	 *
 	 * @param string  $key
