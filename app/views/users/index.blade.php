@@ -7,9 +7,11 @@
 	<table id="mainList" class="table table-striped table-bordered bootstrap-datatable datatable">
 		<th width='5%'>Status</th>
 		<th width='20%'>User</th>
-		<th width='30%'>E-Mail</th>
+		<th width='25%'>E-Mail</th>
 		<th width='15%'>Category</th>
 		<th width='15%'>Updated</th>
+		<th width='10%' style="text-align: center;">Connections</th>
+
 		<th width='10%' align='middle'style='text-align: center'></th>
 
 
@@ -29,6 +31,7 @@
 				<!-- date("m-d-Y", strtotime($user->updated_at)) -->
 
 				<td>{{ ExpressiveDate::make($user->updated_at)->getRelativeDate() }}</td>
+				<td style="text-align: center;">{{ $user->connections }}</td>
 				<td width='10%' style="text-align: center;">
 					<a class="action" href="/users/{{$user->id}}/edit?page={{ Input::get('page') }}" title="Edit Record">{{ Helpers::image('img/icon_edit_16x16.gif') }}</a> &nbsp;&nbsp;
 					<a class="action" data-method="delete" data-confirm="Are you sure?" href="/{{strtolower($title)}}/{{$user->id}}?page={{Input::get('page') }}" title="Delete Record"><img src="img/icon_trash_16x16.gif">

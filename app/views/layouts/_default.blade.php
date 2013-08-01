@@ -12,19 +12,19 @@
 	<!-- end: Mobile Specific -->
 
 	<!-- start: JS Libraries -->
-	<script type="text/javascript" src="/js/vendor/jquery-2.0.3.min.js"></script>
-	<script type="text/javascript" src="/js/vendor/jquery-ui-1.10.0.custom.min.js"></script>
-	<script type="text/javascript" src="/js/vendor/angular-1.0.7-min.js"></script>
-	<script type="text/javascript" src="/js/vendor/utils.js"></script>
-	<script type="text/javascript" src="/js/vendor/bootstrap.js"></script>
-	<script type="text/javascript" src="/js/vendor/humane.js"></script>
- 	<script type="text/javascript" src="/js/vendor/parsley.min.js"></script>
- 	<script type="text/javascript" src="/js/vendor/moment.js"></script>
-	<script type="text/javascript" src="/js/vendor/underscore-1.5.min.js"></script>
-	<script type="text/javascript" src="/js/vendor/bootstrapSwitch.js"></script>
-	<script type="text/javascript" src="/js/vendor/select2.js"></script>
-	<script type="text/javascript" src="/js/vendor/bootbox.min.js"></script>
-	<script type="text/javascript" src="/js/vendor/fullcalendar.min.js"></script>
+	<script type="text/javascript" src="/lib/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="/lib/jquery-ui-1.10.0.custom.min.js"></script>
+	<script type="text/javascript" src="/lib/angular-1.0.7-min.js"></script>
+	<script type="text/javascript" src="/lib/utils.js"></script>
+	<script type="text/javascript" src="/lib/bootstrap.js"></script>
+	<script type="text/javascript" src="/lib/humane.js"></script>
+ 	<script type="text/javascript" src="/lib/parsley.min.js"></script>
+ 	<script type="text/javascript" src="/lib/moment.js"></script>
+	<script type="text/javascript" src="/lib/underscore-1.5.min.js"></script>
+	<script type="text/javascript" src="/lib/bootstrapSwitch.js"></script>
+	<script type="text/javascript" src="/lib/select2.js"></script>
+	<script type="text/javascript" src="/lib/bootbox.min.js"></script>
+	<script type="text/javascript" src="/lib/fullcalendar.min.js"></script>
 
 	<link rel="stylesheet" href="/css/vendor/bootstrap.min.css" id="bootstrap-style" />
 	<link rel="stylesheet" href="/css/vendor/bootstrap-responsive.min.css" />
@@ -65,6 +65,12 @@
     <script>
         $(function() {
         	// $("#nav_events").attr('href','#').addClass("disabled");
+		var today = new Date();
+		var d = today.getDate();
+		var m = today.getMonth();
+		var y = today.getFullYear();
+console.log(today);
+
         	$(".disabled").on('click',function(e){
         		e.PreventDefault();
         	});
@@ -88,7 +94,17 @@
 					header: {
 						left:   'prev, next today',
 						center: 'title',
-					 	right:  'month, agendaWeek, agendaDay'
+					 	right:  'agendaDay, agendaWeek, month'
+					},
+					buttonText: {
+					    prev:     '&lsaquo;', // <
+					    next:     '&rsaquo;', // >
+					    prevYear: '&laquo;',  // <<
+					    nextYear: '&raquo;',  // >>
+					    today:    'Today',
+					    month:    'Month',
+					    week:     'Week',
+					    day:      'Day'						
 					},
 					events: [
 						{
@@ -96,15 +112,15 @@
 							start: new Date(2013,9,15)
 						},
 						{
-							title: 'Test',
-							start: new Date(2013,6,25,10,30),
-							end: new Date(2013,6,25,11,30),
+							title: 'Lacrosse vs Huntington',
+							start: new Date(y,m,d,17,30),
+							end: new Date(y,m,d,19,30),
 							allDay: false
 						},
 						{
-							title: 'Test 2',
-							start: new Date(2013,6,25,13,30),
-							end: new Date(2013,6,25,15,30),
+							title: 'Lacrosse @ Newport',
+							start: new Date(y,m,d+2,15,30),
+							end: new Date(y,m,d+2,17,30),
 							allDay: false
 						}
 					]

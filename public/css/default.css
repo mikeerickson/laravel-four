@@ -190,7 +190,6 @@ fieldset {
 }
 label {
   cursor: pointer;
-  font-weight: bold;
 }
 legend {
   border: 0;

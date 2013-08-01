@@ -14,7 +14,6 @@
         $(function() {
             var login = $('#login_dlog');
             login.modal({ backdrop: true, keyboard: true, show: true });
-
             // TODO: Implement Remember Me
 
             // $("body").css("display", "none");

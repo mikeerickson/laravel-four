@@ -74,7 +74,7 @@ div #queryForm {
 }
 div #queryForm label,
 input {
-  font-size: 12px;
+  font-size: 11px;
 }
 div #queryForm input[type='text'] {
   font-size: 12px;
@@ -88,7 +88,7 @@ div #queryForm input[type='text'] {
 #recHeader {
   margin-bottom: 5px;
 }
-tr:hover {
+#mainList tr:hover {
   background-color: #FEFCD1;
 }
 header img {

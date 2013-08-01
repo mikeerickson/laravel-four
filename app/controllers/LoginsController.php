@@ -20,8 +20,8 @@ class LoginsController extends BaseController {
      */
     public function create()
     {
-        $userID   = Input::get('login_id');
         $password = Input::get('login_pw');
+        $userID = Input::get('login_id');
 
         // first query to see if we supplied an email address, if so retrieve the user name and perform
         // authentication validation

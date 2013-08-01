@@ -4,7 +4,7 @@
 
 	@include ('layouts._toolbar')
 
-	<table class="table table-striped table-bordered bootstrap-datatable datatable">
+	<table id="mainList" class="table table-striped table-bordered bootstrap-datatable datatable">
 			<th width="5%">Active</th>
 			<th>Contact Name</th>
 			<th>Company</th>

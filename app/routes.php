@@ -1,20 +1,30 @@
 <?php
 
-Route::get('/gravatar' , function()
-{
-	return Gravatar::get( null , false , 'codeungeon@gmail.com' ) ;
-});
-
-Route::get('/api/contacts', function(){
-	return Contact::all();
-});
-
+// Login Controller handles all authentication for routes in auth group (below)
 Route::get('/login', 'LoginsController@index');
 Route::post('/login','LoginsController@create');
 Route::get('/logout',function(){
 	Auth::logout();
 	return Redirect::to('/');
 });
+
+Route::group(['before' => 'auth'], function(){
+	Route::resource('contacts', 'ContactsController');
+	Route::resource('companies', 'CompaniesController');
+	Route::resource('users', 'UsersController');
+	Route::resource('players', 'PlayersController');
+	Route::resource('events', 'EventsController');
+});
+
+Route::get('/gravatar' , function()
+{
+	return Gravatar::get( null , false , 'codedungeon@gmail.com' ) ;
+});
+
+Route::get('/api/contacts', function(){
+	return Contact::all();
+});
+
 
 Route::get('/boot','BootController@index');
 /*
@@ -149,22 +159,8 @@ Route::get('/blade', function() {
 });
 
 
-Route::group(['before' => 'auth'], function(){
-	Route::resource('contacts', 'ContactsController');
-	Route::resource('companies', 'CompaniesController');
-	Route::resource('users', 'UsersController');
-	Route::resource('players', 'PlayersController');
-});
 
 Route::resource('cars', 'CarsController');
-
 Route::resource('photos', 'PhotosController');
-
 Route::resource('animals', 'AnimalsController');
-
 Route::resource('dogs', 'DogsController');
-
-// Route::resource('logins','LoginsController');
-
-
-Route::resource('events', 'EventsController');

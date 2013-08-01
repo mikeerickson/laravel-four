@@ -3,7 +3,7 @@
 <head>
 <title>Search form with AngualrJS</title>
     <link rel="stylesheet" href="css/vendor/bootstrap.min.css" type="text/css" />
-    <script src="js/vendor/angular-1.0.6-min.js"></script>
+    <script src="js/vendor/angular-1.0.7.min.js"></script>
     <script src="app.js"></script>
 </head>
 
@@ -14,38 +14,54 @@
 	        <input type="text" ng-model="keywords" class="input-medium search-query" placeholder="Enter First Name...">
 	        <button type="submit" class="btn" ng-click="search()">Find</button>
 	    </form>
-<!--
-		<pre ng-model="result">
+
+<!-- 		<pre ng-model="result">
 			{{result}}
 		</pre>
--->
+ -->
+	 	<div style="margin: 5px;">
+			<span class="pull-right">
+				Order By: <select ng-model="order">
+							<option value="status">Status</option>
+							<option value="fname">First Name</option>
+							<option value="lname" selected>Last Name</option>
+							<option value="company.companyName">Company Name</option>
+							<option value="company.city">City</option>
+							<option value="company.state">State</option>
+							<option value="company.zip">Zip Code</option>
+							<option value="Phone">Phone</option>
+						  </select> 
+				Filter: <input type="search" ng-model="filter" />
+			</span>
 
-		<table class="table table-striped table-bordered bootstrap-datatable datatable">
-			<thead>
-				<th>Status</th>
-				<th>First</th>
-				<th>Last</th>
-				<th>Company</th>
-				<th>City</th>
-				<th>E Mail</th>
-				<th>Phone</th>
-			</thead>
-			<tbody>
-				<tr ng-repeat="contact in result">
-					<td width="5%">
-						<span class="label" ng-class="{true:'label-success', false:''}[contact.active=='1']">
-							{{ contact.active | status }}
-						</span>
-					</td>
-					<td>{{contact.fname}}</td>
-					<td>{{contact.lname}}</td>
-					<td>{{contact.company.companyName}}</td>
-					<td>{{contact.company.city}}, {{contact.company.state}} {{contact.company.zip }}</td>
-					<td><a href='mailto:{{contact.email }}'>{{contact.email }}</a></td>
-					<td>{{contact.phone | phone}}</td>
-				</tr>
-			</tbody>
-		</table>
+			<table class="table table-striped table-bordered bootstrap-datatable datatable">
+				<thead>
+					<th>Status</th>
+					<th>First</th>
+					<th>Last</th>
+					<th>Company</th>
+					<th>City</th>
+					<th>E Mail</th>
+					<th>Phone</th>
+				</thead>
+				<tbody>
+					<tr ng-repeat="contact in result | filter: filter | orderBy: order">
+						<td width="5%">
+							<span class="label" ng-class="{true:'label-success', false:''}[contact.active=='1']">
+								{{ contact.active | status }}
+							</span>
+						</td>
+						<td>{{contact.fname}}</td>
+						<td>{{contact.lname}}</td>
+						<td>{{contact.company.companyName}}</td>
+						<td>{{contact.company.city}}, {{contact.company.state}} {{contact.company.zip}}</td>
+						<td><a href='mailto:{{contact.email}}'>{{contact.email | lowercase}}</a></td>
+						<td>{{contact.phone | phone}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
    </div>
 </body>
 
