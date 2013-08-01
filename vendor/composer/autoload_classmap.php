@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'AddAddressToCompaniesTable' => $baseDir . '/app/database/migrations/2013_06_29_194649_add_address_to_companies_table.php',
+    'AddImgurlToUsersTable' => $baseDir . '/app/database/migrations/2013_08_01_154249_add_imgurl_to_users_table.php',
     'Barryvdh\\LaravelIdeHelper\\GeneratorCommand' => $vendorDir . '/barryvdh/laravel-ide-helper/src/Barryvdh/LaravelIdeHelper/GeneratorCommand.php',
     'Barryvdh\\LaravelIdeHelper\\IdeHelperServiceProvider' => $vendorDir . '/barryvdh/laravel-ide-helper/src/Barryvdh/LaravelIdeHelper/IdeHelperServiceProvider.php',
     'Barryvdh\\LaravelIdeHelper\\ModelsCommand' => $vendorDir . '/barryvdh/laravel-ide-helper/src/Barryvdh/LaravelIdeHelper/ModelsCommand.php',

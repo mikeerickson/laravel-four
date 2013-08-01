@@ -5,10 +5,11 @@
 	@include ('layouts._toolbar')
 
 	<table id="mainList" class="table table-striped table-bordered bootstrap-datatable datatable">
+		<th width="5%">&nbsp;</td>
 		<th width='5%'>Status</th>
 		<th width='20%'>User</th>
 		<th width='25%'>E-Mail</th>
-		<th width='15%'>Category</th>
+		<th width='10%'>Category</th>
 		<th width='15%'>Updated</th>
 		<th width='10%' style="text-align: center;">Connections</th>
 
@@ -18,6 +19,8 @@
 		@foreach ( $users as $user )
 
 			<tr>
+				<td>{{ Gravatar::get( null , false , $user->email ) }}</td>
+
  				@if ($user->active)
 					<td> <span class="label label-success">Active</span> </td>
 				@else

@@ -25,6 +25,8 @@
 	<script type="text/javascript" src="/lib/select2.js"></script>
 	<script type="text/javascript" src="/lib/bootbox.min.js"></script>
 	<script type="text/javascript" src="/lib/fullcalendar.min.js"></script>
+	<script type="text/javascript" src="/lib/jquery.gravatar.js"></script>
+	<script type="text/javascript" src="/lib/md5.js"></script>
 
 	<link rel="stylesheet" href="/css/vendor/bootstrap.min.css" id="bootstrap-style" />
 	<link rel="stylesheet" href="/css/vendor/bootstrap-responsive.min.css" />
@@ -65,11 +67,10 @@
     <script>
         $(function() {
         	// $("#nav_events").attr('href','#').addClass("disabled");
-		var today = new Date();
-		var d = today.getDate();
-		var m = today.getMonth();
-		var y = today.getFullYear();
-console.log(today);
+			var today = new Date();
+			var d = today.getDate();
+			var m = today.getMonth();
+			var y = today.getFullYear();
 
         	$(".disabled").on('click',function(e){
         		e.PreventDefault();
@@ -138,7 +139,7 @@ console.log(today);
 	<div class="wrapper">
 		<div id="userinfo">
 			@if ( Auth::check() )
-				{{ Gravatar::get( null , false , Auth::user()->email ) }}&nbsp;
+				{{ Gravatar::get( null , false , Auth::user()->email ) }}
 				Welcome back <strong>{{ ucwords(Auth::user()->username) }}</strong>&nbsp;&nbsp;
 				<i class="icon-user"></i>&nbsp;{{ link_to('logout', 'Logout') }}
 			@else

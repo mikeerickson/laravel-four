@@ -2,6 +2,7 @@
 
 @section('content')
 
+	<div id="gravatar" class="pull-right well well-small" style="margin: 10px 10px 0px 0px;">Loading...</div>
 	{{ Form::open(
 		[
 			'id'			=> 'user',
@@ -59,5 +60,12 @@
 	</p>
 
 	{{ Form::close() }}
+
+	<script>
+			$('#email').on('keyup change blur',function(){
+				$('#gravatar').empty().append($.gravatar($(this).val()));
+			});
+			$('#gravatar').empty().append($.gravatar('{{ $user->email }}'));		
+	</script>
 
 @stop
