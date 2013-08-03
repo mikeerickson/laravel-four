@@ -6,7 +6,7 @@ use Illuminate\Auth\Reminders\RemindableInterface;
 class User extends Eloquent implements UserInterface, RemindableInterface {
 
 	public static $category = [
-			''         => 'Select Category',
+			''         => '',
 			'parent'   => 'Parent',
 			'student'  => 'Student',
 			'dog'      => 'Dog',

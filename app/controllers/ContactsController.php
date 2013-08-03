@@ -5,7 +5,7 @@ class ContactsController extends BaseController {
 	public $perPage = 20;
 	public $where   = []; // ['lname','LIKE','E%']
 	public $status = [
-		''         => 'Select Status',
+		''         => '',
 		'active'   => 'Active',
 		'inactive' => 'Inactive',
 		'pending'  => 'Pending',

@@ -46,6 +46,7 @@
 	{{ Form::select('category', $category, $user->category,
 		[
 			'data-required' => 'true',
+			'data-placeholder' => 'Select Category...',
 			'data-size'     => 'auto',
 			'style'			=> 'width: 220px'
 		])

@@ -104,3 +104,12 @@ header img {
   width: 20px;
   height: 20px;
 }
+#contact .chosen-search input[type='text'] {
+  height: 25px;
+}
+#user .chosen-search input[type='text'] {
+  height: 25px;
+}
+#company .chosen-search input[type='text'] {
+  height: 25px;
+}

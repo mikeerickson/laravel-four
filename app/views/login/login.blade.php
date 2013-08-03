@@ -5,8 +5,8 @@
 	<meta charset="utf-8">
 	<title>Bootstrap Login</title>
 	<link href="css/vendor/bootstrap.css" rel="stylesheet" type="text/css" />
-	<script src="js/vendor/jquery-1.9.1.min.js"></script>
-	<script src="js/vendor/bootstrap-modal.js"></script>
+	<script src="lib/jquery-2.0.3.min.js"></script>
+	<script src="lib/bootstrap-modal.js"></script>
 
     <!-- http://jsfiddle.net/guyong/EUVWC/2/ -->
 

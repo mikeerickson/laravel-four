@@ -43,9 +43,10 @@
 		{{ Form::label('status','Status:') }}
 		{{ Form::select('status', $status, $contact->status,
 			[
-				'data-required' => 'true',
-				'data-size'     => 'auto',
-				'style'			=> 'width: 220px'
+				'data-placeholder' => 'Select Status...',
+				'data-required'    => 'true',
+				'data-size'        => 'auto',
+				'style'            => 'width: 220px'
 			])
 		}}
 

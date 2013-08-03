@@ -22,7 +22,7 @@
  	<script type="text/javascript" src="/lib/moment.js"></script>
 	<script type="text/javascript" src="/lib/underscore-1.5.min.js"></script>
 	<script type="text/javascript" src="/lib/bootstrapSwitch.js"></script>
-	<script type="text/javascript" src="/lib/select2.js"></script>
+	<script type="text/javascript" src="/lib/chosen.js"></script>
 	<script type="text/javascript" src="/lib/bootbox.min.js"></script>
 	<script type="text/javascript" src="/lib/fullcalendar.min.js"></script>
 	<script type="text/javascript" src="/lib/jquery.gravatar.js"></script>
@@ -41,7 +41,7 @@
 	<!-- end: bootstrap theme -->
 
 	<link rel="stylesheet" href="/css/vendor/bootstrapSwitch.css" />
-	<link rel="stylesheet" href="/css/vendor/select2.css" />
+	<link rel="stylesheet" href="/css/vendor/chosen.css" />
 	<link rel="stylesheet" href="/css/validation.css" type="text/css" media="screen" charset="utf-8">
 	<link rel="stylesheet" href="/css/app.css" type="text/css" media="screen" charset="utf-8">
 
@@ -139,7 +139,7 @@
 	<div class="wrapper">
 		<div id="userinfo">
 			@if ( Auth::check() )
-				{{ Gravatar::get( null , false , Auth::user()->email ) }}
+				{{ Gravatar::get( null , false , Auth::user()->email ) }}&nbsp;
 				Welcome back <strong>{{ ucwords(Auth::user()->username) }}</strong>&nbsp;&nbsp;
 				<i class="icon-user"></i>&nbsp;{{ link_to('logout', 'Logout') }}
 			@else
