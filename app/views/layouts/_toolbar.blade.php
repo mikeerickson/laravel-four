@@ -26,17 +26,9 @@
 				<span style="margin-right: 5px;">&nbsp;</span>
 				<span id="formAdvancedQuery" style="display: none;">
 					{{ Form::label('queryField','Field:')}}
-					{{ Form::select('queryField', $fieldList, $queryField,
-						[
-							'style' => 'width: 120px;',
-						])
-					}}
+					{{ Form::select('queryField', $fieldList, $queryField,[]) }}
 					<span style="margin-right: 5px;"></span>
-					{{ Form::select('queryDelim', $delimList, $queryDelim,
-						[
-							'style' => 'width: 120px;'
-						])
-					}}
+					{{ Form::select('queryDelim', $delimList, $queryDelim,[]) }}
 
 					<span style="margin-right: 5px;"></span>
 					{{ Form::label('queryValue','Value:')}}

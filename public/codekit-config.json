@@ -11,6 +11,17 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
+    "\/img\/s_attention.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/s_attention.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/s_attention.png",
+      "initialSize" : 629,
+      "fileType" : 8192
+    },
     "\/css\/sass\/ie.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -32,17 +43,6 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/css\/img\/glyphicons.png",
       "initialSize" : 173275,
-      "fileType" : 8192
-    },
-    "\/img\/s_attention.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/s_attention.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/s_attention.png",
-      "initialSize" : 629,
       "fileType" : 8192
     },
     "\/img\/browser-ie@2x.png" : {
@@ -139,6 +139,15 @@
       "initialSize" : 7653,
       "fileType" : 8192
     },
+    "\/css\/vendor\/bootstrap-responsive.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/css\/vendor\/bootstrap-responsive.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
     "\/img\/gallery\/photo10.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -158,26 +167,6 @@
       "inputAbbreviatedPath" : "\/index.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
-    },
-    "\/css\/vendor\/bootstrap-responsive.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/vendor\/bootstrap-responsive.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
-    "\/img\/browser-firefox-big.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/browser-firefox-big.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/browser-firefox-big.png",
-      "initialSize" : 5955,
-      "fileType" : 8192
     },
     "\/css\/vendor\/jquery.iphone.toggle.css" : {
       "ignoreWasSetByUser" : 0,
@@ -199,6 +188,17 @@
       "initialSize" : 0,
       "fileType" : 8192
     },
+    "\/img\/browser-firefox-big.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/browser-firefox-big.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/browser-firefox-big.png",
+      "initialSize" : 5955,
+      "fileType" : 8192
+    },
     "\/img\/browser-ie.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -210,16 +210,14 @@
       "initialSize" : 2815,
       "fileType" : 8192
     },
-    "\/css\/vendor\/chosen-sprite@2x.png" : {
+    "\/css\/vendor\/glyphicons.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/vendor\/chosen-sprite@2x.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/css\/vendor\/chosen-sprite@2x.png",
-      "initialSize" : 872,
-      "fileType" : 8192
+      "inputAbbreviatedPath" : "\/css\/vendor\/glyphicons.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
     },
     "\/img\/chat-left@2x.png" : {
       "ignoreWasSetByUser" : 0,
@@ -232,15 +230,6 @@
       "initialSize" : 805,
       "fileType" : 8192
     },
-    "\/css\/vendor\/glyphicons.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/vendor\/glyphicons.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
     "\/css\/vendor\/elfinder.theme.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -249,6 +238,17 @@
       "inputAbbreviatedPath" : "\/css\/vendor\/elfinder.theme.css",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
+    },
+    "\/css\/vendor\/chosen-sprite@2x.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/css\/vendor\/chosen-sprite@2x.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/css\/vendor\/chosen-sprite@2x.png",
+      "initialSize" : 872,
+      "fileType" : 8192
     },
     "\/img\/timeline-right-arrow.png" : {
       "ignoreWasSetByUser" : 0,
@@ -284,17 +284,6 @@
       "outputStyle" : 0,
       "fileType" : 32
     },
-    "\/img\/timeline-left-arrow@2x.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/timeline-left-arrow@2x.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/timeline-left-arrow@2x.png",
-      "initialSize" : 0,
-      "fileType" : 8192
-    },
     "\/img\/gallery\/photo11.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -305,6 +294,17 @@
       "outputAbbreviatedPath" : "\/img\/gallery\/photo11.jpg",
       "initialSize" : 88730,
       "fileType" : 4096
+    },
+    "\/img\/timeline-left-arrow@2x.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/timeline-left-arrow@2x.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/timeline-left-arrow@2x.png",
+      "initialSize" : 0,
+      "fileType" : 8192
     },
     "\/img\/s_info.png" : {
       "ignoreWasSetByUser" : 0,
@@ -414,17 +414,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/img\/ui-bg_glass_75_dadada_1x400.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/ui-bg_glass_75_dadada_1x400.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/ui-bg_glass_75_dadada_1x400.png",
-      "initialSize" : 0,
-      "fileType" : 8192
-    },
     "\/img\/ui-bg_glass_95_fef1ec_1x400.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -433,6 +422,17 @@
       "inputAbbreviatedPath" : "\/img\/ui-bg_glass_95_fef1ec_1x400.png",
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/ui-bg_glass_95_fef1ec_1x400.png",
+      "initialSize" : 0,
+      "fileType" : 8192
+    },
+    "\/img\/ui-bg_glass_75_dadada_1x400.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/ui-bg_glass_75_dadada_1x400.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/ui-bg_glass_75_dadada_1x400.png",
       "initialSize" : 0,
       "fileType" : 8192
     },
@@ -584,26 +584,6 @@
       "initialSize" : 54820,
       "fileType" : 4096
     },
-    "\/img\/avatar3.jpg" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/avatar3.jpg",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/avatar3.jpg",
-      "initialSize" : 2105,
-      "fileType" : 4096
-    },
-    "\/css\/vendor\/preview.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/vendor\/preview.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
     "\/lib\/bootbox.min.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -614,6 +594,26 @@
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/lib\/bootbox.min-ck.js",
       "fileType" : 64
+    },
+    "\/css\/vendor\/preview.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/css\/vendor\/preview.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
+    "\/img\/avatar3.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/avatar3.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/avatar3.jpg",
+      "initialSize" : 2105,
+      "fileType" : 4096
     },
     "\/css\/app.css" : {
       "ignoreWasSetByUser" : 0,
@@ -838,15 +838,6 @@
       "initialSize" : 118323,
       "fileType" : 4096
     },
-    "\/angular-test.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/angular-test.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/img\/browser-chrome-big@2x.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -857,6 +848,15 @@
       "outputAbbreviatedPath" : "\/img\/browser-chrome-big@2x.png",
       "initialSize" : 15640,
       "fileType" : 8192
+    },
+    "\/angular-test.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/angular-test.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/lib\/jquery.dataTables.min.js" : {
       "ignoreWasSetByUser" : 0,
@@ -869,16 +869,16 @@
       "outputAbbreviatedPath" : "\/lib\/jquery.dataTables.min-ck.js",
       "fileType" : 64
     },
-    "\/img\/browser-firefox-big@2x.png" : {
+    "\/lib\/jquery-migrate-1.0.0.min.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/browser-firefox-big@2x.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/browser-firefox-big@2x.png",
-      "initialSize" : 20412,
-      "fileType" : 8192
+      "inputAbbreviatedPath" : "\/lib\/jquery-migrate-1.0.0.min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/lib\/jquery-migrate-1.0.0.min-ck.js",
+      "fileType" : 64
     },
     "\/js\/coffee\/obj.coffee" : {
       "ignoreWasSetByUser" : 0,
@@ -915,16 +915,25 @@
       "initialSize" : 664,
       "fileType" : 8192
     },
-    "\/img\/ui-bg_flat_75_ffffff_40x100.png" : {
+    "\/img\/browser-firefox-big@2x.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/ui-bg_flat_75_ffffff_40x100.png",
+      "inputAbbreviatedPath" : "\/img\/browser-firefox-big@2x.png",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/ui-bg_flat_75_ffffff_40x100.png",
-      "initialSize" : 0,
+      "outputAbbreviatedPath" : "\/img\/browser-firefox-big@2x.png",
+      "initialSize" : 20412,
       "fileType" : 8192
+    },
+    "\/css\/vendor\/normalize.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/css\/vendor\/normalize.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
     },
     "\/img\/arrows-normal.png" : {
       "ignoreWasSetByUser" : 0,
@@ -935,6 +944,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/arrows-normal.png",
       "initialSize" : 312,
+      "fileType" : 8192
+    },
+    "\/img\/glyphicons_halflings-white.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/glyphicons_halflings-white.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/glyphicons_halflings-white.png",
+      "initialSize" : 18321,
       "fileType" : 8192
     },
     "\/lib\/jquery.raty.min.js" : {
@@ -948,35 +968,15 @@
       "outputAbbreviatedPath" : "\/lib\/jquery.raty.min-ck.js",
       "fileType" : 64
     },
-    "\/css\/vendor\/normalize.css" : {
+    "\/img\/ui-bg_flat_75_ffffff_40x100.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/vendor\/normalize.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
-    "\/lib\/jquery-migrate-1.0.0.min.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/jquery-migrate-1.0.0.min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/lib\/jquery-migrate-1.0.0.min-ck.js",
-      "fileType" : 64
-    },
-    "\/img\/glyphicons_halflings-white.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/glyphicons_halflings-white.png",
+      "inputAbbreviatedPath" : "\/img\/ui-bg_flat_75_ffffff_40x100.png",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/glyphicons_halflings-white.png",
-      "initialSize" : 18321,
+      "outputAbbreviatedPath" : "\/img\/ui-bg_flat_75_ffffff_40x100.png",
+      "initialSize" : 0,
       "fileType" : 8192
     },
     "\/css\/vendor\/elfinder.min.css" : {
@@ -988,17 +988,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/img\/iphone-style-checkboxes\/off-63584.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/iphone-style-checkboxes\/off-63584.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/iphone-style-checkboxes\/off-63584.png",
-      "initialSize" : 2577,
-      "fileType" : 8192
-    },
     "\/css\/img\/glyphicons-halflings.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1008,6 +997,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/css\/img\/glyphicons-halflings.png",
       "initialSize" : 13826,
+      "fileType" : 8192
+    },
+    "\/img\/iphone-style-checkboxes\/off-63584.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/iphone-style-checkboxes\/off-63584.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/iphone-style-checkboxes\/off-63584.png",
+      "initialSize" : 2577,
       "fileType" : 8192
     },
     "\/calendar.html" : {
@@ -1039,17 +1039,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/js\/filterTable.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/filterTable.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/filterTable-ck.js",
-      "fileType" : 64
-    },
     "\/lib\/md5.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1060,6 +1049,17 @@
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/lib\/md5-ck.js",
       "fileType" : 64
+    },
+    "\/img\/uploadify-cancel.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/uploadify-cancel.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/uploadify-cancel.png",
+      "initialSize" : 0,
+      "fileType" : 8192
     },
     "\/img\/gallery\/photo8.jpg" : {
       "ignoreWasSetByUser" : 0,
@@ -1081,25 +1081,16 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/img\/uploadify-cancel.png" : {
+    "\/js\/filterTable.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/uploadify-cancel.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/uploadify-cancel.png",
-      "initialSize" : 0,
-      "fileType" : 8192
-    },
-    "\/test.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/test.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "inputAbbreviatedPath" : "\/js\/filterTable.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/filterTable-ck.js",
+      "fileType" : 64
     },
     "\/css\/vendor\/noty_theme_default.css" : {
       "ignoreWasSetByUser" : 0,
@@ -1109,6 +1100,15 @@
       "inputAbbreviatedPath" : "\/css\/vendor\/noty_theme_default.css",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
+    },
+    "\/test.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/test.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/css\/vendor\/style.css" : {
       "ignoreWasSetByUser" : 0,
@@ -1248,16 +1248,16 @@
       "initialSize" : 0,
       "fileType" : 8192
     },
-    "\/lib\/underscore-1.5.min.js" : {
+    "\/img\/logo.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/underscore-1.5.min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/lib\/underscore-1.5.min-ck.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/img\/logo.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/logo.png",
+      "initialSize" : 0,
+      "fileType" : 8192
     },
     "\/img\/laravel.png" : {
       "ignoreWasSetByUser" : 0,
@@ -1270,6 +1270,17 @@
       "initialSize" : 94984,
       "fileType" : 8192
     },
+    "\/lib\/underscore-1.5.min.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/lib\/underscore-1.5.min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/lib\/underscore-1.5.min-ck.js",
+      "fileType" : 64
+    },
     "\/img\/bg-login.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1280,17 +1291,6 @@
       "outputAbbreviatedPath" : "\/img\/bg-login.jpg",
       "initialSize" : 62686,
       "fileType" : 4096
-    },
-    "\/img\/logo.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/logo.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/logo.png",
-      "initialSize" : 0,
-      "fileType" : 8192
     },
     "\/img\/uparrow@2x.png" : {
       "ignoreWasSetByUser" : 0,
@@ -1381,14 +1381,16 @@
       "outputAbbreviatedPath" : "\/lib\/jquery.flot.pie-ck.js",
       "fileType" : 64
     },
-    "\/css\/vendor\/boldlight.css" : {
+    "\/lib\/bootstrap.min.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/vendor\/boldlight.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
+      "inputAbbreviatedPath" : "\/lib\/bootstrap.min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/lib\/bootstrap.min-ck.js",
+      "fileType" : 64
     },
     "\/lib\/jquery.noty.js" : {
       "ignoreWasSetByUser" : 0,
@@ -1434,16 +1436,14 @@
       "outputAbbreviatedPath" : "\/lib\/bootstrap-modal-ck.js",
       "fileType" : 64
     },
-    "\/lib\/bootstrap.min.js" : {
+    "\/css\/vendor\/boldlight.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/bootstrap.min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/lib\/bootstrap.min-ck.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/css\/vendor\/boldlight.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
     },
     "\/img\/chat-left.png" : {
       "ignoreWasSetByUser" : 0,
@@ -1489,6 +1489,15 @@
       "initialSize" : 494,
       "fileType" : 8192
     },
+    "\/css\/vendor\/jackedup.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/css\/vendor\/jackedup.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
     "\/js\/main.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1510,15 +1519,6 @@
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/lib\/jquery-ui-1.9.2.custom.min-ck.js",
       "fileType" : 64
-    },
-    "\/css\/vendor\/jackedup.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/vendor\/jackedup.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
     },
     "\/lib\/bootstrap.js" : {
       "ignoreWasSetByUser" : 0,
@@ -1551,17 +1551,6 @@
       "initialSize" : 0,
       "fileType" : 8192
     },
-    "\/lib\/custom.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/custom.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/lib\/custom-ck.js",
-      "fileType" : 64
-    },
     "\/css\/img\/glyphicons_halflings.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1572,6 +1561,17 @@
       "outputAbbreviatedPath" : "\/css\/img\/glyphicons_halflings.png",
       "initialSize" : 23254,
       "fileType" : 8192
+    },
+    "\/lib\/custom.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/lib\/custom.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/lib\/custom-ck.js",
+      "fileType" : 64
     },
     "\/lib\/jquery.imagesloaded.js" : {
       "ignoreWasSetByUser" : 0,
@@ -1584,17 +1584,6 @@
       "outputAbbreviatedPath" : "\/lib\/jquery.imagesloaded-ck.js",
       "fileType" : 64
     },
-    "\/lib\/jquery.sparkline.min.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/jquery.sparkline.min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/lib\/jquery.sparkline.min-ck.js",
-      "fileType" : 64
-    },
     "\/lib\/bootstrap-select.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1604,6 +1593,17 @@
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/lib\/bootstrap-select-ck.js",
+      "fileType" : 64
+    },
+    "\/lib\/jquery.sparkline.min.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/lib\/jquery.sparkline.min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/lib\/jquery.sparkline.min-ck.js",
       "fileType" : 64
     },
     "\/css\/less\/elements.less" : {
@@ -1622,17 +1622,6 @@
       "outputStyle" : 0,
       "fileType" : 1,
       "debugStyle" : 0
-    },
-    "\/img\/gallery\/photo1.jpg" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/gallery\/photo1.jpg",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/gallery\/photo1.jpg",
-      "initialSize" : 168657,
-      "fileType" : 4096
     },
     "\/css\/vendor\/bootstrap.css" : {
       "ignoreWasSetByUser" : 0,
@@ -1653,6 +1642,17 @@
       "outputAbbreviatedPath" : "\/img\/bg-input-focus.png",
       "initialSize" : 143,
       "fileType" : 8192
+    },
+    "\/img\/gallery\/photo1.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/gallery\/photo1.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/gallery\/photo1.jpg",
+      "initialSize" : 168657,
+      "fileType" : 4096
     },
     "\/lib\/jquery.ui.touch-punch.js" : {
       "ignoreWasSetByUser" : 0,
@@ -1771,17 +1771,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/lib\/jquery.iphone.toggle.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/jquery.iphone.toggle.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/lib\/jquery.iphone.toggle-ck.js",
-      "fileType" : 64
-    },
     "\/css\/vendor\/font-awesome.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1801,6 +1790,17 @@
       "outputAbbreviatedPath" : "\/img\/gallery\/photo3.jpg",
       "initialSize" : 196127,
       "fileType" : 4096
+    },
+    "\/lib\/jquery.iphone.toggle.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/lib\/jquery.iphone.toggle.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/lib\/jquery.iphone.toggle-ck.js",
+      "fileType" : 64
     },
     "\/lib\/jquery.cleditor.min.js" : {
       "ignoreWasSetByUser" : 0,
@@ -1954,17 +1954,6 @@
       "initialSize" : 24526,
       "fileType" : 8192
     },
-    "\/img\/gallery\/photo5.jpg" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/gallery\/photo5.jpg",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/gallery\/photo5.jpg",
-      "initialSize" : 54244,
-      "fileType" : 4096
-    },
     "\/img\/avatar7.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1974,6 +1963,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/avatar7.jpg",
       "initialSize" : 1608,
+      "fileType" : 4096
+    },
+    "\/img\/gallery\/photo5.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/gallery\/photo5.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/gallery\/photo5.jpg",
+      "initialSize" : 54244,
       "fileType" : 4096
     },
     "\/css\/vendor\/bootstrap-select.css" : {
@@ -2006,15 +2006,6 @@
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/lib\/select2-ck.js",
       "fileType" : 64
-    },
-    "\/css\/vendor\/ie9.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/vendor\/ie9.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
     },
     "\/img\/bg-input.png" : {
       "ignoreWasSetByUser" : 0,
@@ -2060,23 +2051,12 @@
       "outputAbbreviatedPath" : "\/js\/laravelMessasge-ck.js",
       "fileType" : 64
     },
-    "\/img\/icons-small.png" : {
+    "\/css\/vendor\/ie9.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/icons-small.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/icons-small.png",
-      "initialSize" : 0,
-      "fileType" : 8192
-    },
-    "\/css\/vendor\/jquery.noty.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/vendor\/jquery.noty.css",
+      "inputAbbreviatedPath" : "\/css\/vendor\/ie9.css",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
@@ -2089,6 +2069,15 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
+    "\/css\/vendor\/jquery.noty.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/css\/vendor\/jquery.noty.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
     "\/img\/browser-safari.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -2098,6 +2087,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/browser-safari.png",
       "initialSize" : 3374,
+      "fileType" : 8192
+    },
+    "\/img\/icons-small.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/icons-small.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/icons-small.png",
+      "initialSize" : 0,
       "fileType" : 8192
     },
     "\/img\/iphone-style-checkboxes\/slider_left-63584.png" : {
@@ -2270,14 +2270,16 @@
       "outputAbbreviatedPath" : "\/lib\/bootstrapSwitch-ck.js",
       "fileType" : 64
     },
-    "\/css\/vendor\/original.css" : {
+    "\/img\/glyphicons_halflings.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/vendor\/original.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
+      "inputAbbreviatedPath" : "\/img\/glyphicons_halflings.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/glyphicons_halflings.png",
+      "initialSize" : 23254,
+      "fileType" : 8192
     },
     "\/img\/iphone-style-checkboxes\/slider_right-63584.png" : {
       "ignoreWasSetByUser" : 0,
@@ -2310,6 +2312,46 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
+    "\/css\/vendor\/uploadify.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/css\/vendor\/uploadify.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
+    "\/lib\/jquery.elfinder.min.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/lib\/jquery.elfinder.min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/lib\/jquery.elfinder.min-ck.js",
+      "fileType" : 64
+    },
+    "\/img\/ui-icons_888888_256x240.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/ui-icons_888888_256x240.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/ui-icons_888888_256x240.png",
+      "initialSize" : 0,
+      "fileType" : 8192
+    },
+    "\/css\/vendor\/original.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/css\/vendor\/original.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
     "\/img\/avatar.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -2331,48 +2373,6 @@
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/lib\/jquery.chosen.min-ck.js",
       "fileType" : 64
-    },
-    "\/img\/ui-icons_888888_256x240.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/ui-icons_888888_256x240.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/ui-icons_888888_256x240.png",
-      "initialSize" : 0,
-      "fileType" : 8192
-    },
-    "\/css\/vendor\/uploadify.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/vendor\/uploadify.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
-    "\/lib\/jquery.elfinder.min.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/lib\/jquery.elfinder.min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/lib\/jquery.elfinder.min-ck.js",
-      "fileType" : 64
-    },
-    "\/img\/glyphicons_halflings.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/glyphicons_halflings.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/glyphicons_halflings.png",
-      "initialSize" : 23254,
-      "fileType" : 8192
     },
     "\/img\/ui-bg_glass_55_fbf9ee_1x400.png" : {
       "ignoreWasSetByUser" : 0,

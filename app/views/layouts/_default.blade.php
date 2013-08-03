@@ -42,8 +42,8 @@
 
 	<link rel="stylesheet" href="/css/vendor/bootstrapSwitch.css" />
 	<link rel="stylesheet" href="/css/vendor/chosen.css" />
-	<link rel="stylesheet" href="/css/validation.css" type="text/css" media="screen" charset="utf-8">
-	<link rel="stylesheet" href="/css/app.css" type="text/css" media="screen" charset="utf-8">
+	<link rel="stylesheet" href="/css/validation.css" />
+	<link rel="stylesheet" href="/css/app.css" />
 
 
 	<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->

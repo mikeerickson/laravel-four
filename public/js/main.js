@@ -1,10 +1,12 @@
 $(function() {
-	console.log('Moment JS Date: '+moment().format('MMMM Do YYYY, h:mm:ss a'));
-	console.log(moment().subtract('seconds', 32).fromNow());
+	// alert(jQuery.fn.jquery);
+
+	// console.log('Moment JS Date: '+moment().format('MMMM Do YYYY, h:mm:ss a'));
+	// console.log(moment().subtract('seconds', 32).fromNow());
 
 	// $('select').select2();
 	$('select').chosen({allow_single_deselect: true});
-/* 			alert(jQuery.fn.jquery); */
+	$('.chosen-container').css('width','130px').css('font-size', '11px');
 	$.expr[':'].containsIgnoreCase = function(n,i,m){
 		return jQuery(n).text().toUpperCase().indexOf(m[3].toUpperCase())>=0;
 	};

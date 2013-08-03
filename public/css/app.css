@@ -113,3 +113,6 @@ header img {
 #company .chosen-search input[type='text'] {
   height: 25px;
 }
+#toolbar .chosen-search input[type='text'] {
+  height: 25px;
+}
