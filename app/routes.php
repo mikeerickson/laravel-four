@@ -8,6 +8,10 @@ Route::get('/logout',function(){
 	return Redirect::to('/');
 });
 
+Route::get('/carbon', function() {
+	return View::make('tests/carbon');
+});
+
 Route::group(['before' => 'auth'], function(){
 	Route::resource('contacts', 'ContactsController');
 	Route::resource('companies', 'CompaniesController');
@@ -47,8 +51,7 @@ Route::post('/angular', function(){
 		->get();
 });
 
-Route::get('/', function()
-{
+Route::get('/', function() {
 /*
 	$company = Company::with('contacts')->get();
 	return $company;
@@ -59,12 +62,14 @@ Route::get('/', function()
 	//$contacts = Contact::with('company')->get();
 	//return $contacts; 						// <- this will return the full contact record (with related one company recor)
 	//return $contacts->company->companyName; // <- this will return the company name in related one record.
+
+
 	$data = [
 				'msgInfo'   => json_decode('{"msgType": "alert-success", "msgHdr": "", "msgBody": "This is a test"}'),
 				'title'  => 'Home',
 				'header' => 'Home',
 			];
-	return View::make('hello', $data);
+	return View::make('index', $data);
 });
 
 // localhost:8000/twig

@@ -7,6 +7,7 @@ $(function() {
 	// $('select').select2();
 	$('select').chosen({allow_single_deselect: true});
 	$('.chosen-container').css('width','130px').css('font-size', '11px');
+	
 	$.expr[':'].containsIgnoreCase = function(n,i,m){
 		return jQuery(n).text().toUpperCase().indexOf(m[3].toUpperCase())>=0;
 	};

@@ -1,0 +1,55 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Delayed Appearance Rev 2</title>
+		<!-- only used for testing -->
+		<link rel="stylesheet" href="/css/vex-theme-default.css" />
+		<script type="text/javascript" src="js/strftime.js"></script>
+</head>
+<body>
+
+	<p>
+		There is a hidden div here, will be displayed shortly
+	<p />
+
+	<div id="test" style="display:none;">
+		(<a href="#"
+		    onClick="delayedDisplay.hideDiv();console.log('Next Display: '+delayedDisplay.getNextDisplayTime());">
+		    Click To Dismiss
+		</a>)
+	</div>
+	Page 1 | <a href="page2.html">Page 2</a>
+
+	<!-- both of these scripts are required -->
+	<script type="text/javascript" src="bower_components/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="js/store.min.js"></script>
+	<script type="text/javascript" src="js/delayedDisplay.js"></script>
+	<script type="text/javascript" src="js/vex.combined.min.js"></script>
+
+	<script>vex.defaultOptions.className = 'vex-theme-default';</script>
+
+	<!-- This entire script block is NOTE required and only exists for testing purposes -->
+	<script>
+
+		// get things started
+		//delayedDisplay.setTimeInterval(1000*10); // optional method for setting time interval
+		var useVex = true;
+
+		delayedDisplay.startTimer({timeInterval: 1000*5});
+		delayedDisplay.resetTimer();
+		var nextTime = new Date(delayedDisplay.getNextTime());
+		var msg      = 'Next Display: '+delayedDisplay.getNextDisplayTime();
+		    msg     += '\n\n- Configure display time delay by setting calling \'delayedDisplay.setTimeInterval\' variable';
+		    msg     += '\n\n- Or by supplying timeInterval parameter in \'delayedDisplay.startTimer\' method';
+		    msg     += '\n\n- Set to display every 10 seconds for testing';
+		    msg     += '\n\n- strftime.js library only used for testing';
+		console.log('Next Display: '+delayedDisplay.getNextDisplayTime());
+
+		useVex ? vex.dialog.alert(msg.replace('\n','<br />')) : alert(msg);
+
+	</script>
+
+</body>
+</html>
